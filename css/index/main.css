@@ -1,0 +1,148 @@
+#header .main {
+  color: white;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  .wrap {
+    @media (--small-viewport) {
+      .entry {
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+        .title {
+          font-size: 3em;
+          text-align: center;
+          margin-top: 70px;
+        }
+        .subtitle {
+          font-size: 18px;
+          text-align: center;
+          padding: 10px;
+        }
+        .signup {
+          margin: 0 auto !important;
+        }
+      }
+      .cloud {
+        margin: 20px;
+        width: 90%;
+      }
+    }
+    .entry {
+      margin-top: 130px;
+      margin-left: 50px;
+      text-align: left;
+      position: relative;
+      .title {
+        font-size: 4em;
+        font-family: 'Moon-Bold';
+        @media (--laptop-viewport) {
+          font-size: 3.5em;
+        }
+      }
+      .subtitle {
+        margin-top: 15px;
+        font-size: 24px;
+        font-family: 'Raleway';
+        font-weight: 400;
+        opacity: 0.5;
+      }
+      .signup {
+        @mixin purple-btn;
+        max-width: 150px;
+        font-family: 'Moon-Bold';
+        margin-top: 25px;
+        margin-bottom: 35px;
+        display: inline-block;
+      }
+      .noise {
+        background-size: 100%;
+      }
+      .terminal {
+        width: 100%;
+        height: 100%;
+        max-width: 700px;
+        max-height: 235px;
+        background-color: #172b46;
+        border: 3px solid #284c7b;
+        border-radius: 10px 10px 0 0;
+        border-bottom: 0;
+        position: relative;
+        .bar {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          margin: 15px;
+          .btn {
+            width: 18px;
+            height: 18px;
+            /*border: 2px solid $mainColor;*/
+            border-radius: 18px;
+            margin-right: 10px;
+            &.red {
+              background-color: #8a0000;
+            }
+            &.green {
+              background-color: green;
+            }
+            &.blue {
+              background-color: #005aca;
+            }
+          }
+        }
+        .content {
+          text-align: left;
+          margin-top: 50px;
+          margin-left: 20px;
+          font-size: 18px;
+          font-family: 'Source Code Pro', ;
+          .line {
+            width: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: width 6s steps(80, end);
+            &::before {
+              margin-right: 8px;
+              font-family: "Moon-Light";
+              font-weight: bold;
+              color: #888;
+            }
+            &.active {
+              width: 100%;
+              &:before {
+                content: "$";
+              }
+            }
+          }
+          .result {
+            color: #aaa;
+            display: none;
+            &::before {
+              content: "";
+              margin-right: 1.33em;
+            }
+            &.active {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .cloud {
+      margin-top: -100px;
+      width: 100%;
+      max-width: 1024px;
+      @media (--laptop-viewport) {
+        max-width: 850px;
+      }
+    }
+  }
+}

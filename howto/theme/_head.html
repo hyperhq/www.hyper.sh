@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '{{i18n "since_year"}}',
+        month: '{{i18n "since_month"}}',
+        day: '{{i18n "since_day"}}',
+        hour: '{{i18n "since_hour"}}',
+        minute: '{{i18n "since_minute"}}',
+        second: '{{i18n "since_second"}}'
+    };
+</script>
+{{if .Develop}}
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+{{end}}
+
+<link rel="shortcut icon" href="/assets/favicon.png">
+<link rel="apple-itouch-icon" href="/assets/favicon.png">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="/index.css" rel="stylesheet"></head>

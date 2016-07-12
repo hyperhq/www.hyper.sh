@@ -1,0 +1,41 @@
+#index .container > .cases {
+  @media (--laptop-viewport) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  @media (--small-viewport) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .content {
+    .group {
+      display: flex;
+      margin-bottom: 50px;
+      .item:last-child {
+        margin-left: 80px;
+      }
+    }
+  }
+  .item {
+    display: flex;
+    align-items: flex-start;
+    img {
+      width: 70px;
+      margin-right: 20px;
+    }
+    .title {
+      font-size: 20px;
+      font-family: 'Moon-Bold';
+      color: $purple;
+      span {
+        margin-left: 20px;
+      }
+    }
+    .desc {
+      font-size: 16px;
+      margin-top: 10px;
+      max-width: 700px;
+      font-weight: 300;
+    }
+  }
+}

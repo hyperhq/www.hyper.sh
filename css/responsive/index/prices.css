@@ -1,0 +1,43 @@
+@media (--ipad-viewport) {
+  #index .container > .prices {
+    .content {
+      .slider {
+        min-width: 50em;
+        .line {
+          left: 3.12em;
+          right: 3.12em;
+        }
+      }
+    }
+  }
+}
+
+
+@media (--small-than-ipad-viewport) {
+  #index .container > .prices {
+    .content {
+      .slider {
+        min-width: 30em;
+        .line {
+          left: 1.87em;
+          right: 1.87em;
+        }
+      }
+    }
+  }
+}
+
+@media (--small-viewport) {
+  #index .container > .prices {
+    .content {
+      .items {
+        min-width: 20em;
+      }
+      .slider {
+        min-width: 20em;
+        .line {
+        }
+      }
+    }
+  }
+}

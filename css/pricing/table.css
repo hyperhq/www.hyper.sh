@@ -1,0 +1,48 @@
+@define-mixin table {
+  .table {
+    background:#fff;
+    overflow:hidden;
+    border:1px solid #652299;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    table {
+      border-collapse:collapse;
+      width:100%;
+      td, th {
+        padding:10px 15px;
+      }
+      thead {
+        th {
+          background-color:#652299;
+          color:#FFFFFF;
+          font-size:16px;
+          font-weight:bold;
+          border-left:1px solid #714399;
+          font-family: "Moon-Bold";
+          &:first-child {
+            border:none;
+          }
+        }
+        td {
+          color:#4D1A75;
+          border-left:1px solid #E7BDFF;
+          font-size:12px;
+          font-weight:normal;
+        }
+      }
+    }
+    tbody {
+      .alt td {
+        background:#F4E3FF;
+        /*color:#4D1A75;*/
+        &:first-child {
+          border-left:none;
+        }
+      }
+      tr:last-child td {
+        border-bottom:none;
+      }
+    }
+  }
+}

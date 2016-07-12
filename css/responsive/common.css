@@ -1,0 +1,8 @@
+@media (--small-viewport ) {
+  /* common */
+  body > .main .container > .section > .title {
+    margin: 0 0 2em !important;
+    max-width: 100% !important;
+  }
+
+}

@@ -1,0 +1,82 @@
+<section class="container white topbg">
+  <div class="section main">
+    <header class="title">
+      Pricing
+      <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </header>
+    <ul class="sections">
+      <li class="section">
+        <h1 class="title">> Container</h1>
+        <div class="content">
+          {{> ./table}}
+          <ul>
+            <li>Billing begins when Hyper_ launches a new container or start a stopped container, ends when the container stops or terminates, either through an API call, or through container exists (success or failure).</li>
+            <li>Everytime you issue a <code>hyper run/start/restart</code> request, a default period of 10 second is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
+            <li>Everytime a container is restarted, a default period of 10 second is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="section">
+        <h1 class="title">> Storage</h1>
+        <div class="content">
+          <ul>
+            <li><b>Image:</b> $0.1/GB/month</li>
+            <li><b>Volume:</b> $0.1/GB/month</li>
+            <li>
+              <b>Snapshot:</b> $0.05/GB/month
+              <ul>
+                <li>Billing begins when the storage object is created (<code>hyper volume create</code>, <code>hyper snapshot create</code>, <code>hyper pull</code>), ends upon removal.</li>
+                <li>Images less than 1GB will be charge for 1GB</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="section">
+        <h1 class="title">> Network</h1>
+        <div class="content">
+          <ul>
+            <li>
+              <b>Floating IP:</b> $1/IP/month
+              <ul>
+                <li>Billing begins when a new Floating IP is allocated, ends when it is released. Partial month is treated as a entire month.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="section">
+        <h1 class="title">> Tax</h1>
+        <div class="content">
+          <ul>
+            <li>
+              Except as otherwise noted, our prices are exclusive of applicable taxes and duties, including VAT and applicable sales tax. Currently, we charges VAT for credits cards issued in NY and Texas. The tax details will be available in the monthly bill.
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="section">
+        <h1 class="title">> Billing Period</h1>
+        <div class="content">
+          <ul>
+            <li>We charge your credit card on the 1st day of each month after usage.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="section">
+        <h1 class="title">> Outstanding Balance</h1>
+        <div class="content">
+          <div class="desc">Balances are considered outstanding if a payment has failed to process on the first of the month. In such case, we will notify you over emails, and re-submit the payment request:</div>
+          <ul>
+            <li>Re-submit after 3 days if the first request failed</li>
+            <li>Re-submit after 5 days if the second request failed</li>
+            <li>Re-submit after 7 days if the third request failed, and during this period you will not be able to create / update resource in your account</li>
+            <li>If the fourth request failed, we will stop the containers in your account, but you can login the web console to update the credit card information, which will trigger new payment request</li>
+            <li>If the balance is due over two months, we will deactivate your account (unable to login web console and all credential will be removed), and purge all resources in your account permanently</li>
+            <li>Whenever a payment request succeeded, we will immediately resume your account</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

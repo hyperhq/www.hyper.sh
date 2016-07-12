@@ -1,0 +1,13 @@
+@custom-media --small-viewport (max-width: 466px);
+@custom-media --medium-viewport (max-width: 856px);
+@custom-media --laptop-viewport (max-width: 1366px);
+
+@custom-media --small-than-ipad-viewport (max-width: 640px);
+
+@custom-media --ipad-viewport (max-width: 768px);
+@custom-media --iphone4-viewport (max-width: 320px);
+@custom-media --iphone6-viewport (max-width: 375px);
+
+$iphone4Width: 320px;
+$iphone6Width: 375px;
+$ipadWidth: 768px;

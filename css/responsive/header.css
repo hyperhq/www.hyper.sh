@@ -1,0 +1,111 @@
+$menuHeight: 180px;
+
+@media (--medium-viewport) {
+
+  #header {
+    nav {
+      .logo .desc {
+        display: none;
+      }
+
+      &.show {
+        margin-bottom: $menuHeight;
+
+        & + .main {
+          top: $menuHeight;
+        }
+
+        .right .menu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 120px;
+          left: 0;
+          right: 0;
+          height: $menuHeight;
+          background: $mainColor;
+
+          #index & {
+            background: none;
+          }
+
+
+          .item {
+            padding: 8px;
+            text-align: center;
+
+            &::after {
+              display: none;
+            }
+          }
+
+        }
+
+
+      }
+
+      .right {
+        .menu {
+          display: none;
+        }
+
+        @at-root #header {
+          .nav-toggle {
+            display: none;
+          }
+        }
+
+        .sign .signup {
+          border: 0;
+          background: none;
+          font-size: 1.16em;
+          font-family: 'Moon-Bold';
+          padding: 0;
+
+          &::before {
+            content: "/";
+            position: relative;
+            left: -10px;
+          }
+        }
+
+        .nav-toggle {
+          display: inline;
+          background: none;
+          border: none;
+          outline: none;
+          font-size: 2em;
+          color: white;
+          cursor: pointer;
+          padding-left: .5em;
+        }
+      }
+
+    }
+
+    #background {
+      .shape {
+        width: $iphone4Width
+      }
+    }
+
+  }
+
+
+
+}
+
+
+@media (--small-viewport) {
+  #header nav .right {
+    .sign {
+      .signin, .signup{
+        margin-left: 0;
+        display: block;
+        &::before {
+          content: "";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+site:
+    title: "HYPER_ How To"
+    subtitle: "HYPER_ How To"
+    limit: 10
+    theme: theme
+    lang: en
+    comment: hyperhqhowto
+    # logo: "-/images/avatar.jpg"
+    # link: "{category}/{year}/{month}/{day}/{title}.html"
+    root: "/howto"
+
+authors:
+    hyper:
+        name: "Hyper_"
+        intro: ""
+
+build:
+    port: 8000
+    # Copied files to public folder when build
+    copy:
+        - "source/images"
+    # Excuted command when use 'ink publish'
+    publish: |
+        mkdir -p ../../dist/howto
+        cp -R ./ ../../dist/howto/.

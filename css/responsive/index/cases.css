@@ -1,0 +1,17 @@
+@media (--small-viewport ) {
+  #index .container > .cases {
+
+
+    .content .group {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      .item {
+        margin: 20px 2px;
+        &:last-child {margin-left: 2px;}
+      }
+
+    }
+
+  }
+}

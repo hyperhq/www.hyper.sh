@@ -1,0 +1,18 @@
+@import "table";
+
+#pricing .container > .main {
+  max-width: 1024px;
+  .sections {
+    .section {
+      @mixin table;
+      .table {
+        margin-bottom: 30px;
+      }
+      .desc {
+        font-weight: 400;
+        margin-bottom: 20px;
+        display: block;
+      }
+    }
+  }
+}

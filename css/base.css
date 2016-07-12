@@ -1,0 +1,81 @@
+$mainColor: #172b46;
+$mainColorLight: #19304f;
+$purple: #5a29a7;
+$purpleLight: #6e3bc6;
+$whiteGray: #fcfcfc;
+
+@font-face {
+    font-family: 'Moon-Light';
+    src: url('../assets/fonts/Moon-Light.eot');
+    src: url('../assets/fonts/Moon-Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Moon-Light.woff') format('woff'),
+        url('../assets/fonts/Moon-Light.ttf') format('truetype'),
+        url('../assets/fonts/Moon-Light.svg#Moon-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Moon-Bold';
+    src: url('../assets/fonts/Moon-Bold.eot');
+    src: url('../assets/fonts/Moon-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Moon-Bold.woff') format('woff'),
+        url('../assets/fonts/Moon-Bold.ttf') format('truetype'),
+        url('../assets/fonts/Moon-Bold.svg#Moon-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@define-mixin purple-btn {
+  text-align: center;
+  background-color: $purple;
+  border: 2px solid $purpleLight;
+  padding: 8px 25px;
+  border-radius: 500px;
+  font-size: 1.1em;
+  font-family: 'Moon-Bold';
+  color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+html, body {
+  min-width: 320px;
+  font-size: 12px;
+  margin: 0;
+  color: #555961;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+code, pre {
+  font-family: consolas, monaco, "Source Code Pro", hack, monospace;
+  background-color: #e5dbff;
+  border: 1px solid #c8b4fd;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input {
+  &:focus {
+    outline: 0;
+  }
+}

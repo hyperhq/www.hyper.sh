@@ -1,0 +1,182 @@
+#footer {
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content {
+    width: 66.66em;
+    padding: 80px 0;
+    text-align: center;
+    .form {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-right: 2px dashed #484848;
+        margin-right: 2.16em;
+        padding-right: 2.16em;
+        @media (--small-viewport) {
+          margin-right: 0;
+          padding-right: 0;
+          .title {
+            font-size: 3em;
+            margin-bottom: 20px;
+          }
+        }
+        .title {
+          font-size: 2em;
+          font-family: "Moon-Bold";
+          color: white;
+        }
+        .start {
+          display: flex;
+          margin-top: 4.16em;
+          @media (--small-viewport) {
+            display: none;
+          }
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            min-width: 12.5em;
+            font-family: "Raleway";
+            font-weight: bold;
+            flex-grow: 1;
+            &:last-child {
+              &:after {
+                content: "";
+              }
+            }
+            &:after {
+              content: ">";
+              font-family: "Moon-Bold";
+              font-size: 32px;
+              position: absolute;
+              margin-left: 145px;
+              margin-top: 15px;
+              top: 0;
+            }
+            .circle {
+              display: flex;
+              align-items: center;
+              text-align: center;
+              justify-content: center;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              border: 2px dashed #888;
+              font-size: 28px;
+              color: #888;
+              span {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+              }
+            }
+            .desc {
+              font-size: 16px;
+              margin-top: 20px;
+              line-height: 25px;
+              color: white;
+            }
+          }
+        }
+      }
+      .fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33.33em;
+        @media (--small-viewport) {
+          width: 22em !important;
+        }
+        input {
+          background-color: white;
+          border: 2px solid $purpleLight;
+          padding: 10px 25px;
+          border-radius: 500px;
+          font-size: 16px;
+          width: 100%;
+          margin-bottom: 20px;
+          box-sizing: border-box;
+        }
+        .wrap {
+          display: flex;
+          justify-content: space-between;
+          input {
+            width: 48%;
+          }
+        }
+        .signup {
+          @mixin purple-btn;
+          display: block;
+          width: 100%;
+          margin-bottom: 0;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      font-size: 14px;
+      margin-top: 100px;
+      @media (--small-viewport ) {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+      .item {
+        .head {
+          color: white;
+          font-family: "Moon-Bold";
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        .list {
+          .item {
+            margin-bottom: 5px;
+            a {
+              color: #888;
+            }
+          }
+        }
+        &.community {
+          .list {
+            display: flex;
+            font-size: 32px;
+            .item {
+              margin-right: 15px;
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .logo {
+      width: 40px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 100px;
+      opacity: 0.3;
+    }
+    .copyright {
+      color: #888;
+      font-family: "Moon-Light";
+      margin-top: 20px;
+    }
+  }
+}

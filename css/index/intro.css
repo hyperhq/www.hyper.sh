@@ -1,0 +1,100 @@
+#index .container > .intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  &.right {
+    flex-direction: row-reverse;
+    .title {
+      padding-left: 20px;
+      margin-left: 20px;
+      margin-right: 0;
+      text-align: left;
+      border-right: 0;
+      border-left: 4px solid #ddd;
+      padding-left: 30px;
+      align-items: flex-start;
+      .signup {
+        background-color: white;
+        color: $mainColor;
+      }
+    }
+  }
+  .title {
+    display: flex;
+    font-size: 36px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: right;
+    font-family: 'Fjalla One';
+    max-width: 300px;
+    text-transform: uppercase;
+    border-right: 4px solid #ddd;
+    padding-right: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (--small-viewport) {
+      align-items: center !important;
+      text-align: center !important;
+      margin: 0 auto !important;
+      margin-bottom: 30px !important;
+      padding: 0 !important;
+    }
+    .signup {
+      background-color: $mainColor;
+      color: white;
+      border: 2px solid $mainColor;
+      border-radius: 200px;
+      padding: 8px 8px;
+      display: block;
+      font-size: 18px;
+      min-width: 130px;
+      text-align: center;
+      font-family: "Moon-Bold";
+      margin-top: 20px;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  .detail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 900px;
+    .list {
+      display: flex;
+      /*justify-content: center;*/
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .item {
+        display: flex;
+        align-items: flex-start;
+        margin: 30px 20px;
+        &.center {
+          align-items: center;
+        }
+        .name {
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .icon {
+          margin-right: 20px;
+          height: 80px;
+        }
+        .desc {
+          font-size: 16px;
+          margin-top: 5px;
+          max-width: 300px;
+        }
+      }
+    }
+    .bg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      margin: -15px;
+    }
+  }
+}

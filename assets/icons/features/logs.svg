@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="62.387px" height="62.387px" viewBox="7.078 6.078 62.387 62.387" enable-background="new 7.078 6.078 62.387 62.387"
+	 xml:space="preserve">
+<path fill="#FFFFFF" stroke="#3D3588" stroke-miterlimit="10" d="M66.673,52.833c0,4.145-3.36,7.504-7.504,7.504H18.582
+	c-4.145,0-7.504-3.36-7.504-7.504V22.078c0-4.145,3.36-7.504,7.504-7.504h40.587c4.145,0,7.504,3.36,7.504,7.504V52.833z"/>
+<circle fill="#F4F4F4" stroke="#383380" stroke-miterlimit="10" cx="27.035" cy="44.061" r="10.159"/>
+<g>
+	<path fill="#F4F4F4" stroke="#3D3588" stroke-miterlimit="10" d="M31.991,41.379c0.271,0.135,0.271,0.355,0,0.49l-4.636,2.318
+		c-0.271,0.135-0.709,0.135-0.98,0l-4.636-2.318c-0.271-0.135-0.271-0.355,0-0.49l4.636-2.318c0.271-0.135,0.709-0.135,0.98,0
+		L31.991,41.379z"/>
+	<path fill="#3D3588" d="M32.071,47.428c-0.003,0.009-0.025,0.043-0.101,0.081l-4.636,2.318c-0.209,0.104-0.607,0.104-0.816,0
+		l-4.636-2.318c-0.078-0.039-0.1-0.075-0.102-0.08l0.001-0.001l-0.367,0v0c0,0.096,0.039,0.276,0.304,0.409l4.636,2.318
+		c0.156,0.078,0.359,0.121,0.572,0.121s0.416-0.043,0.572-0.121l4.636-2.318c0.265-0.132,0.304-0.313,0.304-0.409v0H32.071z"/>
+	<line fill="none" stroke="#3D3588" stroke-miterlimit="10" x1="21.536" y1="47.551" x2="21.536" y2="41.746"/>
+	<line fill="none" stroke="#3D3588" stroke-miterlimit="10" x1="32.194" y1="47.435" x2="32.194" y2="41.63"/>
+	<line fill="none" stroke="#3D3588" stroke-miterlimit="10" x1="26.865" y1="44.288" x2="26.865" y2="50.276"/>
+</g>
+<rect x="17.969" y="23.138" fill="#E2E1E1" width="11.681" height="3.429"/>
+<rect x="33.785" y="23.138" fill="#E2E1E1" width="11.681" height="3.429"/>
+<rect x="49.785" y="23.138" fill="#E2E1E1" width="11.681" height="3.429"/>
+<rect x="39.842" y="32.105" fill="#E2E1E1" width="21.392" height="3.429"/>
+<rect x="39.842" y="39.119" fill="#E2E1E1" width="21.392" height="3.429"/>
+<rect x="40.02" y="46.358" fill="#E2E1E1" width="21.392" height="3.429"/>
+<rect x="39.88" y="52.973" fill="#E2E1E1" width="21.392" height="3.429"/>
+</svg>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+        <meta name="keywords" content="{{range .Tags}}{{.}},{{end}}">
+        <meta name="description" content="{{.Title}}">
+        <link rel="stylesheet" href="{{.Site.Root}}/bundle/index.css">
+        <title>{{.Title}}</title>
+        {{template "head" .}}
+    </head>
+    <body id="howto">
+        {{template "header" .}}
+        <article class="main">
+          <section class="container white topbg">
+            <div class="section main">
+              <header class="title left">
+                <a href="/howto"><i class="fa fa-chevron-left"></i>How To</a>
+                <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              </header>
+              <article class="main-content article">
+                <h1 class="title">{{.Title}}</h1>
+                <section class="info">
+                    {{if .Author.Avatar}}<span class="avatar" style="background-image: url({{.Author.Avatar}});"></span>{{end}}
+                    {{if .Author.Name}}<span class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</span>{{end}}
+                    <span class="date" data-time="{{.Date}}">
+                        <span class="from"></span>
+                        {{if .Update}}<span class="date" data-time="{{.Update}}">(<span class="from"></span> {{i18n "updated"}})</span>{{end}}
+                    </span>
+                    <span class="tags">{{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}</span>
+                </section>
+                <article class="content">{{.Content}}</article>
+                <section class="author">
+                    {{if .Author.Avatar}}<div class="avatar" style="background-image: url({{.Author.Avatar}});"></div>{{end}}
+                    <a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>
+                    <div class="intro">{{.Author.Intro}}</div>
+                </section>
+                <section class="recommend">
+                    {{if .Prev}}
+                    <section class="nav prev{{if .Next}} more{{end}}">
+                        <div class="head">{{i18n "prev_reading"}}</div>
+                        <a class="link" href="{{.Site.Root}}/{{.Prev.Link}}">{{.Prev.Title}}</a>
+                    </section>
+                    {{end}}
+                    {{if .Next}}
+                    <section class="nav next{{if .Prev}} more{{end}}">
+                        <div class="head">{{i18n "next_reading"}}</div>
+                        <a class="link" href="{{.Site.Root}}/{{.Next.Link}}">{{.Next.Title}}</a>
+                    </section>
+                    {{end}}
+                </section>
+                {{template "comment" .}}
+              </article>
+            </div>
+          </section>
+        </article>
+        {{template "footer" .}}
+        <script src="{{.Site.Root}}/bundle/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "name": "hyper-website",
+  "version": "1.0.0",
+  "description": "hyper website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors; cd howto; ../ink_linux publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/getdvm/hyper-website.git"
+  },
+  "author": "imeoer",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/getdvm/hyper-website#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "clean-webpack-plugin": "^0.1.9",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.3",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "handlebars": "^4.0.5",
+    "handlebars-loader": "^1.3.0",
+    "html-webpack-plugin": "^2.21.0",
+    "json-loader": "^0.5.4",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0",
+    "font-awesome": "^4.6.3"
+  },
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "lunr": "^0.7.1",
+    "particles.js": "^2.0.0"
+  }
+}
