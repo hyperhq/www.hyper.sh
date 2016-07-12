@@ -6,6 +6,7 @@
     border-radius: 10px;
     font-size: 14px;
     text-align: center;
+    overflow: auto;
     table {
       border-collapse:collapse;
       width:100%;

@@ -4,8 +4,9 @@
   align-items: center;
   justify-content: center;
   .content {
-    width: 66.66em;
-    padding: 80px 0;
+    max-width: 66.66em;
+    width: 100%;
+    padding: 80px 10px;
     text-align: center;
     .form {
       display: flex;
