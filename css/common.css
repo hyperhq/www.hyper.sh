@@ -83,9 +83,16 @@ body > .main .container {
       text-transform: uppercase;
       margin-bottom: 100px;
       position: relative;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+      .sub {
+        float: right;
+        font-size: 24px;
+        margin-top: 8px;
+        color: #aaa;
+        font-family: "Source Sans Pro";
+      }
       a {
-        display: flex;
-        align-items: center;
         .fa {
           background-color: white;
           border: 2px solid $purple;
