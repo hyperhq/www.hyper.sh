@@ -27,13 +27,13 @@
                   <header class="header site">
                       {{if .TagName}}
                           <h1 class="tag">{{.TagName}}</h1>
-                          <h2 class="tag-sub">{{.TagCount}} {{i18n "articles"}}</h2>
+                          <h2 class="tag-sub">Total {{.TagCount}} {{i18n "articles"}}</h2>
                       {{else}}
                       {{end}}
                   </header>
-                  <div class="info">
-                    <span class="count">{{len .Articles}} HowTos</span>
-                  </div>
+                  {{if .TagName}}{{else}}
+                      <div class="info">Total <span class="count">{{len .Articles}}</span> Articles</div>
+                  {{end}}
                   <ul class="article-list">
                       {{range .Articles}}
                       <li class="article">

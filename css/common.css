@@ -90,7 +90,7 @@ body > .main .container {
         font-size: 24px;
         margin-top: 8px;
         color: #aaa;
-        font-family: "Source Sans Pro";
+        font-family: 'Fjalla One';
       }
       a {
         .fa {
@@ -107,6 +107,7 @@ body > .main .container {
           color: $purple;
           margin-right: 20px;
           margin-bottom: 5px;
+          float: left;
         }
       }
       .subtitle {

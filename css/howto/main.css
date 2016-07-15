@@ -1,6 +1,10 @@
 #howto {
   .container > .main {
       max-width: 1024px;
+      .title {
+        margin-bottom: 15px;
+        border-bottom: 0;
+      }
       .search-wrap {
         position: relative;
         .search {
@@ -55,7 +59,15 @@
         }
     }
     &.page {
-        padding-bottom: 70px;
+        padding-bottom: 30px;
+        > .info {
+          font-size: 18px;
+          color: #aaa;
+          font-family: 'Fjalla One';
+          background-color: white;
+          position: relative;
+          z-index: 1;
+        }
         .header {
             text-align: center;
             > .title {
@@ -77,6 +89,7 @@
                 margin-top: 10px;
                 font-size: 16px;
                 color: #bbb;
+                font-family: 'Fjalla One';
             }
         }
         .search-title {

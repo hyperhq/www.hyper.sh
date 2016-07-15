@@ -133,6 +133,7 @@ const initArticlesSearch = async () => {
     `
   }
   const oriHtml = $('#howto .article-list').html()
+  const count = $('#howto .info .count').text()
   $('#search').on('input', debounce(function() {
     const keyword = $(this).val().trim()
     const results = db.search(keyword)
@@ -145,13 +146,16 @@ const initArticlesSearch = async () => {
       })
       $('#howto .page-nav').hide()
       $('#howto .article-list').html(retHtml)
+      $('#howto .info .count').text(results.length)
     } else {
       if (keyword) {
         $('#howto .page-nav').hide()
+        $('#howto > .info .count').text('0')
         $('#howto .article-list').html(`<div class="empty">No Results for "<span>${keyword}</span>"</div>`)
       } else {
         $('#howto .page-nav').show()
         $('#howto .article-list').html(oriHtml)
+        $('#howto .info .count').text(count)
       }
     }
   }, 500))
