@@ -80,19 +80,20 @@ body > .main .container {
       text-align: left;
       font-family: 'Fjalla One';
       font-size: 36px;
-      text-transform: uppercase;
       margin-bottom: 100px;
       position: relative;
       padding-bottom: 15px;
       &.border {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #aaa;
       }
       .sub {
         float: right;
         font-size: 24px;
         margin-top: 8px;
-        color: #aaa;
         font-family: 'Fjalla One';
+        .quota {
+          font-size: 28px;
+        }
       }
       a {
         .fa {
