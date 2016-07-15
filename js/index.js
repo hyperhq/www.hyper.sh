@@ -150,7 +150,7 @@ const initArticlesSearch = async () => {
     } else {
       if (keyword) {
         $('#howto .page-nav').hide()
-        $('#howto > .info .count').text('0')
+        $('#howto .info .count').text('0')
         $('#howto .article-list').html(`<div class="empty">No Results for "<span>${keyword}</span>"</div>`)
       } else {
         $('#howto .page-nav').show()

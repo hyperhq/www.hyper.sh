@@ -83,8 +83,10 @@ body > .main .container {
       text-transform: uppercase;
       margin-bottom: 100px;
       position: relative;
-      border-bottom: 1px solid #eee;
       padding-bottom: 15px;
+      &.border {
+        border-bottom: 1px solid #eee;
+      }
       .sub {
         float: right;
         font-size: 24px;

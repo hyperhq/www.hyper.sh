@@ -15,7 +15,7 @@
         <article class="main">
           <section class="container white topbg">
             <div class="section main">
-              <header class="title left">
+              <header class="title border left">
                 <a href="/howto">How To</a>
                 <span class="sub">NO OPS, NO CRY!</span>
                 <div class="search-wrap">
@@ -44,7 +44,7 @@
                           {{if .Preview}}<section class="preview content">{{.Preview}}...</section>{{end}}
                           <section class="info">
                               {{if .Author.Avatar}}<span class="avatar" style="background-image: url({{.Author.Avatar}});"></span>{{end}}
-                              {{if .Author.Name}}<span class="name">By {{.Author.Name}}</span>{{end}}
+                              {{if .Author.Name}}<span class="name">{{.Author.Name}}</span>{{end}}
                               <span class="tags">
                               {{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}
                               </span>

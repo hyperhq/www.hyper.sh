@@ -39,10 +39,9 @@
         margin-top: 5px;
         text-align: center;
         border: 2px solid white;
-        padding: 6px 10px;
-        border-radius: 3px;
-        font-size: 12px;
-        font-family: 'Moon-Bold';
+        padding: 5px 12px;
+        border-radius: 30px;
+        font-size: 14px;
       }
     }
     .right {
