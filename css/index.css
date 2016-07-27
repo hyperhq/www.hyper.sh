@@ -5,12 +5,15 @@
 @import "header";
 @import "footer";
 
+@import "unslider";
+
 @import "index/main";
 @import "index/cloud";
 @import "index/cases";
 @import "index/prices";
 @import "index/intro";
 @import "index/start";
+@import "index/news";
 
 @import "features/main.css";
 @import "howto/main.css";
@@ -25,4 +28,3 @@
 @import "responsive/index/prices.css";
 @import "responsive/index/intro.css";
 @import "responsive/index/cases.css";
-

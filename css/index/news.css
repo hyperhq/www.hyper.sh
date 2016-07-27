@@ -1,0 +1,95 @@
+#index .container > .news {
+  .content {
+    position: relative;
+    .latest {
+      display: flex;
+      .item {
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0,0,0,.04);
+        border: 1px solid rgba(0,0,0,.09);
+        padding: 20px;
+        border-radius: 10px;
+        flex-grow: 1;
+        margin-right: 30px;
+        font-size: 16px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .desc {
+          margin-top: 20px;
+        }
+        .link {
+          @mixin purple-btn;
+          font-size: 14px;
+          float: right;
+          margin-top: 20px;
+        }
+      }
+    }
+    .unslider {
+      /*background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      border: 1px solid rgba(0,0,0,.09);
+      padding: 40px 20px;*/
+      border-radius: 10px;
+      position: relative;
+      margin-bottom: 100px;
+      .unslider-wrap li {
+        text-align: center;
+        .word {
+          font-family: "Fjalla One";
+          font-size: 28px;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        .name {
+          color: #aaa;
+          font-size: 24px;
+          margin-top: 50px;
+        }
+        .intro {
+          color: #aaa;
+          margin-top: 5px;
+          font-size: 18px;
+          font-style: italic;
+        }
+      }
+      .unslider-arrow {
+        top: 50%;
+        margin-top: -25px;
+        border: 1px solid #ccc;
+        background-color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        color: $purpleLight;
+        background-color: white;
+        border: 2px solid $purpleLight;
+        font-family: "Moon-Bold";
+        font-size: 12px;
+        font-style: italic;
+        &:hover {
+          background-color: $purple;
+          border: 2px solid $purple;
+          color: white;
+        }
+      }
+      .unslider-nav {
+        margin-top: 30px;
+        li {
+          border: 1px solid #aaa;
+          &.unslider-active {
+            border: 1px solid $purple;
+            background-color: $purpleLight;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 require('../css/index.css')
 require('font-awesome/css/font-awesome.css')
 const particlesJS = require('exports?particlesJS!particles.js')
+require('./unslider')
 import lunr from 'lunr'
 import price from './price'
 
@@ -190,6 +191,10 @@ const bindEvents = () => {
   $('#header .nav-toggle').click(evt => $('#header nav').toggleClass('show'))
 }
 
+const initSlider = () => {
+  $('.echo-slider').unslider()
+}
+
 $(() => {
   bindEvents()
   initBackground()
@@ -199,6 +204,7 @@ $(() => {
   initArticlesSearch()
   setPrice('M')
   initSignup()
+  initSlider()
   // initCloudAnimate()
   // initTyping()
   // createAssciimaPlayer(1)
