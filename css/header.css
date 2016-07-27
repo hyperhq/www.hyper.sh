@@ -23,28 +23,32 @@
     @media (--small-viewport) {
       padding: 15px;
     }
-    .logo {
+    .logo-wrap {
       display: flex;
       align-items: center;
-      @media (--small-viewport) {
-        img {
-          height: 40px;
+      .logo {
+        @media (--small-viewport) {
+          img {
+            height: 40px;
+          }
         }
-      }
-      img {
-        height: 50px;
+        img {
+          height: 50px;
+        }
       }
       .desc {
         margin-left: 20px;
-        margin-top: 5px;
         text-align: center;
         border: 2px solid white;
         padding: 4px 12px;
         border-radius: 0px;
         font-size: 14px;
-        color: $purple;
+        color: $mainColorLight;
         background-color: white;
         position: relative;
+        @media (--small-viewport) {
+          display: none;
+        }
         &::after {
           border-color: transparent #fff;
           content: '';
