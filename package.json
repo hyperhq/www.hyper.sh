@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
-    "build": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors; cd howto; ../ink_linux publish"
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors && cd howto && ../ink_linux publish && cd .. ; rm -rf dist; mv ./dist_tmp ./dist"
   },
   "repository": {
     "type": "git",

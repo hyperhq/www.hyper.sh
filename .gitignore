@@ -3,3 +3,4 @@ node_modules
 npm-debug.log
 content.md
 dist
+dist_tmp

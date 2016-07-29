@@ -21,5 +21,5 @@ build:
         - "source/images"
     # Excuted command when use 'ink publish'
     publish: |
-        mkdir -p ../../dist/howto
-        cp -R ./ ../../dist/howto/.
+        mkdir -p ../../dist_tmp/howto
+        cp -R ./ ../../dist_tmp/howto/.

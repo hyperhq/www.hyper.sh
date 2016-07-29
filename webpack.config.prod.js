@@ -17,7 +17,7 @@ module.exports = Object.assign(webpackBaseConfig, {
     app: ['babel-polyfill', './index']
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist_tmp'),
     filename: 'app.js',
     publicPath: '/'
   },
@@ -38,7 +38,7 @@ module.exports = Object.assign(webpackBaseConfig, {
         to: './assets'
       }
     ]),
-    new Clean(['dist'])
+    new Clean(['dist_tmp'])
   ].concat(htmls),
   module: {
     loaders: loaders.concat([{
