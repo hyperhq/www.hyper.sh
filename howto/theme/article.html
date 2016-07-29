@@ -31,11 +31,6 @@
                     <span class="tags">{{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}</span>
                 </section>
                 <article class="content">{{.Content}}</article>
-                <section class="author">
-                    {{if .Author.Avatar}}<div class="avatar" style="background-image: url({{.Author.Avatar}});"></div>{{end}}
-                    <a class="name" href="{{.Site.Root}}/about.{{.Author.Id}}.html">{{.Author.Name}}</a>
-                    <div class="intro">{{.Author.Intro}}</div>
-                </section>
                 <section class="recommend">
                     {{if .Prev}}
                     <section class="nav prev{{if .Next}} more{{end}}">

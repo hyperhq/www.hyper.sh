@@ -279,10 +279,10 @@
         .recommend {
             margin-top: 50px;
             overflow: auto;
+            font-size: 16px;
             .nav {
                 width: 100%;
                 .head {
-                    font-size: 12px;
                     font-style: italic;
                     margin-bottom: 10px;
                     color: #c4c4c4;
