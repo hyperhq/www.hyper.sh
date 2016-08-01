@@ -25,6 +25,10 @@ $menuHeight: 180px;
           height: $menuHeight;
           background: $mainColor;
 
+          @media (--small-viewport) {
+            top: 73px;
+          }
+
           #index & {
             background: none;
           }
