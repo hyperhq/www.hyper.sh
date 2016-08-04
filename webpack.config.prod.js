@@ -36,6 +36,14 @@ module.exports = Object.assign(webpackBaseConfig, {
       {
         from: 'assets/',
         to: './assets'
+      },
+      {
+        from: 'robot.txt',
+        to: './'
+      },
+      {
+        from: 'sitemap.xml',
+        to: './'
       }
     ]),
     new Clean(['dist_tmp'])
