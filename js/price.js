@@ -1,5 +1,5 @@
 export default {
-  '3XS': {
+  'S1': {
     cpu: '1 Core',
     mem: '64 MB',
     disk: '10 GB',
@@ -7,7 +7,7 @@ export default {
     month: '$1.03',
     second: '$0.0000004'
   },
-  '2XS': {
+  'S2': {
     cpu: '1 Core',
     mem: '128 MB',
     disk: '10 GB',
@@ -15,7 +15,7 @@ export default {
     month: '$1.55',
     second: '$0.0000006'
   },
-  'XS': {
+  'S3': {
     cpu: '1 Core',
     mem: '256 MB',
     disk: '10 GB',
@@ -23,7 +23,7 @@ export default {
     month: '$2.59',
     second: '$0.000001'
   },
-  'S': {
+  'S4': {
     cpu: '1 Core',
     mem: '512 MB',
     disk: '10 GB',
@@ -31,7 +31,7 @@ export default {
     month: '$5.18',
     second: '$0.000002'
   },
-  'M': {
+  'M1': {
     cpu: '1 Core',
     mem: '1 GB',
     disk: '10 GB',
@@ -39,7 +39,7 @@ export default {
     month: '$10.36',
     second: '$0.000004'
   },
-  'XM': {
+  'M2': {
     cpu: '2 Core',
     mem: '2 GB',
     disk: '10 GB',
@@ -47,7 +47,7 @@ export default {
     month: '$20.73',
     second: '$0.000008'
   },
-  '2XM': {
+  'M3': {
     cpu: '2 Core',
     mem: '4 GB',
     disk: '10 GB',
@@ -55,7 +55,7 @@ export default {
     month: '$38.88',
     second: '$0.000015'
   },
-  'L': {
+  'L1': {
     cpu: '4 Core',
     mem: '4 GB',
     disk: '10 GB',
@@ -63,7 +63,7 @@ export default {
     month: '$77.76',
     second: '$0.00003'
   },
-  'XL': {
+  'L2': {
     cpu: '4 Core',
     mem: '8 GB',
     disk: '10 GB',
@@ -71,7 +71,7 @@ export default {
     month: '$155.52',
     second: '$0.00006'
   },
-  '2XL': {
+  'L3': {
     cpu: '8 Core',
     mem: '16 GB',
     disk: '10 GB',

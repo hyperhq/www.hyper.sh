@@ -202,7 +202,7 @@ $(() => {
   initTab('features')
   initTab('howto')
   initArticlesSearch()
-  setPrice('M')
+  setPrice('M1')
   initSignup()
   initSlider()
   // initCloudAnimate()
