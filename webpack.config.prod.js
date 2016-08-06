@@ -38,7 +38,7 @@ module.exports = Object.assign(webpackBaseConfig, {
         to: './assets'
       },
       {
-        from: 'robot.txt',
+        from: 'robots.txt',
         to: './'
       },
       {

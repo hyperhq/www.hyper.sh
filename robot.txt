@@ -1,4 +1,0 @@
-Sitemap: https://www.hyper.sh/sitemap.xml
-User-Agent: *
-Disallow:
-Allow: /
