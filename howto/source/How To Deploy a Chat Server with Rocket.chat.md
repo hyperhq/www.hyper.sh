@@ -53,7 +53,7 @@ d578eb3dc4ee3c2fb8127b2dee1900035f1e2a954eace2182b0471d0254a5802
 [root@localhost]$ hyper run -d --name app --link db:db rocket.chat
 fa18660c1a9ef63da929b62f66417b5d82b3c5c877556417c11f31de4996ba01
 ```
-	
+
 ### 4. Assign floating IP to Rocket.chat container
 
 ``` bash
