@@ -59,9 +59,8 @@
               font-family: "Moon-Bold";
               font-size: 32px;
               position: absolute;
-              margin-left: 145px;
-              margin-top: 15px;
-              top: 0;
+              top: 15px;
+              left: 145px;
             }
             .circle {
               display: flex;
