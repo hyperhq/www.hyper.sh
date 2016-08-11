@@ -57,12 +57,12 @@ b6cae93b056d        oddrationale/docker-shadowsocks   "/usr/local/bin/ssser"   2
 
 ```
 
-### Step 3.  Associate Floating IP
+### Step 3. Attach Floating IP
 
 ``` bash
 $ hyper fip allocate 1
 162.221.195.201
-$ hyper fip associate 162.221.195.201 shadowsocks
+$ hyper fip attach 162.221.195.201 shadowsocks
 $
 ```
 

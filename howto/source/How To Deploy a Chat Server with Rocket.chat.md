@@ -59,7 +59,7 @@ fa18660c1a9ef63da929b62f66417b5d82b3c5c877556417c11f31de4996ba01
 ``` bash
 [root@localhost]$ hyper fip allocate 1
 23.236.114.34
-[root@localhost]$ hyper fip associate 23.236.114.34 app
+[root@localhost]$ hyper fip attach 23.236.114.34 app
 ```
 
 ### Done

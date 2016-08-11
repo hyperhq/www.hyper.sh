@@ -18,7 +18,7 @@ $ hyper run -d --name web-1 hyperhq/webapp:host python app.py
 $ hyper run -d --name web-2 hyperhq/webapp:host python app.py
 $ hyper run -d --name lb --link web-1 --link web-2 dockercloud/haproxy
 $ FIP=$(hyper fip allocate 1)
-$ hyper fip associate $FIP lb
+$ hyper fip attach $FIP lb
 $ curl $FIP:80
 > Hello my host name is: de380811142a
 $ curl $FIP:80

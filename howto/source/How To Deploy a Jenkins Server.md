@@ -52,7 +52,7 @@ Finally, allocate a `fip` and bind it with our Jenkins container.
 $ hyper fip allocate 1
 162.221.195.48
 
-$ hyper fip associate 162.221.195.48 myjenkins
+$ hyper fip attach 162.221.195.48 myjenkins
 ```
 Great! Now we should be able to  visit the URL `http://162.221.195.48:8080` of the Jenkins server to see if it works.
 
