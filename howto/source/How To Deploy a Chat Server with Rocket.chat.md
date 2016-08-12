@@ -1,4 +1,4 @@
-title: "How To Deploy a Chat Server with Rocket.chat"
+title: "How To Deploy a Chat Server with Rocket.chatx"
 date: 2016-06-28 11:00:00 +0800
 author: hyper
 preview: Rocket.Chat is a web chat application for communities and companies wanting to privately host their own chat service or for developers looking forward to build and evolve their own chat platforms. In this guide, we will demonstrate how to deploy a Rocket.chat container connected with a MongoDB container.

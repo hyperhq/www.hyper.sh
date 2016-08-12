@@ -120,6 +120,9 @@
       @media (--laptop-viewport) {
         zoom: 75%;
       }
+      @media (--small-viewport) {
+        zoom: 30%;
+      }
     }
     .shape1 {
       background: url("/assets/shape1.svg") no-repeat;
