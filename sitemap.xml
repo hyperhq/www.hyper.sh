@@ -5,23 +5,23 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
   http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>http://www.hyper.sh/</loc>
+    <loc>https://www.hyper.sh/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.hyper.sh/features.html</loc>
+    <loc>https://www.hyper.sh/features.html</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.hyper.sh/howto</loc>
+    <loc>https://www.hyper.sh/howto</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.hyper.sh/pricing.html</loc>
+    <loc>https://www.hyper.sh/pricing.html</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.hyper.sh/company.html</loc>
+    <loc>https://www.hyper.sh/company.html</loc>
     <changefreq>daily</changefreq>
   </url>
 </urlset>

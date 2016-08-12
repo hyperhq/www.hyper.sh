@@ -204,7 +204,7 @@ $(() => {
   initArticlesSearch()
   setPrice('S4')
   initSignup()
-  initSlider()
+  // initSlider()
   // initCloudAnimate()
   // initTyping()
   // createAssciimaPlayer(1)
