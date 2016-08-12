@@ -456,6 +456,10 @@
             // letter-spacing: 1px;
             text-align: left;
         }
+        &.preview p {
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
         a {
             // color: #1980e6;
             // text-decoration: none;
