@@ -2,11 +2,11 @@ title: "How To Deploy a Multi-Container Cassandra Cluster in 4 steps"
 date: 2016-05-26 11:00:00 +0800
 author: hyper
 preview: |
-In this tutorial, we will show how in 4 steps you can bring up:
+  In this tutorial, we will show how in 4 steps you can bring up:
 
-- A five-node  [Cassandra](http://cassandra.apache.org/) cluster (DataStax OpsCenter 5.0.0)
-- All the necessary wiring
-- Each node runs in its own container with the Cassandra process + DataStax Agent while OpsCenter runs in its own container separate from the cluster.
+  - A five-node  [Cassandra](http://cassandra.apache.org/) cluster (DataStax OpsCenter 5.0.0)
+  - All the necessary wiring
+  - Each node runs in its own container with the Cassandra process + DataStax Agent while OpsCenter runs in its own container separate from the cluster.
 
 ---
 
