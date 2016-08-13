@@ -44,7 +44,7 @@ Status: Image is up to date for oddrationale/docker-shadowsocks:latest
 ### Step 2. Launch the container
 
 ``` bash
-$ hyper run -d --name shadowsocks oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1989 -k MyPassWord -m aes-256-cfb
+$ hyper run -d --name shadowsocks -p 1989 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1989 -k MyPassWord -m aes-256-cfb
 b6cae93b056ddb123dcb754e785c557bee9b080e4a3a4731f3e1cd97798fe058
 ```
 
