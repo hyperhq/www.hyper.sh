@@ -11,7 +11,7 @@ Load balancing is the most common use cases of container. This guides shows how 
 ![](https://trello-attachments.s3.amazonaws.com/57722f6db6fad32f2b9329f8/329x158/9019c2e1961ee81ca6ef778b2f2aba4b/upload_6_28_2016_at_4_27_51_PM.png)
 
 #### How do I do it?
-Simple enough; deploy two web containers, and a HAProxy containers pointing to the two web container, associate a floating IP on the proxy container and done!
+Simple enough; deploy two web containers, and a HAProxy containers pointing to the two web container, attach a floating IP on the proxy container and done!
 
 ``` bash
 $ hyper run -d --name web-1 hyperhq/webapp:host python app.py
