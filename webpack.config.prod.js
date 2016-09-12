@@ -44,6 +44,10 @@ module.exports = Object.assign(webpackBaseConfig, {
       {
         from: 'sitemap.xml',
         to: './'
+      },
+      {
+        from: 'googlea2b9850d0473629c.html',
+        to: './'
       }
     ]),
     new Clean(['dist_tmp'])

@@ -5,7 +5,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const config = require('./webpack.config.dev')
 
 const app = new express()
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8001
 
 const indexFullpath = __dirname + '/index.html'
 
