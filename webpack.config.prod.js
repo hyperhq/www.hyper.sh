@@ -48,6 +48,10 @@ module.exports = Object.assign(webpackBaseConfig, {
       {
         from: 'googlea2b9850d0473629c.html',
         to: './'
+      },
+      {
+        from: 'BingSiteAuth.xml',
+        to: './'
       }
     ]),
     new Clean(['dist_tmp'])
