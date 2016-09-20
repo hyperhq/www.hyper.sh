@@ -86,3 +86,15 @@ h1, h2, h3 {
   font-weight: normal;
   font-size: 1em;
 }
+
+.typed-cursor {
+  opacity: 1;
+  animation: blink 1s infinite;
+  color: white;
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}

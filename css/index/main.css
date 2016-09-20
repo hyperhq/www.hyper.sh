@@ -52,7 +52,11 @@
         font-size: 24px;
         font-family: 'Raleway';
         font-weight: 400;
-        opacity: 0.5;
+        color: #aaa;
+        #typed {
+          color: white;
+          font-weight: bold;
+        }
       }
       .signup {
         @mixin purple-btn;

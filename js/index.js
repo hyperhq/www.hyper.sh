@@ -2,6 +2,7 @@ require('../css/index.css')
 require('font-awesome/css/font-awesome.css')
 const particlesJS = require('exports?particlesJS!particles.js')
 require('./unslider')
+require('./typed')
 import lunr from 'lunr'
 import price from './price'
 
@@ -195,6 +196,16 @@ const initSlider = () => {
   $('.echo-slider').unslider()
 }
 
+const initTyped = () => {
+  if (!$('#typed').length) return
+  $('#typed').typed({
+    strings: ['container', 'microservices', 'serverless', '(CI/CD)', 'Event-driven'],
+    typeSpeed: 60,
+    backDelay: 2000,
+    loop: true
+  })
+}
+
 $(() => {
   bindEvents()
   initBackground()
@@ -204,6 +215,7 @@ $(() => {
   initArticlesSearch()
   setPrice('S4')
   initSignup()
+  initTyped()
   // initSlider()
   // initCloudAnimate()
   // initTyping()
