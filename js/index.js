@@ -199,7 +199,7 @@ const initSlider = () => {
 const initTyped = () => {
   if (!$('#typed').length) return
   $('#typed').typed({
-    strings: ['container', 'microservices', 'serverless', '(CI/CD)', 'Event-driven'],
+    strings: ['container', 'microservices', 'serverless', 'CI/CD', 'Event-driven'],
     typeSpeed: 60,
     backDelay: 2000,
     loop: true
