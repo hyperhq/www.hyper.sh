@@ -208,6 +208,16 @@ const initTyped = async () => {
   const typed = (i) => {
     const dom = $($('#code .line')[i])
     const text = dom.attr('text')
+    if (i == 1) {
+      $('#entry').addClass('zoom')
+      $('#code').addClass('zoom')
+    }
+    if (i == 8) {
+      setTimeout(() => {
+        $('#entry').removeClass('zoom')
+        $('#code').removeClass('zoom')
+      }, 1000)
+    }
     i++
     setTimeout(() => {
       if (dom.hasClass('result')) {
