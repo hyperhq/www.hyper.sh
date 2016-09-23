@@ -141,12 +141,34 @@
         }
       }
     }
-    .cloud {
-      margin-top: -100px;
-      width: 100%;
-      max-width: 1024px;
-      @media (--laptop-viewport) {
-        max-width: 850px;
+    .cloud-wrap {
+      #code {
+        text-align: left;
+        font-size: 16px;
+        position: absolute;
+        margin-left: 90px;
+        margin-top: 66px;
+        .line {
+          display: inline-block;
+        }
+        .result {
+          color: #aaa;
+          display: inline-block;
+          margin: 3px 0;
+          margin-left: 19px;
+          /*font-weight: bold;*/
+          font-style: italic;
+        }
+      }
+      .cloud {
+        margin-top: -110px;
+        width: 100%;
+        margin-left: -15px;
+        /*max-width: 1100px;*/
+        @media (--laptop-viewport) {
+          margin-left: 0;
+          max-width: 1000px;
+        }
       }
     }
   }

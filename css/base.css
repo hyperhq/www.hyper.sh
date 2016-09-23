@@ -74,6 +74,10 @@ code, pre {
   font-size: 14px;
 }
 
+.code {
+  font-family: monaco, consolas, "Source Code Pro", hack, monospace;
+}
+
 input {
   &:focus {
     outline: 0;

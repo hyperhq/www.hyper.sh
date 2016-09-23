@@ -196,7 +196,7 @@ const initSlider = () => {
   $('.echo-slider').unslider()
 }
 
-const initTyped = () => {
+const initTyped = async () => {
   if (!$('#typed').length) return
   $('#typed').typed({
     strings: ['container', 'microservices', 'serverless', 'CI/CD', 'Event-driven'],
@@ -204,6 +204,34 @@ const initTyped = () => {
     backDelay: 2000,
     loop: true
   })
+
+  const typed = (i) => {
+    const dom = $($('#code .line')[i])
+    const text = dom.attr('text')
+    i++
+    setTimeout(() => {
+      if (dom.hasClass('result')) {
+        dom.text(text)
+        typed(i)
+      } else {
+        dom.typed({
+          strings: [dom.attr('text')],
+          typeSpeed: 30,
+          callback: () => {
+            if (i < 10) {
+              $('.typed-cursor').remove()
+              typed(i)
+            }
+          }
+        })
+      }
+    }, 1000)
+  }
+
+  typed(0)
+  // await delay(() => $('#code .ret1').text('MySQL is running...'), 5000)
+  // await delay(() => $('#code .ret2').text('WordPress is running...'), 5000)
+  // await delay(() => $('#code .ret3').text('22.33.44.55'), 5000)
 }
 
 $(() => {
