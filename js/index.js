@@ -197,13 +197,13 @@ const initSlider = () => {
 }
 
 const initTyped = async () => {
-  if (!$('#typed').length) return
-  $('#typed').typed({
-    strings: ['container', 'microservices', 'serverless', 'CI/CD', 'Event-driven'],
-    typeSpeed: 60,
-    backDelay: 2000,
-    loop: true
-  })
+  // if (!$('#typed').length) return
+  // $('#typed').typed({
+  //   strings: ['container', 'microservices', 'serverless', 'CI/CD', 'Event-driven'],
+  //   typeSpeed: 60,
+  //   backDelay: 2000,
+  //   loop: true
+  // })
 
   const typed = (i) => {
     const dom = $($('#code .line')[i])
