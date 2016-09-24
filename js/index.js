@@ -239,9 +239,6 @@ const initTyped = async () => {
   }
 
   typed(0)
-  // await delay(() => $('#code .ret1').text('MySQL is running...'), 5000)
-  // await delay(() => $('#code .ret2').text('WordPress is running...'), 5000)
-  // await delay(() => $('#code .ret3').text('22.33.44.55'), 5000)
 }
 
 $(() => {
