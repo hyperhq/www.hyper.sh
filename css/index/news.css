@@ -1,127 +1,130 @@
-#index .container > .news {
-  > .title {
-    text-align: center;
-    color: #bbb;
+#index .container {
+  &.news {
+    border: 5px solid $mainColorLight;
+    background-color: $mainColor;
   }
-  .content {
-    position: relative;
-    .latest {
-      display: flex;
-      @media (--small-viewport) {
-        flex-direction: column;
-      }
-      .item {
-        background: #fff;
-        box-shadow: 0 1px 4px rgba(0,0,0,.04);
-        border: 1px solid rgba(0,0,0,.09);
-        padding: 20px;
-        border-radius: 10px;
-        flex-grow: 1;
-        margin-right: 30px;
-        font-size: 16px;
+  > .news {
+    > .title {
+      text-align: center;
+      color: #bbb;
+    }
+    .content {
+      position: relative;
+      .latest {
+        display: flex;
         @media (--small-viewport) {
-          margin: 10px;
-          &:last-child {
+          flex-direction: column;
+        }
+        .item {
+          background: #fff;
+          box-shadow: 0 1px 4px rgba(0,0,0,.04);
+          border: 1px solid rgba(0,0,0,.09);
+          padding: 20px;
+          border-radius: 10px;
+          flex-grow: 1;
+          margin-right: 30px;
+          font-size: 16px;
+          @media (--small-viewport) {
             margin: 10px;
+            &:last-child {
+              margin: 10px;
+            }
+            .bottom {
+              flex-direction: column;
+              .date {
+                margin-bottom: 20px;
+              }
+            }
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          .title {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .desc {
+            margin-top: 20px;
           }
           .bottom {
-            flex-direction: column;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             .date {
-              margin-bottom: 20px;
+              font-style: italic;
+              border-left: 4px solid $purple;
+              padding-left: 12px;
+              font-size: 18px;
+            }
+            .link {
+              @mixin purple-btn;
+              font-size: 14px;
             }
           }
         }
-        &:last-child {
-          margin-right: 0;
-        }
-        .title {
-          font-size: 24px;
-          font-weight: bold;
-        }
-        .desc {
-          margin-top: 20px;
-        }
-        .bottom {
-          margin-top: 20px;
+      }
+      .unslider {
+        border-radius: 10px;
+        position: relative;
+        /*margin-bottom: 100px;*/
+        .unslider-wrap {
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          .date {
-            font-style: italic;
-            border-left: 4px solid $purple;
-            padding-left: 12px;
-            font-size: 18px;
-          }
-          .link {
-            @mixin purple-btn;
-            font-size: 14px;
+          justify-content: center;
+          li {
+            text-align: center;
+            .word {
+              font-family: "Fjalla One";
+              font-size: 32px;
+              max-width: 900px;
+              margin: 0 auto;
+            }
+            .name {
+              color: white;
+              font-size: 24px;
+              font-weight: bold;
+              margin-top: 50px;
+            }
+            .intro {
+              color: #ccc;
+              margin-top: 5px;
+              font-size: 18px;
+              font-style: italic;
+            }
           }
         }
-      }
-    }
-    .unslider {
-      border-radius: 10px;
-      position: relative;
-      margin-bottom: 100px;
-      .unslider-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        li {
+        .unslider-arrow {
+          top: 50%;
+          margin-top: -25px;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          line-height: 60px;
           text-align: center;
-          .word {
-            font-family: "Fjalla One";
-            font-size: 28px;
-            max-width: 900px;
-            margin: 0 auto;
-          }
-          .name {
-            color: #aaa;
-            font-size: 24px;
-            margin-top: 50px;
-          }
-          .intro {
-            color: #aaa;
-            margin-top: 5px;
-            font-size: 18px;
-            font-style: italic;
-          }
-        }
-      }
-      .unslider-arrow {
-        top: 50%;
-        margin-top: -25px;
-        border: 1px solid #ccc;
-        background-color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        color: $purpleLight;
-        background-color: white;
-        border: 2px solid $purpleLight;
-        font-family: "Moon-Bold";
-        font-size: 12px;
-        font-style: italic;
-        @media (--small-viewport) {
-          width: 40px;
-          height: 40px;
-          line-height: 40px;
-        }
-        &:hover {
-          background-color: $purple;
-          border: 2px solid $purple;
           color: white;
+          background-color: $mainColor;
+          border: 3px solid white;
+          font-family: "Moon-Bold";
+          font-size: 14px;
+          font-style: italic;
+          @media (--small-viewport) {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+          }
+          &:hover {
+            opacity: 0.9;
+          }
         }
-      }
-      .unslider-nav {
-        margin-top: 30px;
-        li {
-          border: 1px solid #aaa;
-          &.unslider-active {
-            border: 1px solid $purple;
-            background-color: $purpleLight;
+        .unslider-nav {
+          margin-top: 30px;
+          li {
+            border: 2px solid #aaa;
+            &.unslider-active {
+              border: 2px solid white;
+              background-color: white;
+            }
           }
         }
       }
