@@ -11,8 +11,9 @@
   height: 100%;
   z-index: -1;
   .wrap {
+    padding-top: 110px;
     @media (--laptop-viewport) {
-      transform: scale(0.8);
+      transform: scale(0.75);
     }
     @media (--small-viewport) {
       .entry {
@@ -35,7 +36,6 @@
       }
     }
     .entry {
-      margin-top: 130px;
       margin-right: 240px;
       text-align: right;
       position: relative;
@@ -153,10 +153,6 @@
         margin-top: 133px;
         box-sizing: border-box;
         transition: all .2s ease-in-out;
-        @media (--laptop-viewport) {
-          margin-left: 180px;
-          margin-top: 113px;
-        }
         &.zoom {
           /*transform: scale(1.6);
           padding: 15px;
@@ -177,8 +173,7 @@
         }
       }
       .cloud {
-        margin-top: -400px;
-        width: 100%;
+        margin-top: -250px;
       }
     }
   }
