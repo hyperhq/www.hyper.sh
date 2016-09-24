@@ -40,8 +40,8 @@
     }
     .entry {
       margin-top: 130px;
-      margin-left: 50px;
-      text-align: left;
+      margin-right: 240px;
+      text-align: right;
       position: relative;
       &.zoom {
         opacity: 0.4;
@@ -153,20 +153,21 @@
         text-align: left;
         font-size: 16px;
         position: absolute;
-        margin-left: 72px;
-        margin-top: 66px;
+        margin-left: 175px;
+        margin-top: 136px;
         background-color: #0a2232;
         width: 383px;
         height: 191px;
         padding: 0 10px;
         box-sizing: border-box;
         transition: all .2s ease-in-out;
+        /*display: none;*/
         &.zoom {
-          transform: scale(1.6);
+          /*transform: scale(1.6);
           padding: 15px;
           height: 215px;
           border: 2px solid #0d3a58;
-          margin-top: 45px;
+          margin-top: 120px;*/
         }
         .line {
           display: inline-block;
@@ -181,9 +182,8 @@
         }
       }
       .cloud {
-        margin-top: -110px;
+        margin-top: -400px;
         width: 100%;
-        margin-left: -15px;
       }
     }
   }

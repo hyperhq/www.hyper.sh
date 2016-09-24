@@ -209,12 +209,12 @@ const initTyped = async () => {
     const dom = $($('#code .line')[i])
     const text = dom.attr('text')
     if (i == 1) {
-      $('#entry').addClass('zoom')
+      // $('#entry').addClass('zoom')
       $('#code').addClass('zoom')
     }
     if (i == 8) {
       setTimeout(() => {
-        $('#entry').removeClass('zoom')
+        // $('#entry').removeClass('zoom')
         $('#code').removeClass('zoom')
       }, 1000)
     }
@@ -223,12 +223,19 @@ const initTyped = async () => {
       if (dom.hasClass('result')) {
         dom.text(text)
         typed(i)
+        if (i >= 8) {
+          setTimeout(() => {
+            $('#code .line').html('')
+            typed(0)
+          }, 5000)
+        }
       } else {
         dom.typed({
           strings: [dom.attr('text')],
-          typeSpeed: 30,
+          typeSpeed: 10,
+          startDelay: (i == 1 ? 2000 : 0),
           callback: () => {
-            if (i < 10) {
+            if (i < 8) {
               $('.typed-cursor').remove()
               typed(i)
             }
