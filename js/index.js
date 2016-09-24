@@ -242,7 +242,7 @@ const initTyped = async () => {
 
 $(() => {
   bindEvents()
-  initBackground()
+  // initBackground()
   initPriceSlider()
   initTab('features')
   initTab('howto')
