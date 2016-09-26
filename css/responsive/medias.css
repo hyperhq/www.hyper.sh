@@ -1,5 +1,5 @@
 @custom-media --small-viewport (max-width: 466px);
-@custom-media --medium-viewport (max-width: 856px);
+@custom-media --medium-viewport (max-width: 1115px);
 @custom-media --laptop-viewport (max-width: 1366px);
 
 @custom-media --small-than-ipad-viewport (max-width: 640px);
