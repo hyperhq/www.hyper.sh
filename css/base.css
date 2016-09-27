@@ -67,11 +67,12 @@ ul {
 
 code, pre {
   font-family: consolas, monaco, "Source Code Pro", hack, monospace;
-  background-color: #e5dbff;
-  border: 1px solid #c8b4fd;
-  padding: 1px 4px;
-  border-radius: 4px;
   font-size: 14px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  margin: 0 3px;
+  background-color: #f7f7f7;
+  color: #009a61;
 }
 
 .code {

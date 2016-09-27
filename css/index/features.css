@@ -1,0 +1,74 @@
+#index .container {
+  .intro-wrap {
+    padding: 100px 10px 50px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #424c5c;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1224px;
+    .list {
+      list-style: circle;
+      margin-left: 16px;
+      .item {
+        margin: 10px 0;
+      }
+    }
+    .intro-title {
+      font-size: 72px;
+      font-family: 'Fjalla One';
+      max-width: 800px;
+      font-weight: bold;
+      position: relative;
+      padding-bottom: 40px;
+      &::after {
+        content: "";
+        border-bottom: 15px solid $purpleLight;
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    &.right {
+      flex-flow: row-reverse;
+      .intro-title {
+        &::after {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+    .intro-line {
+      width: 600px;
+      justify-content: space-between;
+    }
+    .intro {
+      margin-bottom: 20px;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      .image {
+        min-width: 100px;
+        margin-right: 40px;
+      }
+      .info {
+        text-align: left;
+        .head {
+          font-family: 'Fjalla One';
+          font-weight: bold;
+          font-size: 28px;
+          min-width: 250px;
+          margin-top: 10px;
+        }
+        .desc {
+          font-size: 18px;
+          font-weight: 300;
+          max-width: 700px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
