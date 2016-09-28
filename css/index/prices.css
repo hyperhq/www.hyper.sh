@@ -1,7 +1,11 @@
 $lineWidth: 66.66em;
 $itemStart: 3.16em;
 
-#index .container > .prices {
+#index .container.prices {
+  .title {
+    @mixin title;
+    position: absolute;
+  }
   .content {
     text-align: center;
     display: flex;
@@ -30,7 +34,7 @@ $itemStart: 3.16em;
           margin-bottom: 10px;
         }
         .icon {
-          width: 55px;
+          width: 65px;
           margin-bottom: 5px;
         }
         .name {

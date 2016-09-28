@@ -41,6 +41,28 @@ $whiteGray: #fcfcfc;
   }
 }
 
+@define-mixin title {
+  font-size: 56px;
+  font-family: 'Fjalla One';
+  max-width: 800px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  &::after {
+    content: "";
+    border-bottom: 15px solid $purpleLight;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &.small {
+    font-size: 42px;
+    &::after {
+      display: none;
+    }
+  }
+}
+
 html, body {
   min-width: 320px;
   font-size: 12px;

@@ -1,4 +1,9 @@
-#index .container > .cases {
+#index .container.cases {
+  background: url(/assets/features_bg1.svg);
+  background-size: contain;
+  h1.title {
+    @mixin title;
+  }
   @media (--laptop-viewport) {
     padding-left: 70px;
     padding-right: 70px;
@@ -24,7 +29,7 @@
       margin-right: 20px;
     }
     .title {
-      font-size: 20px;
+      font-size: 24px;
       font-family: 'Moon-Bold';
       color: $purple;
       span {

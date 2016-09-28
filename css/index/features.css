@@ -1,4 +1,19 @@
-#index .container {
+#index .container.features {
+  background: url(/assets/features_bg1.svg);
+  background-size: contain;
+  overflow: hidden;
+  .bg {
+    position: absolute;
+    left: -150px;
+    bottom: -250px;
+    opacity: 0.1;
+    z-index: -1;
+    width: 800px;
+    &.right {
+      left: auto;
+      right: -150px;
+    }
+  }
   .intro-wrap {
     padding: 100px 10px 50px 10px;
     display: flex;
@@ -16,20 +31,8 @@
       }
     }
     .intro-title {
-      font-size: 72px;
-      font-family: 'Fjalla One';
-      max-width: 800px;
-      font-weight: bold;
+      @mixin title;
       position: relative;
-      padding-bottom: 40px;
-      &::after {
-        content: "";
-        border-bottom: 15px solid $purpleLight;
-        width: 100px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
     }
     &.right {
       flex-flow: row-reverse;
