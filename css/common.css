@@ -10,6 +10,10 @@ body > .main .container {
   background-color: #2d384a;
   padding: 10px;
   box-sizing: border-box;
+  @media (--laptop-viewport) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
   .fa-heart {
     color: #ca0000;
     font-size: 32px;

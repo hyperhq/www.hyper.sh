@@ -13,8 +13,15 @@
       left: auto;
       right: -150px;
     }
+    @media (--laptop-viewport) {
+      width: 650px;
+    }
   }
   .intro-wrap {
+    @media (--laptop-viewport) {
+      transform: scale(0.85);
+      padding: 10px;
+    }
     padding: 100px 10px 50px 10px;
     display: flex;
     align-items: flex-start;

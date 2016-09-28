@@ -4,14 +4,6 @@
   h1.title {
     @mixin title;
   }
-  @media (--laptop-viewport) {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-  @media (--small-viewport) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
   .content {
     .group {
       display: flex;
@@ -30,8 +22,7 @@
     }
     .title {
       font-size: 24px;
-      font-family: 'Moon-Bold';
-      color: $purple;
+      font-family: 'Fjalla One';
       span {
         margin-left: 20px;
       }
