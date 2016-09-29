@@ -11,7 +11,7 @@
     bottom: -250px;
     opacity: 0.1;
     z-index: -1;
-    width: 800px;
+    width: 700px;
     &.right {
       left: auto;
       right: -150px;
