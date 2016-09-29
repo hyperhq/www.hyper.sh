@@ -1,3 +1,3 @@
 #!/bin/sh
 
-npm install && npm run build
+git pull && npm install && npm run build
