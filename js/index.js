@@ -5,6 +5,7 @@ require('./unslider')
 require('./typed')
 import lunr from 'lunr'
 import price from './price'
+import quotas from './quotas.json'
 
 const createAssciimaPlayer = function(num) {
   asciinema_player.core.CreatePlayer(
@@ -193,7 +194,25 @@ const bindEvents = () => {
 }
 
 const initSlider = () => {
-  $('.echo-slider').unslider()
+  const tpl = (data) => {
+    return `
+    <li>
+      <div class="word">${data.content}</div>
+      <div class="name">${data.name}</div>
+      <div class="intro">${data.title}</div>
+    </li>
+    `
+  }
+  let str = ''
+  for (const item of quotas) {
+    str += tpl(item)
+  }
+  $('#echo-slider ul').html(str)
+  $('#echo-slider').unslider({
+    autoplay: true,
+    speed: 300,
+    delay: 5000
+  })
 }
 
 const initTyped = async () => {

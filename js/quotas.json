@@ -1,0 +1,12 @@
+[
+  {
+    "content": "We use Docker on prem and Hyper_ as failover cloud. Since both sides have Docker, everything works 100% out of the box.",
+    "name": "Hareem Haque",
+    "title": "Sigma Global Solutions"
+  },
+  {
+    "content": "Hyper_ looks pretty competitive with Docker Cloud, or better – per-second billing, floating ips, monitoring, logging",
+    "name": "TJ Holowaychuk",
+    "title": "Founder of Apex and Express.sh"
+  }
+]
