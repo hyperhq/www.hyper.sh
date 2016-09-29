@@ -14,6 +14,10 @@ body > .main .container {
     padding-left: 70px;
     padding-right: 70px;
   }
+  @media (--small-viewport) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .fa-heart {
     color: #ca0000;
     font-size: 32px;

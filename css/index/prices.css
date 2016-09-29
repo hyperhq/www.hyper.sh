@@ -36,6 +36,9 @@ $itemStart: 3.16em;
         .icon {
           width: 65px;
           margin-bottom: 5px;
+          @media (--small-viewport) {
+            width: 55px;
+          }
         }
         .name {
           font-size: 18px;

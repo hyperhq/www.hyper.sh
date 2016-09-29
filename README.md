@@ -14,8 +14,8 @@ run `npm run build` , build to dist folder
 
 ## Deploy
 
-`pm2 start website.sh`
+run `./build.sh`, build to dist folder
 
-## Restart
+## Quotas Update
 
-`pm2 restart website`
+modify `js/quotas.json`, confirm it's a valid JSON file

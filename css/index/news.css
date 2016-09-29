@@ -109,9 +109,7 @@
           font-size: 14px;
           font-style: italic;
           @media (--small-viewport) {
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
+            display: none;
           }
           &:hover {
             opacity: 0.9;

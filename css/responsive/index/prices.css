@@ -1,5 +1,5 @@
 @media (--ipad-viewport) {
-  #index .container > .prices {
+  #index .container.prices {
     .content {
       .slider {
         min-width: 50em;
@@ -14,7 +14,7 @@
 
 
 @media (--small-than-ipad-viewport) {
-  #index .container > .prices {
+  #index .container.prices {
     .content {
       .slider {
         min-width: 30em;
@@ -28,7 +28,7 @@
 }
 
 @media (--small-viewport) {
-  #index .container > .prices {
+  #index .container.prices {
     .content {
       .items {
         min-width: 20em;

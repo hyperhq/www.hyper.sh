@@ -2,6 +2,9 @@
   background: url(/assets/features_bg1.svg);
   background-size: contain;
   overflow: hidden;
+  @media (--small-viewport) {
+    background-size: auto;
+  }
   .bg {
     position: absolute;
     left: -150px;
@@ -18,10 +21,6 @@
     }
   }
   .intro-wrap {
-    @media (--laptop-viewport) {
-      transform: scale(0.85);
-      padding: 10px;
-    }
     padding: 100px 10px 50px 10px;
     display: flex;
     align-items: flex-start;
@@ -30,6 +29,14 @@
     width: 100%;
     margin: 0 auto;
     max-width: 1224px;
+    @media (--laptop-viewport) {
+      transform: scale(0.85);
+      padding: 10px;
+    }
+    @media (--small-viewport) {
+      flex-direction: column;
+      padding: 20px 10px 20px 10px;
+    }
     .list {
       list-style: circle;
       margin-left: 16px;
@@ -40,6 +47,13 @@
     .intro-title {
       @mixin title;
       position: relative;
+      @media (--small-viewport) {
+        text-align: center;
+        margin-bottom: 50px;
+        &::after {
+          display: none;
+        }
+      }
     }
     &.right {
       flex-flow: row-reverse;
@@ -49,22 +63,39 @@
           left: auto;
         }
       }
+      @media (--small-viewport) {
+        flex-direction: column;
+      }
     }
     .intro-line {
       width: 600px;
       justify-content: space-between;
+      @media (--small-viewport) {
+        width: auto;
+      }
     }
     .intro {
       margin-bottom: 20px;
       text-align: left;
       display: flex;
       align-items: flex-start;
+      @media (--small-viewport) {
+        flex-direction: column;
+        text-align: center;
+      }
       .image {
         min-width: 100px;
         margin-right: 40px;
+        @media (--small-viewport) {
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
       }
       .info {
         text-align: left;
+        @media (--small-viewport) {
+          text-align: center;
+        }
         .head {
           font-family: 'Fjalla One';
           font-weight: bold;

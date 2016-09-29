@@ -61,6 +61,10 @@ $whiteGray: #fcfcfc;
       display: none;
     }
   }
+  @media (--small-viewport) {
+    position: static;
+    padding-bottom: 10px;
+  }
 }
 
 html, body {

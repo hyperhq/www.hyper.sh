@@ -1,5 +1,5 @@
 @media (--small-viewport ) {
-  #index .container > .intro {
+  #index .container.intro {
     &, &.right { flex-direction: column; }
     &.right .title { border-left: 0; }
     .title {

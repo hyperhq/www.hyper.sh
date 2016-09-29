@@ -1,5 +1,5 @@
 @media (--small-viewport ) {
-  #index .container > .cases {
+  #index .container.cases {
 
 
     .content .group {
