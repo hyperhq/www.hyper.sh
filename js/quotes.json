@@ -18,5 +18,5 @@
     "content": "Hyper's Docker super-set REST API made it a breeze to write support for buildbot! and Thanks to their per second billing Hyper.sh came in around 10 times cheaper for our continuous integration workloads!",
     "name": "Pierre Tardy",
     "title": "Technical Lead at Buildbot.net"
-  },
+  }
 ]

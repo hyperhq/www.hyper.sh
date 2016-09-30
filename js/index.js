@@ -5,7 +5,7 @@ require('./unslider')
 require('./typed')
 import lunr from 'lunr'
 import price from './price'
-import quotas from './quotas.json'
+import quotes from './quotes.json'
 
 const createAssciimaPlayer = function(num) {
   asciinema_player.core.CreatePlayer(
@@ -204,7 +204,7 @@ const initSlider = () => {
     `
   }
   let str = ''
-  for (const item of quotas) {
+  for (const item of quotes) {
     str += tpl(item)
   }
   $('#echo-slider ul').html(str)

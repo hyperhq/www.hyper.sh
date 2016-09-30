@@ -4,7 +4,8 @@
 
 @custom-media --small-than-ipad-viewport (max-width: 640px);
 
-@custom-media --ipad-viewport (max-width: 768px);
+@custom-media --ipad-viewport (max-width: 1024px);
+@custom-media --ipad-small-viewport (max-width: 768px);
 @custom-media --iphone4-viewport (max-width: 320px);
 @custom-media --iphone6-viewport (max-width: 375px);
 

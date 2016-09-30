@@ -18,6 +18,10 @@ body > .main .container {
     padding-left: 10px;
     padding-right: 10px;
   }
+  @media (--ipad-small-viewport) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .fa-heart {
     color: #ca0000;
     font-size: 32px;
