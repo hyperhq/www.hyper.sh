@@ -7,7 +7,7 @@
   {
     "content": "Hyper.sh looks pretty competitive with Docker Cloud, or better with per-second billing, floating ips, monitoring, logging",
     "name": "TJ Holowaychuk",
-    "title": "Founder of Apex and Express.sh"
+    "title": "Founder of Apex and Express.js"
   },
   {
     "content": "Combination of Gitlab CI and Hyper.sh makes container build/deployment remarkably painless. Impressed!",
@@ -15,7 +15,7 @@
     "title": "CTO at Chaser.io"
   },
   {
-    "content": "Hyper's Docker super-set REST API made it a breeze to write support for buildbot! and Thanks to their per second billing Hyper.sh came in around 10 times cheaper for our continuous integration workloads!",
+    "content": "Hyper.sh's Docker super-set REST API made it a breeze to write support for buildbot! and Thanks to their per second billing Hyper.sh came in around 10 times cheaper for our continuous integration workloads!",
     "name": "Pierre Tardy",
     "title": "Technical Lead at Buildbot.net"
   }
