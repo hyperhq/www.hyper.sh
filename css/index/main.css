@@ -192,6 +192,7 @@
       }
       .cloud {
         margin-top: -250px;
+        max-width: 1415px;
         @media (--small-viewport) {
           display: none;
         }
