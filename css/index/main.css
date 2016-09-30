@@ -162,10 +162,10 @@
     .cloud-wrap {
       #code {
         text-align: left;
-        font-size: 16px;
+        font-size: 15px;
         position: absolute;
         margin-left: 185px;
-        margin-top: 133px;
+        margin-top: 135px;
         box-sizing: border-box;
         transition: all .2s ease-in-out;
         @media (--small-viewport) {
