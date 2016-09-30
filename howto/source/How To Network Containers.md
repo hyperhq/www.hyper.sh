@@ -5,13 +5,13 @@ tags:
     - Container
     - Hyper
     - Network
-preview: This guide we will teach you how to network your containers on Hyper_ to set up your microservices.
+preview: This guide we will teach you how to network your containers on Hyper.sh to set up your microservices.
 
 ---
 
-# Container Networking on Hyper_ cloud
+# Container Networking on Hyper.sh cloud
 
-You just previously succeeded in building and running a simple web application in the last blog of this series, but that's not enough for real web service on the Internet. So, in this section we will teach you how to network your containers on Hyper_ to set up your microservices.
+You just previously succeeded in building and running a simple web application in the last blog of this series, but that's not enough for real web service on the Internet. So, in this section we will teach you how to network your containers on Hyper.sh to set up your microservices.
 
 ## Name your container
 
@@ -35,7 +35,7 @@ d54e6f546795        training/webapp     "python app.py"     11 seconds ago      
 
 Container names must be unique. That means you can only call one container `web`. If you want to re-use a container name you must delete the old container.
 
-Note that container name is not its hostname, Hyper_ container uses container ID as default hostname, and you can also configure your own by using `hyper run --hostname`:
+Note that container name is not its hostname, Hyper.sh container uses container ID as default hostname, and you can also configure your own by using `hyper run --hostname`:
 
 ```
 -h, --hostname                  Container host name
@@ -44,9 +44,9 @@ Note that container name is not its hostname, Hyper_ container uses container ID
 
 ## Manage the public network of your container
 
-You may have noticed that containers in Hyper_ have their own private IP as long as they are created. Hyper_ cloud makes the networking transparent for the end user, by using mature SDN component to build VLAN based tenants.
+You may have noticed that containers in Hyper.sh have their own private IP as long as they are created. Hyper.sh cloud makes the networking transparent for the end user, by using mature SDN component to build VLAN based tenants.
 
-Hyper_ also provides a public network solution, named floating IP, for you to connect containers from outside world., in which the basic usage of  `hyper fip allocate` was showcased in the ["Run web application"](https://blog.hyper.sh/learn-hyper_-by-examples-run-your-application.html) blog.
+Hyper.sh also provides a public network solution, named floating IP, for you to connect containers from outside world., in which the basic usage of  `hyper fip allocate` was showcased in the ["Run web application"](https://blog.hyper.sh/learn-Hyper.sh-by-examples-run-your-application.html) blog.
 
 ```
 $ hyper fip --help
@@ -61,7 +61,7 @@ Commands:
   release               Release a floating IP
 ```
 
-In Hyper_, floating IP is a top level resource, that means you can manage it independently from the containers and other resources.
+In Hyper.sh, floating IP is a top level resource, that means you can manage it independently from the containers and other resources.
 
 Let's create and list them:
 ```
@@ -97,10 +97,10 @@ As you can disconnect a container from a public network, you can also delete the
 $ hyper fip release 162.221.195.205
 ```
 
-## Link containers in Hyper_ cloud
-The Docker style link in Hyper_ allow containers to discover each other and securely transfer information about one container to another container. When containers are linked, information about a source container can be sent to a recipient container. This allows the recipient to see selected data describing aspects of the source container.
+## Link containers in Hyper.sh cloud
+The Docker style link in Hyper.sh allow containers to discover each other and securely transfer information about one container to another container. When containers are linked, information about a source container can be sent to a recipient container. This allows the recipient to see selected data describing aspects of the source container.
 
-To establish links, Hyper_ relies on the names of your containers. We have emphasized the importance of naming in previous article, and we'll soon see the reason.
+To establish links, Hyper.sh relies on the names of your containers. We have emphasized the importance of naming in previous article, and we'll soon see the reason.
 
 To create a link, we use the `--link` flag. First, let's create a new container, this time one containing a database.
 ```
@@ -143,13 +143,13 @@ $ hyper inspect -f "{{ .HostConfig.Links }}" web
 
 You can see that the web container is now linked to the db container `db`. Which allows it to access information about the `db` container.
 
-Then how to consume the `link`? Hyper_ exposes connectivity information for the source container to the recipient container in two ways:
+Then how to consume the `link`? Hyper.sh exposes connectivity information for the source container to the recipient container in two ways:
 
 * Environment variables,
 * Names in the `/etc/hosts` file.
 
 ### Environment variables
-Containers in Hyper_ creates several environment variables when you link containers. These environment variables in the target container (`web` container) are created based on the `--link` parameters. It will also expose all environment variables originating from the source container (`db` container) including:
+Containers in Hyper.sh creates several environment variables when you link containers. These environment variables in the target container (`web` container) are created based on the `--link` parameters. It will also expose all environment variables originating from the source container (`db` container) including:
 
 * the `ENV` commands in the source container’s Dockerfile
 * the `-e` or `--env` options on the `hyper run` command when the source container is started
@@ -157,11 +157,11 @@ Containers in Hyper_ creates several environment variables when you link contain
 These environment variables enable programmatic discovery from within the target container of information related to the source container.
 
 > **WARNING:**
-> Don't abuse environments! All environment variables originating from Hyper_ within a container are made available to any container that links to it. This could have serious security implications if sensitive data is stored in them.
+> Don't abuse environments! All environment variables originating from Hyper.sh within a container are made available to any container that links to it. This could have serious security implications if sensitive data is stored in them.
 
-Hyper_ sets an `<alias>_NAME` environment variable for each target container listed in the `--link` parameter. This is a Docker compatible environment system. For example, if a new container called `web` is linked to a database container called `db` via `--link db:webdb`, then Hyper_ creates a `WEBDB_NAME=webdb` variable in the `web` container.
+Hyper.sh sets an `<alias>_NAME` environment variable for each target container listed in the `--link` parameter. This is a Docker compatible environment system. For example, if a new container called `web` is linked to a database container called `db` via `--link db:webdb`, then Hyper.sh creates a `WEBDB_NAME=webdb` variable in the `web` container.
 
-Hyper_ also defines a set of environment variables for each port exposed by the source container. Each variable has a unique prefix in the form:
+Hyper.sh also defines a set of environment variables for each port exposed by the source container. Each variable has a unique prefix in the form:
 
 `<name>_PORT_<port>_<protocol>`
 
@@ -171,19 +171,19 @@ The components in this prefix are:
 * the `<port>` number exposed
 * a `<protocol>` which is either TCP or UDP
 
-Hyper_ uses this prefix format to define three distinct environment variables:
+Hyper.sh uses this prefix format to define three distinct environment variables:
 
 * The `prefix_ADDR` variable contains the IP Address from the URL, for example `WEBDB_PORT_5432_TCP_ADDR=172.16.0.142`.
 * The `prefix_PORT` variable contains just the port number from the URL for example `WEBDB_PORT_5432_TCP_PORT=5432`.
 * The `prefix_PROTO` variable contains just the protocol from the URL for example `WEBDB_PORT_5432_TCP_PROTO=tcp`.
 
-If the container exposes multiple ports, an environment variable set is defined for each one. For example, if a container exposes 4 ports that Hyper_ creates 12 environment variables, 3 for each port.
+If the container exposes multiple ports, an environment variable set is defined for each one. For example, if a container exposes 4 ports that Hyper.sh creates 12 environment variables, 3 for each port.
 
-Additionally, Hyper_ creates an environment variable called `<alias>_PORT`. This variable contains the URL of the source container’s **first exposed port**. The ‘first’ port is defined as the exposed port with the lowest number.
+Additionally, Hyper.sh creates an environment variable called `<alias>_PORT`. This variable contains the URL of the source container’s **first exposed port**. The ‘first’ port is defined as the exposed port with the lowest number.
 
 For example, consider the `WEBDB_PORT=tcp://172.16.0.1422:5432` variable. If that port is used for both tcp and udp, then the tcp one is specified.
 
-Finally, as we mentioned before, Hyper_ also exposes each originated environment variable from the source container as an environment variable in the target. For each variable Hyper creates an `<alias>_ENV_<name>` variable in the target container. The variable’s value is set to the value Hyper_ used when it started the source container.
+Finally, as we mentioned before, Hyper.sh also exposes each originated environment variable from the source container as an environment variable in the target. For each variable Hyper creates an `<alias>_ENV_<name>` variable in the target container. The variable’s value is set to the value Hyper.sh used when it started the source container.
 
 Back to our database example, you can run the env command to list the specified container’s environment variables.
 ```shell
@@ -202,14 +202,14 @@ DB_PORT_5432_TCP=tcp://172.16.0.137:5432
 Each variable coming from the source container is prefixed with `DB_`, which is populated from the alias you specified above. You can use these environment variables to configure your applications to connect to the database on the db container.
 
 > **NOTE:**
-> `--link` works everywhere in Hyper_ cloud. Unlike Docker legacy `--link`, software defined network in Hyper_ guarantee the container connectivity within the same tenant. Users should never need to care things like cross-host or customized network.
+> `--link` works everywhere in Hyper.sh cloud. Unlike Docker legacy `--link`, software defined network in Hyper.sh guarantee the container connectivity within the same tenant. Users should never need to care things like cross-host or customized network.
 
 However, IP addresses stored in the environment variables are not automatically updated if the source container is restarted. And these environment variables are only set for the first process in the container. Some daemons, such as `sshd`, will scrub them when spawning shells for connection.
 
 We recommend using the host entries in `/etc/hosts` to resolve the IP address of linked containers in production.
 
 ##Updating the `/etc/hosts` file
-In addition to the environment variables, Hyper_ adds a host entry for the source container to the `/etc/hosts` file. Here’s an entry for the web container:
+In addition to the environment variables, Hyper.sh adds a host entry for the source container to the `/etc/hosts` file. Here’s an entry for the web container:
 
 ```shell
 $ hyper run -t -i --rm --link db:webdb training/webapp /bin/bash
@@ -234,16 +234,16 @@ Here, you used the ping command to ping the `db` container using its host entry,
 > **Note:**
 > You can link multiple recipient containers to a single source. For example, you could have multiple (differently named) web containers attached to your `db` container.
 
-When you restart the source container (`db` container), Hyper_ will make sure it's **IP address will not change**, allowing linked communication to continue.
+When you restart the source container (`db` container), Hyper.sh will make sure it's **IP address will not change**, allowing linked communication to continue.
 
 
 ## Best Practice
 
-As you can see above, Hyper_ cloud networking is simple but useful, it avoids boring users and try to free their creativity to compose micro-services as they wish. For better usage of this networking model, some best practices are recommended here.
+As you can see above, Hyper.sh cloud networking is simple but useful, it avoids boring users and try to free their creativity to compose micro-services as they wish. For better usage of this networking model, some best practices are recommended here.
 
-* Always naming your containers. Hyper_ `--link` uses names to identify related containers, and renaming containers afterward is costly.
+* Always naming your containers. Hyper.sh `--link` uses names to identify related containers, and renaming containers afterward is costly.
 * Do not abuse floating IP. For security reason, and for resource saving reason.
-* Expose service ports in your Dockerfile. This is not required by Hyper_, but this will bring you more automation, since only exposed ports will be added to target containers' ENV.
+* Expose service ports in your Dockerfile. This is not required by Hyper.sh, but this will bring you more automation, since only exposed ports will be added to target containers' ENV.
 
 A nice example to show these best practice is [`dockercloud/harpoxy`](https://github.com/docker/dockercloud-haproxy) image from Docker Inc.
 

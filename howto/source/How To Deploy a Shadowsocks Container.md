@@ -19,11 +19,11 @@ In this tutorial we will explain in detail how to deploy a private shadowsocks c
 # Prerequisites
 Please make sure you complete the following prerequisites:
 
-- [Open a Hyper_ account](https://console.hyper.sh/register)
+- [Open a Hyper.sh account](https://console.hyper.sh/register)
 - [Generate API credential](https://docs.hyper.sh/GettingStarted/generate_api_credential.html)
 - [Setup `hyper` CLI on your local computer](https://docs.hyper.sh/GettingStarted/install.html)
 
-### Step 1. Pull the shadowsocks image to your Hyper_ account
+### Step 1. Pull the shadowsocks image to your Hyper.sh account
 
 Open the terminal on your local computer:
 

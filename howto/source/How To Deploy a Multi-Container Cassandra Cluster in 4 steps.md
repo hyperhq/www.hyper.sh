@@ -16,18 +16,18 @@ Cassandra is a distributed NoSQL database system designed to handle large amount
 
 In this tutorial, we will show how in 4 steps you can bring up:
 
-- A five-node  [Cassandra](http://cassandra.apache.org/) cluster in Hyper_ DataStax OpsCenter 5.0.0
+- A five-node  [Cassandra](http://cassandra.apache.org/) cluster in Hyper.sh DataStax OpsCenter 5.0.0
 - All the necessary wiring
 - Each node runs in its own container with the Cassandra process + DataStax Agent while OpsCenter runs in its own container separate from the cluster.
 
 ### Prerequisites
 Before beginning this tutorial please make sure you complete the following steps:
 
-- [Open a Hyper_ account](https://console.hyper.sh/register)
+- [Open a Hyper.sh account](https://console.hyper.sh/register)
 - [Generate API credential](https://docs.hyper.sh/GettingStarted/generate_api_credential.html)
 - [Setup `hyper` CLI on your local computer](https://docs.hyper.sh/GettingStarted/install.html)
 
-### Step 1. Pull the Cassandra image to your Hyper_ account
+### Step 1. Pull the Cassandra image to your Hyper.sh account
 
 ``` bash
 [root@localhost]$ hyper pull abh1nav/cassandra

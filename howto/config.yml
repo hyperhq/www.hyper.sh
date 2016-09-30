@@ -1,6 +1,6 @@
 site:
-    title: "HYPER_ - How To"
-    subtitle: "HYPER_ How To"
+    title: "Hyper.sh - How To"
+    subtitle: "Hyper.sh How To"
     limit: 10
     theme: theme
     lang: en
@@ -11,7 +11,7 @@ site:
 
 authors:
     hyper:
-        name: "Hyper_"
+        name: "Hyper.sh"
         intro: ""
 
 build:
