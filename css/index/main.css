@@ -26,6 +26,9 @@
     @media (--ipad-small-viewport) {
       @mixin scale 0.5;
     }
+    @media (--small-than-ipad-viewport) {
+      @mixin scale 0.75;
+    }
     @media (--small-viewport) {
       padding-top: 5px;
       .entry {

@@ -52,6 +52,7 @@
       position: relative;
       text-transform: uppercase;
       @media (--small-viewport) {
+        font-size: 38px;
         text-align: center;
         margin-bottom: 50px;
         &::after {
@@ -66,6 +67,9 @@
         &::after {
           right: 0;
           left: auto;
+        }
+        @media (--small-viewport) {
+          text-align: center;
         }
       }
       @media (--small-viewport) {
