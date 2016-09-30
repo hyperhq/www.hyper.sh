@@ -1,12 +1,22 @@
 [
   {
-    "content": "We use Docker on prem and Hyper_ as failover cloud. Since both sides have Docker, everything works 100% out of the box.",
+    "content": "We use Docker on prem and Hyper.sh as failover cloud. Since both sides have Docker, everything works 100% out of the box.",
     "name": "Hareem Haque",
     "title": "Sigma Global Solutions"
   },
   {
-    "content": "Hyper_ looks pretty competitive with Docker Cloud, or better – per-second billing, floating ips, monitoring, logging",
+    "content": "Hyper.sh looks pretty competitive with Docker Cloud, or better with per-second billing, floating ips, monitoring, logging",
     "name": "TJ Holowaychuk",
     "title": "Founder of Apex and Express.sh"
-  }
+  },
+  {
+    "content": "Combination of Gitlab CI and Hyper.sh makes container build/deployment remarkably painless. Impressed!",
+    "name": "Mark Woodbridge",
+    "title": "CTO at Chaser.io"
+  },
+  {
+    "content": "Hyper's Docker super-set REST API made it a breeze to write support for buildbot! and Thanks to their per second billing Hyper.sh came in around 10 times cheaper for our continuous integration workloads!",
+    "name": "Pierre Tardy",
+    "title": "Technical Lead at Buildbot.net"
+  },
 ]
