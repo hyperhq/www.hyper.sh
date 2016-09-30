@@ -38,6 +38,10 @@ module.exports = Object.assign(webpackBaseConfig, {
         to: './assets'
       },
       {
+        from: 'logo/',
+        to: './logo'
+      },
+      {
         from: 'robots.txt',
         to: './'
       },
