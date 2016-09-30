@@ -1,6 +1,6 @@
 require('../css/index.css')
 require('font-awesome/css/font-awesome.css')
-const particlesJS = require('exports?particlesJS!particles.js')
+// const particlesJS = require('exports?particlesJS!particles.js')
 require('./unslider')
 require('./typed')
 import lunr from 'lunr'
