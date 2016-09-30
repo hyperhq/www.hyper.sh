@@ -18,5 +18,10 @@
     "content": "Hyper.sh's Docker super-set REST API made it a breeze to write support for buildbot! and Thanks to their per second billing Hyper.sh came in around 10 times cheaper for our continuous integration workloads!",
     "name": "Pierre Tardy",
     "title": "Technical Lead at Buildbot.net"
+  },
+  {
+    "content": "Hyper.sh makes it super simple for developers to launch containers in the cloud today. And the best bit is if you already know the Docker command line tools, then you already know how to use Hyper.sh!",
+    "name": "Gareth Rushgrove ",
+    "title": "Senior Software Engineer at Puppet"
   }
 ]
