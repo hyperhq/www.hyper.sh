@@ -28,7 +28,7 @@
     color: #424c5c;
     width: 100%;
     margin: 0 auto;
-    max-width: 1224px;
+    max-width: 1280px;
     @media (--laptop-viewport) {
       transform: scale(0.85);
       padding: 10px;
@@ -88,6 +88,9 @@
       text-align: left;
       display: flex;
       align-items: flex-start;
+      &.center {
+        align-items: center;
+      }
       @media (--small-viewport) {
         flex-direction: column;
         text-align: center;
