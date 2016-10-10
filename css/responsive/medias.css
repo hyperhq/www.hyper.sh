@@ -2,6 +2,7 @@
 @custom-media --medium-viewport (max-width: 1115px);
 @custom-media --mac-viewport (max-width: 1280px);
 @custom-media --laptop-viewport (max-width: 1366px);
+@custom-media --large-laptop-viewport (max-width: 1440px);
 
 @custom-media --small-than-ipad-viewport (max-width: 640px);
 

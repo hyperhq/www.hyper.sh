@@ -17,6 +17,9 @@
   z-index: -1;
   .wrap {
     padding-top: 150px;
+    @media (--large-laptop-viewport) {
+      @mixin scale 0.8;
+    }
     @media (--laptop-viewport) {
       @mixin scale 0.75;
     }
