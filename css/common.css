@@ -103,6 +103,11 @@ body > .main .container {
       &.border {
         border-bottom: 1px solid #aaa;
       }
+      h1 {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+      }
       .sub {
         float: right;
         font-size: 24px;
