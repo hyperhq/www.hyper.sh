@@ -211,7 +211,7 @@ const initSlider = () => {
   $('#echo-slider').unslider({
     autoplay: true,
     speed: 300,
-    delay: 5000
+    delay: 10000
   })
 }
 
