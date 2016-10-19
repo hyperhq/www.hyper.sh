@@ -1,3 +1,13 @@
+title: "How To Use Hyper.sh to deploy your Buildbot"
+date: 2016-10-19 21:00:00 +0800
+author: hyper
+tags:
+    - Container
+    - Hyper
+    - Buildbot
+
+---
+
 #Using Hyper.sh to deploy your Buildbot
 
 Buildbot comes with several pre-built docker images that can be used for easy deployment on your own infrastructure or in the cloud. The official buildbot documentation already comes with a docker tutorial explaining how to quickly start with Buildbot using docker.
