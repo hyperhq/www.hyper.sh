@@ -8,11 +8,13 @@ tags:
 
 ---
 
-#Using Hyper.sh to deploy your Buildbot
+# Using Hyper.sh to deploy your Buildbot
 
 Buildbot comes with several pre-built docker images that can be used for easy deployment on your own infrastructure or in the cloud. The official buildbot documentation already comes with a docker tutorial explaining how to quickly start with Buildbot using docker.
 
 If you want to deploy it in the cloud, there are several options available on the market. One of them I find quite handy is [hyper.sh.](https://hyper.sh/)
+
+> For the high-level overview and rationale behind the Hyper.sh + Buildbot integration you can check [this post on the Hyper.sh blog.](https://blog.hyper.sh/serverless-ci-hyper-docker-integration-for-buildbot.html)
 
 
 Hyper.sh is a young CAAS (Container-as-a-Servive) company which provides docker hosting as a service. They have per-second billing which is quite competitive when you want to run on-demand build workers.
