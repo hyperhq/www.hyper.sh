@@ -13,6 +13,9 @@ authors:
     hyper:
         name: "Hyper.sh"
         intro: ""
+    Pierre Tardy:
+        name: "Pierre Tardy"
+        intro: ""
 
 build:
     port: 8000
