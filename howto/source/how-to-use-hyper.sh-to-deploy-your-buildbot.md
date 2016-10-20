@@ -1,10 +1,11 @@
 title: "How To Use Hyper.sh to deploy your Buildbot"
 date: 2016-10-19 21:00:00 +0800
-author: hyper
+author: Pierre Tardy
 tags:
     - Container
     - Hyper
     - Buildbot
+preview: In this post Pierre Tardy from Buildbot explains how to use the new Hyper.sh integration for Buildbot to achieve 'Serverless CI'. A seamlessly integrated plugin that allows Buildbot users to use Hyper.sh as a massively parallelized, easy-to-use and per-second billed build platform.
 
 ---
 
