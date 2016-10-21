@@ -7,4 +7,4 @@ RUN tar -xvzf caddy.tgz -C caddy
 RUN git clone https://github.com/hyperhq/website.git
 EXPOSE 8080
 ENV BRANCH master
-CMD cd website && git checkout $BRANCH && /website/build.sh && /caddy/caddy -port 8080 -root /website/dist
+CMD cd website && git checkout $BRANCH && git pull && /website/build.sh && /caddy/caddy -port 8080 -root /website/dist
