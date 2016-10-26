@@ -19,6 +19,11 @@ module.exports = function() {
       template: 'html/company/index.handlebars',
       filename: `company.html`,
       inject: false
+    },
+    {
+      template: 'html/docker-hosting/index.handlebars',
+      filename: `docker-hosting.html`,
+      inject: false
     }
   ]
 }
