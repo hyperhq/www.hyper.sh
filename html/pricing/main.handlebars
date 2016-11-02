@@ -92,14 +92,12 @@
       <li class="section">
         <div class="title">> Outstanding Balance</div>
         <div class="content">
-          <div class="desc">Balances are considered outstanding if a payment has failed to process on the first of the month. In such case, we will notify you over emails, and re-submit the payment request:</div>
           <ul>
-            <li>Re-submit after 3 days if the first request failed</li>
-            <li>Re-submit after 5 days if the second request failed</li>
-            <li>Re-submit after 7 days if the third request failed, and during this period you will not be able to create / update resource in your account</li>
-            <li>If the fourth request failed, we will stop the containers in your account, but you can login the web console to update the credit card information, which will trigger new payment request</li>
-            <li>If the balance is due over two months, we will deactivate your account (unable to login web console and all credential will be removed), and purge all resources in your account permanently</li>
-            <li>Whenever a payment request succeeded, we will immediately resume your account</li>
+            <li>First Payment Attempt: Credit card payment charged on 1st of month. User will receive email notification of failed credit card charge and to update credit card information in web console.</li>
+            <li>Second Payment Attempt: Submitted 3 days after first attempt, if the first charge fails, during this period you will be unable to create / update resources in your account.</li>
+            <li>Third Payment Attempt: Submitted 5 days after second attempt, if the second charge attempt fails. If third attempt fails, we will stop all containers in your account.</li>
+            <li>If the balance is due over 30 days, we will deactivate your account (unable to login to web console, removal of all credentials), and permanently purge all resources in your account.</li>
+            <li>You can login the web console to update your credit card information, which will trigger new payment request, whenever a payment request succeeds, we will immediately resume your account.</li>
           </ul>
         </div>
       </li>
