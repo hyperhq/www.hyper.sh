@@ -9,8 +9,6 @@ preview: In this post Pierre Tardy from Buildbot explains how to use the new Hyp
 
 ---
 
-# Using Hyper.sh to deploy your Buildbot
-
 _This is a guest post from [Pierre Tardy](https://github.com/tardyp), one of the main contributors to Buildbot._
 
 ## Video tutorial
