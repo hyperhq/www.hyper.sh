@@ -13,6 +13,10 @@ preview: In this post Pierre Tardy from Buildbot explains how to use the new Hyp
 
 _This is a guest post from [Pierre Tardy](https://github.com/tardyp), one of the main contributors to Buildbot._
 
+## Video tutorial
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N8ALf7vKYoQ" frameborder="0" allowfullscreen></iframe>
+
 Buildbot comes with several pre-built docker images that can be used for easy deployment on your own infrastructure or in the cloud. The official buildbot documentation already comes with a docker tutorial explaining how to quickly start with Buildbot using docker.
 
 If you want to deploy it in the cloud, there are several options available on the market. One of them I find quite handy is [hyper.sh.](https://hyper.sh/)
@@ -211,7 +215,3 @@ This tells Buildbot to use ‘bb’ as normal reporting string or bb/<TESTS> for
 We can then commit our code, push to a temporary branch, open a pull request, and see the results in live directly on the github interface.
 
 ![Checks Page](images/how-to-use-hyper.sh-to-deploy-your-buildbot/checks-page.png)
-
-## Video tutorial
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/N8ALf7vKYoQ" frameborder="0" allowfullscreen></iframe>
