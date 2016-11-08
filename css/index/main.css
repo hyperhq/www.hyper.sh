@@ -1,6 +1,7 @@
 @define-mixin scale $size {
-  -webkit-backface-visibility: hidden;
-  transform: scale($size);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transform: scale($size) translateZ(0);
 }
 
 #header .main {
