@@ -101,7 +101,11 @@ body > .main .container {
       padding-bottom: 15px;
       overflow: auto;
       &.border {
-        border-bottom: 1px solid #aaa;
+        border-bottom: 1px solid #bbb;
+      }
+      &.sub {
+        margin-top: 80px;
+        margin-bottom: 0;
       }
       h1 {
         margin: 0;
@@ -152,7 +156,7 @@ body > .main .container {
         margin-top: 70px;
         .title {
           font-size: 24px;
-          font-family: "Moon-Bold";
+          font-family: "Fjalla One";
           color: $purple;
           margin-bottom: 15px;
         }
