@@ -72,32 +72,61 @@
         </div>
       </li>
       <li class="section">
-        <div class="title">> Tax</div>
+        <div class="title">> What payment types do you accept?</div>
         <div class="content">
+          Currently, Hyper.sh accepts credit cards, including Visa, MasterCard, American Express, JCB, Discover, and Diners Club.
+        </div>
+      </li>
+      <li class="section">
+        <div class="title">> Does Hyper.sh keep my credit card information?</div>
+        <div class="content">
+          No, all payments are processed through Stripe, a trusted third party payment processing service. Hyper.sh does not retain any credit card information.
+        </div>
+      </li>
+      <li class="section">
+        <div class="title">> Why was my card declined?</div>
+        <div class="content">
+          <p>Our third party payment processing service employs specific checks against card payments. Some of the reasons your card was declined could be:</p>
           <ul>
-            <li>
-              Except as otherwise noted, our prices exclude applicable sales tax and VAT. Currently, we charge sales tax for credit cards issued in the US states of NY and Texas. The tax details will be available in the monthly bill.
-            </li>
+            <li><b>The zip code you supplied failed validation.</b>: You can leave the Zip Code as blank and try again if your card not located in US.</li>
+            <li><b>Your card's security code is incorrect.</b>: Currently we require CVC verification.</li>
+            <li><b>Your card does not support this type of purchase.</b>: Please get in touch with your bank to confirm the reason declining the payments.</li>
           </ul>
         </div>
       </li>
       <li class="section">
-        <div class="title">> Billing Period</div>
+        <div class="title">> When will my credit card be charged?</div>
         <div class="content">
-          <ul>
-            <li>We charge your credit card on the 1st day of each month after usage.</li>
-          </ul>
+          We charge your credit card on the 1st day of each month.
         </div>
       </li>
       <li class="section">
-        <div class="title">> Outstanding Balance</div>
+        <div class="title">> How about the billing tax?</div>
+        <div class="content">
+          Except as otherwise noted, our prices exclude applicable sales tax and VAT. Currently, we charge sales tax for credit cards issued in the US states of NY and Texas. The tax details will be available in the monthly bill.
+        </div>
+      </li>
+      <li class="section">
+        <div class="title">> What happens after outstanding balance?</div>
         <div class="content">
           <ul>
-            <li>First Payment Attempt: Credit card payment charged on 1st of month. User will receive email notification of failed credit card charge and to update credit card information in web console.</li>
+            <li>First Payment Attempt: Credit card payment charged on 1st of the month. You will receive email notification of failed credit card charge and to update credit card information in web console.</li>
             <li>Second Payment Attempt: Submitted 3 days after first attempt, if the first charge fails, during this period you will be unable to create / update resources in your account.</li>
             <li>Third Payment Attempt: Submitted 5 days after second attempt, if the second charge attempt fails. If third attempt fails, we will stop all containers in your account.</li>
             <li>If the balance is due over 30 days, we will deactivate your account (unable to login to web console, removal of all credentials), and permanently purge all resources in your account.</li>
             <li>You can login the web console to update your credit card information, which will trigger new payment request, whenever a payment request succeeds, we will immediately resume your account.</li>
+          </ul>
+          <p>If you have any questions about an outstanding balance, how to add a payment option, or about billing in general, please feel free to contact <a href="mailto:support@hyper.sh">Hyper.sh Support</a>.</p>
+        </div>
+      </li>
+      <li class="section">
+        <div class="title">> How do I remove my credit card?</div>
+        <div class="content">
+          <p>You can go to <a href="https://console.hyper.sh/billing/credit">Credit Page</a> to add/update/delete your credit card.</p>
+          <ul>
+            <li>First please make sure that there is no payment due and that there are no resources left in your account.</li>
+            <li>If there is payment due, you will need to update the credit card to first fullfill the payment.</li>
+            <li>Once the credit card information is removed, your account will be limited. You can add a credit card to re-enable your account.</li>
           </ul>
         </div>
       </li>

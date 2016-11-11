@@ -154,6 +154,7 @@ body > .main .container {
           font-size: 24px;
           font-family: "Moon-Bold";
           color: $purple;
+          margin-bottom: 15px;
         }
         .content {
           font-size: 16px;
