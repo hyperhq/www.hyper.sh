@@ -10,9 +10,9 @@
         <div class="content">
           {{> ./table}}
           <ul>
-            <li>Billing begins when you launch a new container or start a stopped container, and ends when the container stops itself or is terminated.</li>
-            <li>Everytime you issue a <code>hyper run/start/restart</code> request, a default period of 10 second is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
-            <li>Everytime a container is restarted, a default period of 10 second is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
+            <li>Billing begins when Hyper.sh launches a new container or start a stopped container, ends when the container stops or terminates, either through an API call, or through container exists (success or failure).</li>
+            <li>Everytime you issue a <code>hyper run/start/restart</code> request, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
+            <li>Everytime a container is restarted, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
           </ul>
         </div>
       </li>
@@ -39,6 +39,7 @@
           </div>
           <ul>
             <li>Billing begins when a new service created, ends when it is terminated.</li>
+            <li>Everytime you issue a <code>hyper run/start/restart</code> request, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
           </ul>
         </div>
       </li>
@@ -63,12 +64,18 @@
                   <td>$0.1/GB</td>
                 </tr>
                 <tr class="alt">
-                  <td>Volume</td>
+                  <td>RootFS</td>
                   <td>$0.0000000386/GB</td>
                   <td>$0.0001388889/GB</td>
                   <td>$0.1/GB</td>
                 </tr>
                 <tr>
+                  <td>Volume</td>
+                  <td>$0.0000000386/GB</td>
+                  <td>$0.0001388889/GB</td>
+                  <td>$0.1/GB</td>
+                </tr>
+                <tr class="alt">
                   <td>Snapshot</td>
                   <td>$0.0000000193/GB</td>
                   <td>$0.0000694444/GB</td>
@@ -78,7 +85,7 @@
             </table>
           </div>
           <ul>
-            <li>Billing begins when the storage object is created (<code>hyper volume create</code>, <code>hyper snapshot create</code>, <code>hyper pull</code>), ends upon removal.</li>
+            <li>Billing begins when the storage object is created (<code>hyper pull</code>, <code>hyper run</code>, <code>hyper volume create</code>, <code>hyper snapshot create</code>), and a default period of 10 seconds is billed, ends upon removal.</li>
             <li>Images are charged per GB with a minimum of 1GB and will be rounded UP to nearest GB (i.e. 1.5GB billed at 2GB).</li>
           </ul>
         </div>

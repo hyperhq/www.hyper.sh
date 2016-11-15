@@ -1,4 +1,4 @@
-$menuHeight: 180px;
+$menuHeight: 110px;
 
 @media (--medium-viewport) {
 
@@ -35,7 +35,7 @@ $menuHeight: 180px;
 
 
           .item {
-            padding: 8px;
+            padding: 5px;
             text-align: center;
 
             &::after {
