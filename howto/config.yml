@@ -16,6 +16,9 @@ authors:
     Pierre Tardy:
         name: "Pierre Tardy"
         intro: ""
+    Pedro Yamada:
+        name: "Pedro Yamada"
+        intro: ""
 
 build:
     port: 8000

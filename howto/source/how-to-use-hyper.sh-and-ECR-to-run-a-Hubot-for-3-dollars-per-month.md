@@ -1,13 +1,15 @@
-title: "How to use Hyper.sh and AWS ECR to deploy a Hubot instance for less than \$3 a month"
-date: 2016-11-18 16:00:00 +0100
+title: "How to use Hyper.sh and AWS ECR to deploy a Hubot instance for less than $3 a month"
+date: 2016-11-18 20:00:00 +0800
 author: Pedro Yamada
 tags:
     - Container
     - Hyper.sh
     - Hubot
     - AWS ECR
-preview: In this post [Pedro Yamada](https://twitter.com/yamadapc) from [Beijaflor Software](https://beijaflor.io/) explains how to use AWS ECR and Hyper.sh to run a Hubot instance for less than \$3 per month.
 
+preview: "In this post [Pedro Yamada](https://twitter.com/yamadapc) from [Beijaflor Software](https://beijaflor.io/) explains how to use AWS ECR and Hyper.sh to run a Hubot instance for less than $3 per month."
+
+---
 
 # How to use Hyper.sh and AWS ECR to deploy a Hubot instance for less than \$3 a month
 
@@ -82,7 +84,7 @@ First install the Hyper.sh CLI following these instructions. In order for Hyper 
 $ eval $(aws get-login ecr | sed 's/docker/hyper')
 ```
 
-We take the output that the AWS CLI command generates and replace “docker” with “hyper” using ```sed```. 
+We take the output that the AWS CLI command generates and replace “docker” with “hyper” using ```sed```.
 
 Now all we need to do is:
 
@@ -115,6 +117,6 @@ Thanks a lot and see you next time.
 
 ### About the author
 
-Pedro is a Software Engineer and Founder at [Beijaflor Software]([Beijaflor Software](https://beijaflor.io/)). He's passionate about open-source and software development, having spent his career working "full-stack" on diverse products for the web like [toggl.com](https://toggl.com/). He is currently trying to make Beijaflor Software a reference software development services provider in Brazil, growing its young but ambitious ventures.
+Pedro is a Software Engineer and Founder at [Beijaflor Software](https://beijaflor.io/). He's passionate about open-source and software development, having spent his career working "full-stack" on diverse products for the web like [toggl.com](https://toggl.com/). He is currently trying to make Beijaflor Software a reference software development services provider in Brazil, growing its young but ambitious ventures.
 
 Beijaflor Software is a young software development and consultancy company based in São Paulo focused on large-scale engineering for the web. We make use of JavaScript and Functional Programming to continuously deliver world-class results in a predictable manner, with technologies like Node.js, React.js and Haskell. Our goal is to make art through great software products, while building a healthy workplace where creativity can flourish and creators can own their work.
