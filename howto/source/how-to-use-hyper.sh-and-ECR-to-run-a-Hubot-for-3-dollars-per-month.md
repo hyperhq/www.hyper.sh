@@ -11,7 +11,7 @@ preview: "In this post [Pedro Yamada](https://twitter.com/yamadapc) from [Beijaf
 
 ---
 
-# How to use Hyper.sh and AWS ECR to deploy a Hubot instance for less than \$3 a month
+# How to use Hyper.sh and AWS ECR to deploy a Hubot instance for less than $3 a month
 
 *This is a translation from a Portuguese [blog post](https://t.co/TWuSSORp7h) by [Pedro Yamada](https://twitter.com/yamadapc) from [Beijaflor Software](https://beijaflor.io/).*
 
