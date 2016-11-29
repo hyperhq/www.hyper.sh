@@ -28,5 +28,10 @@
     "content": "Running containers directly through an API with zero concerns about host/cluster resources allowed us to focus entirely on our application logic. The per-second pricing was icing on the cake.",
     "name": "Conor Nash",
     "title": "Data Science Consulting"
+  },
+  {
+    "content": "Having a lot of fun playing with Hyper.sh. Good design, easy UX, and the feature-set is minimal, mostly what you need.",
+    "name": "Diogo Monica",
+    "title": "Security Lead at Docker"
   }
 ]
