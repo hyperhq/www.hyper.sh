@@ -10,7 +10,7 @@
         <div class="content">
           {{> ./table}}
           <ul>
-            * All containers include a 10GB rootFS disk volume which is billed separately. See 'Storage' section below.
+            <p> * All containers include a 10GB rootFS disk volume which is billed separately. See 'Storage' section below.</p>
             <li>Billing begins when Hyper.sh launches a new container or start a stopped container, ends when the container stops or terminates, either through an API call, or through container exists (success or failure).</li>
             <li>Everytime you issue a <code>hyper run/start/restart</code> request, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
             <li>Everytime a container is restarted, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
