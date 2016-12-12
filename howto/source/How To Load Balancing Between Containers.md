@@ -23,7 +23,6 @@ $ curl $FIP:80
 > Hello my host name is: de380811142a
 $ curl $FIP:80
 > Hello my host name is: 32d28908d30a
-> Hello: linked database is "tcp://<ip_of_db>"
 ```
 
 Questions? Drop us a mail at [contact@hyper.sh](mailto:contact@hyper.sh).
