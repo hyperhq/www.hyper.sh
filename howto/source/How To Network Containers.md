@@ -245,7 +245,7 @@ As you can see above, Hyper.sh cloud networking is simple but useful, it avoids 
 * Do not abuse floating IP. For security reason, and for resource saving reason.
 * Expose service ports in your Dockerfile. This is not required by Hyper.sh, but this will bring you more automation, since only exposed ports will be added to target containers' ENV.
 
-A nice example to show these best practice is [`dockercloud/harpoxy`](https://github.com/docker/dockercloud-haproxy) image from Docker Inc.
+A nice example to show these best practice is [`dockercloud/haproxy`](https://github.com/docker/dockercloud-haproxy) image from Docker Inc.
 
 ```
 $ hyper run -d --name web-1 hyperhq/webapp:host python app.py
