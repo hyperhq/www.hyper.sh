@@ -81,7 +81,7 @@ $ docker push this-was-printed-when-we-created-the-repository.dkr.ecr.us-east-1.
 First install the Hyper.sh CLI following these instructions. In order for Hyper to pull the image from ECR, we need log-in again to the registry using the Hyper CLI. Hyper's CLI uses the same command structure as Docker's, so my solution was:
 
 ```
-$ eval $(aws get-login ecr | sed 's/docker/hyper')
+$ eval $(aws ecr get-login | sed 's/docker/hyper')
 ```
 
 We take the output that the AWS CLI command generates and replace “docker” with “hyper” using ```sed```.
