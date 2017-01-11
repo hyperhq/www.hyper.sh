@@ -19,7 +19,7 @@ $ hyper allocate 1
 xxx.xxx.xxx.xxx <-- Your floating IP
 ```
 ### 3. Clone the compose file
-```                   
+```
 $ git clone https://github.com/hyperhq/Hyper_Rocket.Chat.git
 Cloning into 'Hyper_Rocket.Chat'...
 remote: Counting objects: 11, done.
@@ -38,7 +38,7 @@ services:
     image: mongo
     restart: always
 
-  rocket.chat:
+  rocketchat:
     depends_on:
       - db
     image: rocket.chat
@@ -52,11 +52,11 @@ services:
 
 ### 5. Start Rocket.Chat
 ```
-$ hyper compose up -f rocketchat_mongodb 
-Project [hyperrocketchat]: Starting project 
-[0/2] [db]: Starting 
-[1/2] [db]: Started 
-[1/2] [rocket.chat]: Starting 
+$ hyper compose up -f rocketchat_mongodb
+Project [hyperrocketchat]: Starting project
+[0/2] [db]: Starting
+[1/2] [db]: Started
+[1/2] [rocketchat]: Starting 
 ...
 ```
 
@@ -64,4 +64,3 @@ Project [hyperrocketchat]: Starting project
 ### Done!
 
 Try ```http://<YOUR FIP GOES HERE>:3000``` in your browser!
-
