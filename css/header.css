@@ -20,6 +20,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (--laptop-viewport) {
+      padding: 30px;
+    }
     @media (--small-viewport) {
       padding: 15px;
     }
@@ -73,17 +76,34 @@
         display: flex;
         .item {
           margin: 0 10px;
+          @media (--laptop-viewport) {
+            margin: 0 5px;
+          }
           white-space: nowrap;
           &:after {
             font-family: 'Source Sans Pro';
             content: "/";
             margin-left: 15px;
             opacity: 0.3;
+            @media (--laptop-viewport) {
+              margin-left: 5px;
+            }
           }
           &:last-child {
             &:after {
               content: "";
             }
+          }
+          .new {
+            position: absolute;
+            background-color: white;
+            padding: 1px 7px;
+            border-radius: 100px;
+            margin-left: -15px;
+            color: $mainColor;
+            margin-top: -18px;
+            font-size: 12px;
+            font-family: "Source Sans Pro";
           }
         }
       }
