@@ -85,6 +85,17 @@
               content: "";
             }
           }
+          .new {
+            position: absolute;
+            background-color: white;
+            padding: 1px 7px;
+            border-radius: 100px;
+            margin-left: -15px;
+            color: $mainColor;
+            margin-top: -18px;
+            font-size: 12px;
+            font-family: "Source Sans Pro";
+          }
         }
       }
       .sign {
