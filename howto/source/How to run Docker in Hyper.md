@@ -2,13 +2,13 @@ title: "How To Run Docker in Hyper.sh"
 date: 2017-03-13 18:00:00 +0800
 author: hyper
 preview: |
-  This blog shows you a few ways to setup a Docker daemon, and launch Docker containers inside of a Hyper container.
+  This post shows you a few ways to setup a Docker daemon, and launch Docker containers inside of a Hyper container.
   
 ---
 
 # How to run Docker in Hyper.sh
 
-Lately we have received a lot of requests asking **how to run Docker in Hyper.sh**. This blog shows you a few ways to setup a Docker daemon, and launch Docker containers inside of a Hyper container.
+Lately we have received a lot of requests asking **how to run Docker in Hyper.sh**. This post shows you a few ways to setup a Docker daemon, and launch Docker containers inside of a Hyper container.
 
 ---
 
