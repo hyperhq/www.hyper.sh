@@ -66,4 +66,4 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### Questions?
 
-Feel free to drop us an email [contact@hyper.sh](mailto:contact@hyper.sh), or use the Forum, the Twitter or the in console support window!
+Feel free to drop us an email [contact@hyper.sh](mailto:contact@hyper.sh), or use the [forum](https://forum.hyper.sh), [Twitter](https://twitter.com/hyper_sh) or in the console support window!
