@@ -2,22 +2,22 @@ title: "How To Run Docker in Hyper.sh"
 date: 2017-03-13 18:00:00 +0800
 author: hyper
 preview: |
-  This tutorial is a walk-through to setup Docker daemon, and launch Docker containers inside of a Hyper container.
+  This blog shows you a few ways to setup a Docker daemon, and launch Docker containers inside of a Hyper container.
   
 ---
 
 # How to run Docker in Hyper.sh
 
-Lately we received a lot of requests of **How to run Docker in Hyper.sh**. This tutorial is a walk-through to setup Docker daemon, and launch Docker containers inside of a Hyper container.
+Lately we have received a lot of requests asking **how to run Docker in Hyper.sh**. This blog shows you a few ways to setup a Docker daemon, and launch Docker containers inside of a Hyper container.
 
 ---
 
 ### Ubuntu 16.04
 ``` bash
-$ ID=`hyper run -d ubuntu:16.04`                    # launch a Ubuntu container
-$ hyper exec -it ${ID} /bin/bash                    # get the shell access
+$ ID=`hyper run -d ubuntu:16.04`                    # launch an Ubuntu container
+$ hyper exec -it ${ID} /bin/bash                    # get shell access
 # apt-get update                                    
-# apt-get install docker.io cgroup-lite screen -y   # install deps
+# apt-get install docker.io cgroup-lite screen -y   # install dependencies
 # cgroups-mount                                     # mount cgroup
 # screen -dmS docker_daemon dockerd -D              # Do NOT use `service docker start`
 # docker info                                       # if this works, you are all set
@@ -46,7 +46,9 @@ $ hyper exec -it ${ID} /bin/bash
 
 ### Prebaked Docker Images!
  
-Check out our repository on Docker hub: https://hub.docker.com/r/hyperhq/docker-in-hyper/ for the prebaked images. Use the following tags:
+Prefer to use something prebaked? Check out our repository on Docker hub: [https://hub.docker.com/r/hyperhq/docker-in-hyper/](https://hub.docker.com/r/hyperhq/docker-in-hyper/)
+
+You can use the following tags:
 - hyperhq/docker-in-hyper:ubuntu-16.04
 - hyperhq/docker-in-hyper:centos7 (`latest`)
 
@@ -62,4 +64,6 @@ $ hyper exec -it 8dcb2ab01 /bin/bash
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-Questions? [contact@hyper.sh](mailto:contact@hyper.sh)
+### Questions?
+
+Feel free to drop us an email [contact@hyper.sh](mailto:contact@hyper.sh), or use the Forum, the Twitter or the in console support window!
