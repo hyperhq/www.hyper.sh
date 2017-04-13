@@ -215,7 +215,7 @@ body > .main .container {
         width: 100%;
         .item {
           text-align: left;
-          padding: 20px;
+          padding: 25px 30px;
           cursor: pointer;
           &:first-child {
             border-radius: 5px 5px 0 0;

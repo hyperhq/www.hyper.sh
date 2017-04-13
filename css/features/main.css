@@ -1,7 +1,7 @@
 #features .container > .main {
   max-width: 1024px;
   .tabs {
-    height: 426px;
+    height: 496px;
     @media (--small-viewport) {
       height: auto;
       flex-direction: column;

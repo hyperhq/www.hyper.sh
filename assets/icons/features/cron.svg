@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="62.387px" height="62.387px" viewBox="0 0 62.387 62.387" enable-background="new 0 0 62.387 62.387" xml:space="preserve">
-<circle fill="none" stroke="#312F74" stroke-width="2" stroke-miterlimit="10" cx="32.637" cy="31.245" r="28.667"/>
+	 viewBox="0 0 62.4 62.4" style="enable-background:new 0 0 62.4 62.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#312F74;stroke-miterlimit:10;}
+	.st1{fill:#F4F4F4;stroke:#3D3588;stroke-miterlimit:10;}
+	.st2{fill:#3D3588;}
+	.st3{fill:none;stroke:#3D3588;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#312F74;stroke-width:2;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#312F74;stroke-miterlimit:10;stroke-dasharray:4.1135,4.1135;}
+	.st6{fill:#FFFFFF;}
+</style>
+<circle class="st0" cx="32.6" cy="31.2" r="28.7"/>
 <g>
-	<path fill="#F4F4F4" stroke="#3D3588" stroke-miterlimit="10" d="M45.619,24.395c0.66,0.33,0.66,0.866,0,1.196L34.3,31.251
-		c-0.66,0.33-1.731,0.33-2.392,0l-11.319-5.66c-0.66-0.33-0.66-0.866,0-1.196l11.319-5.66c0.66-0.33,1.731-0.33,2.392,0
-		L45.619,24.395z"/>
-	<path fill="#3D3588" d="M45.814,39.166c-0.007,0.022-0.062,0.105-0.247,0.198l-11.319,5.66c-0.51,0.255-1.482,0.255-1.991,0
-		l-11.319-5.66c-0.191-0.095-0.244-0.183-0.248-0.194c0-0.001,0.001-0.002,0.002-0.003h-0.896v0c0,0.234,0.096,0.675,0.743,0.998
-		l11.319,5.659c0.38,0.19,0.876,0.295,1.396,0.295c0.52,0,1.016-0.105,1.396-0.295l11.319-5.66c0.646-0.323,0.743-0.764,0.743-0.998
-		v0H45.814z"/>
-	<line fill="none" stroke="#3D3588" stroke-miterlimit="10" x1="20.094" y1="39.464" x2="20.094" y2="25.292"/>
-	<line fill="none" stroke="#3D3588" stroke-miterlimit="10" x1="46.114" y1="39.181" x2="46.114" y2="25.009"/>
-	<line fill="none" stroke="#3D3588" stroke-miterlimit="10" x1="33.104" y1="31.499" x2="33.104" y2="46.119"/>
+	<path class="st1" d="M45.6,24.4c0.7,0.3,0.7,0.9,0,1.2l-11.3,5.7c-0.7,0.3-1.7,0.3-2.4,0l-11.3-5.7c-0.7-0.3-0.7-0.9,0-1.2
+		l11.3-5.7c0.7-0.3,1.7-0.3,2.4,0L45.6,24.4z"/>
+	<path class="st2" d="M45.8,39.2c0,0-0.1,0.1-0.2,0.2L34.2,45c-0.5,0.3-1.5,0.3-2,0l-11.3-5.7c-0.2-0.1-0.2-0.2-0.2-0.2c0,0,0,0,0,0
+		h-0.9l0,0c0,0.2,0.1,0.7,0.7,1l11.3,5.7c0.4,0.2,0.9,0.3,1.4,0.3s1-0.1,1.4-0.3L46,40.2c0.6-0.3,0.7-0.8,0.7-1l0,0
+		C46.7,39.2,45.8,39.2,45.8,39.2z"/>
+	<line class="st3" x1="20.1" y1="39.5" x2="20.1" y2="25.3"/>
+	<line class="st3" x1="46.1" y1="39.2" x2="46.1" y2="25"/>
+	<line class="st3" x1="33.1" y1="31.5" x2="33.1" y2="46.1"/>
 </g>
-<line fill="none" stroke="#312F74" stroke-width="2" stroke-miterlimit="10" x1="5.866" y1="22.67" x2="3.958" y2="16.494"/>
-<line fill="none" stroke="#312F74" stroke-width="2" stroke-miterlimit="10" x1="4.965" y1="22.37" x2="11.055" y2="19.897"/>
+<line class="st4" x1="5.9" y1="22.7" x2="4" y2="16.5"/>
+<line class="st4" x1="5" y1="22.4" x2="11.1" y2="19.9"/>
 <g>
-	
-		<circle fill="none" stroke="#312F74" stroke-miterlimit="10" stroke-dasharray="4.1135,4.1135" cx="32.637" cy="31.245" r="22.265"/>
+	<circle class="st5" cx="32.6" cy="31.2" r="22.3"/>
 </g>
-<circle fill="#FFFFFF" cx="4.912" cy="26.292" r="3.499"/>
+<circle class="st6" cx="4.9" cy="26.3" r="3.5"/>
 </svg>
