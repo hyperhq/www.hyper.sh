@@ -124,6 +124,7 @@
           width: 100%;
           margin-bottom: 0;
           box-sizing: border-box;
+          font-size: 1.25em;
           -webkit-appearance: none;
         }
       }

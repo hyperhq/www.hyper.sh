@@ -15,7 +15,7 @@ preview: "In this post [Pedro Yamada](https://twitter.com/yamadapc) from [Beijaf
 
 *This is a translation from a Portuguese [blog post](https://t.co/TWuSSORp7h) by [Pedro Yamada](https://twitter.com/yamadapc) from [Beijaflor Software](https://beijaflor.io/).*
 
-This week, I wanted to deploy a small [Hubot](https://hubot.github.com/) instance for Beijaflor Software, spending as little as possible and having a system that deploys easily and without maintenance. I decided to test the new container hosting service [Hyper.sh](https://hyper.sh/) that purports to provide *"Effortless Docker Hosting."*
+This week, I wanted to deploy a small [Hubot](https://hubot.github.com/) instance for Beijaflor Software, spending as little as possible and having a system that deploys easily and without maintenance. I decided to test the new container hosting service [Hyper.sh](https://hyper.sh/) that purports to provide *"Clusterless Docker Hosting."*
 
 I will walk through the steps I used to create this deployment quickly.
 
