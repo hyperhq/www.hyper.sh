@@ -168,8 +168,8 @@
         text-align: left;
         font-size: 15px;
         position: absolute;
-        margin-left: 185px;
-        margin-top: 135px;
+        margin-left: 198px;
+        margin-top: 132px;
         box-sizing: border-box;
         transition: all .2s ease-in-out;
         @media (--small-viewport) {
