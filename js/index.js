@@ -259,6 +259,14 @@ const initTyped = async () => {
   typed(0)
 }
 
+const updateButton = () => {
+  const tz = new Date().getTimezoneOffset()
+  if (tz !== -480) {
+    const txt = 'Start 3-month free tier'
+    $('.signup-button').text(txt).val(txt)
+  }
+}
+
 $(() => {
   bindEvents()
   // initBackground()
@@ -270,6 +278,7 @@ $(() => {
   initSignup()
   initTyped()
   initSlider()
+  updateButton()
   // initCloudAnimate()
   // initTyping()
   // createAssciimaPlayer(1)
