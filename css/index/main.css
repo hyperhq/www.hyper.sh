@@ -71,10 +71,10 @@
       }
       .subtitle {
         margin-top: 15px;
-        font-size: 24px;
+        font-size: 18px;
         font-family: 'Raleway';
         font-weight: 400;
-        color: #aaa;
+        color: #ccc;
         #typed {
           color: white;
           font-weight: bold;
