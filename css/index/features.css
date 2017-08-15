@@ -108,6 +108,11 @@
         @media (--small-viewport) {
           text-align: center;
         }
+        .enter {
+          width: 35px;
+          position: relative;
+          top: 5px;
+        }
         .head {
           font-family: 'Fjalla One';
           font-weight: bold;

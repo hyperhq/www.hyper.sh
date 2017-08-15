@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 110 110" style="enable-background:new 0 0 110 110;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#B3B5D5;stroke:#382952;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:6;}
+	.st1{opacity:0.1;}
+	.st2{fill:#231815;}
+	.st3{fill:#2E2D6E;}
+	.st4{fill:#F4F4F4;stroke:#2B2C69;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:#3D3588;stroke:#2B2C69;stroke-width:2;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#2B2C69;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<g>
+	<rect x="21.1" y="13.1" class="st0" width="67.4" height="15.2"/>
+	<g>
+		<g class="st1">
+			<path class="st2" d="M13.4,12.3h73.2v73.6l-37,17.9L13.4,85.9V12.3z M81.8,81.8V32.8H18.2v48.9l31.5,15.5L81.8,81.8z M81.4,28.4
+				V17.8H17.8v10.6H81.4z M25.8,35.4v1.9h-5.4v-1.9H25.8z M33.5,35.4v1.9H28v-1.9H33.5z M41.2,35.4v1.9h-5.5v-1.9H41.2z M48.9,35.4
+				v1.9h-5.4v-1.9H48.9z M56.6,35.4v1.9h-5.4v-1.9H56.6z M64.3,35.4v1.9h-5.5v-1.9H64.3z M72,35.4v1.9h-5.5v-1.9H72z M79.7,35.4v1.9
+				h-5.4v-1.9H79.7z"/>
+		</g>
+		<g>
+			<path class="st3" d="M18.4,10.3h73.2v73.6l-37,17.9L18.4,83.9V10.3z M86.8,79.8V30.8H23.2v48.9l31.5,15.5L86.8,79.8z M86.4,26.4
+				V15.8H22.8v10.6H86.4z M30.8,33.4v1.9h-5.4v-1.9H30.8z M38.5,33.4v1.9H33v-1.9H38.5z M46.2,33.4v1.9h-5.5v-1.9H46.2z M53.9,33.4
+				v1.9h-5.4v-1.9H53.9z M61.6,33.4v1.9h-5.4v-1.9H61.6z M69.3,33.4v1.9h-5.5v-1.9H69.3z M77,33.4v1.9h-5.5v-1.9H77z M84.7,33.4v1.9
+				h-5.4v-1.9H84.7z"/>
+		</g>
+	</g>
+	<g>
+		<path class="st4" d="M70.4,53.4c0.9,0.4,0.9,1.2,0,1.6l-15.2,7.6c-0.9,0.4-2.3,0.4-3.2,0L36.9,55c-0.9-0.4-0.9-1.2,0-1.6l15.2-7.6
+			c0.9-0.4,2.3-0.4,3.2,0L70.4,53.4z"/>
+		<path class="st5" d="M70.7,73.2c0,0-0.1,0.1-0.3,0.3L55.2,81c-0.7,0.3-2,0.3-2.7,0l-15.2-7.6c-0.3-0.1-0.3-0.2-0.3-0.3
+			c0,0,0,0,0,0h-1.2v0c0,0.3,0.1,0.9,1,1.3L52,82.1c0.5,0.3,1.2,0.4,1.9,0.4c0.7,0,1.4-0.1,1.9-0.4l15.2-7.6c0.9-0.4,1-1,1-1.3v0
+			H70.7z"/>
+		<line class="st6" x1="36.2" y1="73.6" x2="36.2" y2="54.6"/>
+		<line class="st6" x1="71.1" y1="73.2" x2="71.1" y2="54.2"/>
+		<line class="st6" x1="53.7" y1="62.9" x2="53.7" y2="82.5"/>
+	</g>
+</g>
+</svg>
