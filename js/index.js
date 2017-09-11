@@ -262,7 +262,7 @@ const initTyped = async () => {
 const updateButton = () => {
   const tz = new Date().getTimezoneOffset()
   if (tz !== -480) {
-    const txt = 'Start 3-month free tier'
+    const txt = 'Start 2-month free tier'
     $('.signup-button').text(txt).val(txt)
   }
 }
