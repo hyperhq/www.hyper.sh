@@ -129,3 +129,39 @@ h1, h2, h3 {
   50% { opacity:0; }
   100% { opacity:1; }
 }
+
+.region-select-wrap {
+  margin-left: 20px;
+  background-image: none;
+  background-color: $mainColor;
+  color: white;
+  border-radius: 500px;
+  line-height: 0;
+  position: relative;
+  &:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    top: 15px;
+    right: 13px;
+  }
+  .region-select {
+    text-align: center;
+    font-family: 'Moon-Bold';
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    color: white;
+    padding: 0 20px;
+    height: 35px;
+    width: 130px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

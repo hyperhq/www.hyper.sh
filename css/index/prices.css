@@ -5,6 +5,8 @@ $itemStart: 3.16em;
   .title {
     @mixin title;
     position: absolute;
+    display: flex;
+    align-items: center;
   }
   .content {
     text-align: center;
