@@ -7,7 +7,7 @@
     "start": "node server",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors && cd howto && ../ink_linux publish && cd .. && rm -rf dist && mv ./dist_tmp ./dist",
     "build-local": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors && cd howto && ink publish && cd .. && rm -rf dist && mv ./dist_tmp ./dist",
-    "docker": "npm run build-local && docker build -t imeoer/hyper-www ."
+    "docker": "npm run build-local && docker build -t imeoer/hyper-www . && docker push imeoer/hyper-www"
   },
   "repository": {
     "type": "git",

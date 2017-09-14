@@ -278,7 +278,9 @@ const getUrlVars = () => {
   return vars
 }
 
-const initRegionSelect = () => {
+const initRegionUX = () => {
+  $('.new-region').addClass('show')
+
   const querys = getUrlVars()
   const $dom = $('.region-select.active')
   $dom.val(querys['region'])
@@ -301,7 +303,7 @@ $(() => {
   initTyped()
   initSlider()
   updateButton()
-  initRegionSelect()
+  initRegionUX()
   // initCloudAnimate()
   // initTyping()
   // createAssciimaPlayer(1)
