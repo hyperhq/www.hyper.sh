@@ -267,6 +267,28 @@ const updateButton = () => {
   }
 }
 
+const getUrlVars = () => {
+  let vars = [], hash
+  const hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')
+  for(let i = 0; i < hashes.length; i++) {
+    hash = hashes[i].split('=')
+    vars.push(hash[0])
+    vars[hash[0]] = hash[1]
+  }
+  return vars
+}
+
+const initRegionSelect = () => {
+  const querys = getUrlVars()
+  const $dom = $('.region-select.active')
+  $dom.val(querys['region'])
+  $dom.on('change', (event) => {
+    const region = event.target.value
+    const path = region ? '?region=' + region : ''
+    location.href = location.pathname + path
+  })
+}
+
 $(() => {
   bindEvents()
   // initBackground()
@@ -279,6 +301,7 @@ $(() => {
   initTyped()
   initSlider()
   updateButton()
+  initRegionSelect()
   // initCloudAnimate()
   // initTyping()
   // createAssciimaPlayer(1)
