@@ -1,6 +1,7 @@
 title: "Automate your DevOps environment with Hyper.sh and a Yubikey"
 date: 2018-01-04 11:28:00 +0800
-author: Hilton De Meillontags:
+author: Hilton De Meillon
+tags:
     - Containers
     - Security
     - DevOps
