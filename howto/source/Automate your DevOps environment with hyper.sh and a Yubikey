@@ -9,7 +9,6 @@ author: Hilton De Meillontags:
 preview: In this guest article, Hilton shows us his Python script  that uses osquery to automate his DevOps workstation when he plugs in his yubikey.
 
 ---
-# 
 [Hyper.sh](hyper.sh) containers make a great devops workstation for a number of reasons:
 
 1. You can shut them down when not in use which saves money and also reduces the attack surface.
