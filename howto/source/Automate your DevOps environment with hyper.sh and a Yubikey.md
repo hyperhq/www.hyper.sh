@@ -7,11 +7,11 @@ tags:
     - DevOps
     - Save Money
     - Osquery
-preview: In this guest article, Hilton shows us his Python script  that uses osquery to automate his DevOps workstation when he plugs in his yubikey.
+preview: In this guest article, Hilton shows us his Python script that uses osquery to automate his DevOps workstation when he plugs in his yubikey.
 
 ---
 
-> Note: this is a guest articile from [Hilton De Meillon](https://medium.com/@hdemeillon?source=post_header_lockup). The original post can be found [here](https://medium.com/@hdemeillon/introducing-hyper-saver-ca36c367b3ff).
+> Note: this is a guest article from [Hilton De Meillon](https://medium.com/@hdemeillon?source=post_header_lockup). The original post can be found [here](https://medium.com/@hdemeillon/introducing-hyper-saver-ca36c367b3ff).
 
 [Hyper.sh](hyper.sh) containers make a great devops workstation for a number of reasons:
 
