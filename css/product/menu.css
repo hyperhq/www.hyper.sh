@@ -1,0 +1,85 @@
+
+.product > .menu {
+  background: #E2EFFF;
+  font-family: 'Moon-Bold';
+
+  .content {
+    height: 6.67em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    .logo {
+      height: 39px;
+      margin-right: 14px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      font-size: 1.67em;
+      color: #424C5C;
+      flex-direction: row;
+    }
+    .btns {
+      &.features .btn-features,
+      &.pricing .btn-pricing,
+      &.docs .btn-docs {
+        background: white;
+      }
+
+      .btn {
+        text-align: center;
+        background-color: #EBDEFF;
+        border: 2px solid #424C5C;
+        padding: 8px 13px 8px 33px;
+        border-radius: 500px;
+        font-size: 1.1em;
+        font-family: 'Moon-Bold';
+        color: #424C5C;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+
+        &::before {
+          position: absolute;
+          left: 11px;
+          top: 7px;
+          content: "";
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+        }
+
+        &.btn-features {
+          & > & {background: white;}
+          &::before {
+            background-image: url("/assets/images/features.svg");
+          }
+        }
+        &.btn-pricing {
+          & > &{background: white;}
+          &::before {
+            width: 18px;
+            height: 18px;
+            background-image: url("/assets/images/pricing.svg");
+          }
+        }
+        &.btn-docs {
+          & & {background: white;}
+          &::before {
+            height: 17px;
+            background-image: url("/assets/images/docs.svg");
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+
+}

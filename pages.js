@@ -29,6 +29,27 @@ module.exports = function() {
       template: 'html/docker-hosting/index.handlebars',
       filename: `docker-hosting.html`,
       inject: false
-    }
+    },
+    {
+      template: 'html/product/swarm/index/index.handlebars',
+      filename: `swarm/index.html`,
+      inject: false
+    },
+    {
+      template: 'html/product/swarm/pricing/index.handlebars',
+      filename: `swarm/pricing.html`,
+      inject: false
+    },
+    {
+      template: 'html/product/kubernetes/index/index.handlebars',
+      filename: `kubernetes/index.html`,
+      inject: false
+    },
+    {
+      template: 'html/product/kubernetes/pricing/index.handlebars',
+      filename: `kubernetes/pricing.html`,
+      inject: false
+    },
+
   ]
 }

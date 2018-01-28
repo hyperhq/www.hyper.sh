@@ -87,11 +87,6 @@ $menuHeight: 165px;
 
     }
 
-    #background {
-      .shape {
-        width: $iphone4Width
-      }
-    }
 
   }
 

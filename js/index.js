@@ -84,13 +84,13 @@ const initPriceSlider = () => {
 }
 
 const initTab = (id) => {
-  const items = $(`#${id} .tabs > .items .item`)
+  const items = $(`${id} .tabs > .items .item`)
   if (!items.length) return
   items.hover(function() {
     items.removeClass('active')
     $(this).addClass('active')
-    $(`#${id} .detail`).removeClass('active')
-    $(`#${id} .detail.detail-${$(this).index()}`).addClass('active')
+    $(`${id} .detail`).removeClass('active')
+    $(`${id} .detail.detail-${$(this).index()}`).addClass('active')
   })
 }
 
@@ -279,8 +279,6 @@ const getUrlVars = () => {
 }
 
 const initRegionUX = () => {
-  $('.new-region').addClass('show')
-
   const querys = getUrlVars()
   const $dom = $('.region-select.active')
   $dom.val(querys['region'])
@@ -295,8 +293,8 @@ $(() => {
   bindEvents()
   // initBackground()
   initPriceSlider()
-  initTab('features')
-  initTab('howto')
+  initTab('.product')
+  initTab('#howto')
   initArticlesSearch()
   setPrice('S4')
   initSignup()

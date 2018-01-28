@@ -75,14 +75,44 @@
       .menu {
         display: flex;
         .item {
+          position: relative;
           margin: 0 10px;
+          white-space: nowrap;
+
           @media (--laptop-viewport) {
             margin: 0 5px;
           }
-          white-space: nowrap;
+
+
+          &:hover ul {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          ul {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility .5s, opacity .3s linear;
+
+            position: absolute;
+            left: -8px;
+            top: 25px;
+            background: $purple;
+            border-radius: 5px;
+            padding: 5px 0;
+
+            li a {
+              display: block;
+              padding: 2px 8px;
+              text-align: center;
+              &:hover {
+                background: $purpleLight;
+              }
+            }
+          }
+
           &:after {
             font-family: 'Source Sans Pro';
-            content: "/";
             margin-left: 15px;
             opacity: 0.3;
             @media (--laptop-viewport) {
@@ -128,36 +158,42 @@
   }
   #background {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     z-index: -2;
     .shape {
-      width: 400px;
-      height: 163px;
-      position: absolute;
+      display: flex;
       @media (--laptop-viewport) {
+        zoom: 65%;
+      }
+      @media (--large-laptop-viewport) {
         zoom: 75%;
       }
       @media (--small-viewport) {
         zoom: 30%;
       }
     }
-    .shape1 {
-      background: url("/assets/shape1.svg") no-repeat;
-      left: 0;
-      bottom: 0;
+    .shape-left {
       z-index: 1;
+      max-width: 161px;
     }
-    .shape2 {
-      background: url("/assets/shape2.svg") no-repeat;
-      right: 0;
-      bottom: 0;
+    .shape-right {
       z-index: 1;
+      max-width: 161px;
+      transform: scaleX(-1);
     }
-    canvas {
-      opacity: 0.4;
+    .shape-center {
+      max-width: 609px;
+      z-index: 1;
+      @media (--ipad-viewport) {
+        display: none;
+      }
     }
   }
 }
+

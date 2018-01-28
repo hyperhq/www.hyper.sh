@@ -200,40 +200,6 @@ body > .main .container {
         }
       }
     }
-    .tabs {
-      display: flex;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 80px;
-      > .items {
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-family: "Moon-Bold";
-        font-size: 16px;
-        text-align: center;
-        color: $mainColor;
-        max-width: 210px;
-        width: 100%;
-        .item {
-          text-align: left;
-          padding: 25px 30px;
-          cursor: pointer;
-          &:first-child {
-            border-radius: 5px 5px 0 0;
-          }
-          &:last-child {
-            border-radius: 0 0 5px 5px;
-          }
-          &.active {
-            color: white;
-            background-color: $purple !important;
-          }
-          &:hover {
-            background-color: #efefef;
-          }
-        }
-      }
-      .detail {
-      }
-    }
+
   }
 }

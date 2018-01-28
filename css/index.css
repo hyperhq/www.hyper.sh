@@ -10,14 +10,15 @@
 @import "index/main";
 @import "index/cloud";
 @import "index/cases";
-@import "index/prices";
-@import "index/features";
+@import "index/guide";
 @import "index/start";
 @import "index/news";
 
-@import "features/main.css";
+@import "product/main.css";
+@import "product/pricing.css";
+@import "product/menu.css";
+
 @import "howto/main.css";
-@import "pricing/main.css";
 @import "company/main.css";
 @import "customers/main.css";
 

@@ -1,0 +1,121 @@
+.product .main > .container.topbg {
+    background: none;
+    &::before {
+      background: none;
+    }
+    &::after {
+      background: none;
+    }
+}
+
+.product .container > .main {
+  max-width: 1024px !important;
+  padding-top: 0 !important;
+
+  .tabs {
+    flex-direction: column;
+    display: flex;
+    padding-bottom: 5em;
+
+    @media (--small-viewport) {
+      height: auto;
+      flex-direction: column;
+      > .items {
+        display: none;
+      }
+      .detail {
+        margin-left: 0;
+        margin-top: 50px;
+        display: block;
+        .items {
+        }
+      }
+    }
+
+    > .items {
+      font-family: 'Fjalla One';
+      font-size: 16px;
+      text-align: center;
+      color: #424C5C;
+      width: 100%;
+      .item {
+        float: left;
+        text-align: left;
+        padding: 11px 30px;
+        cursor: pointer;
+        &.active {
+          border-bottom: #6D3BC6 3px solid;
+        }
+      }
+    }
+    .detail {
+      display: none;
+      margin-top: 5.5em;
+      align-content: space-between;
+      &.active {
+        display: block;
+      }
+      > .title {
+        font-size: 24px;
+        font-weight: 300;
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+      .items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 100%;
+        .item {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          width: 33.3%;
+          margin-bottom: 40px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .icon-wrap {
+            /*width: 120px;*/
+            display: flex;
+            align-items: center;
+            .icon {
+              text-align: center;
+              height: 80px;
+              margin-right: 20px;
+            }
+          }
+          .title {
+            font-size: 18px;
+            font-family: "Moon-Bold";
+            color: $purple;
+          }
+          .subtitle {
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: 400;
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+
+  .links {
+    text-align: center;
+    .btn {
+      @mixin white-btn;
+      display: inline-block;
+      &:first-child {
+        margin-right: 1.8em;
+      }
+      &.active {
+        @mixin purple-btn;
+      }
+    }
+
+
+  }
+}

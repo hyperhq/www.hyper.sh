@@ -1,0 +1,102 @@
+ .guide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6.66em 0;
+
+  .title {
+    font-size: 4em;
+    font-family: 'Fjalla One';
+    color: #424C5C;
+  }
+
+  .getstarted {
+    a {
+      @mixin purple-btn;
+      display: block;
+    }
+  }
+
+  .start {
+    display: flex;
+    margin: 4.16em 0;
+    max-width: 1280px;
+    width: 100%;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      font-family: "Moon";
+      flex-grow: 1;
+      min-width: 380px;
+
+      .step {
+        width: 145px;
+        height: 145px;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &.step-1 {
+          background-image: url("/assets/icons/guide/step-1.svg")
+        }
+        &.step-2 {
+          background-image: url("/assets/icons/guide/step-2.svg")
+        }
+        &.step-3 {
+          background-image: url("/assets/icons/guide/step-3.svg")
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: url("/assets/icons/guide/arrow.svg") no-repeat;
+        background-size: contain;
+      }
+      .circle {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px dashed #888;
+        font-size: 28px;
+        color: #888;
+        span {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+      .desc {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 25px;
+        color: #6D3BC6;
+
+        a {
+          color: #409FFF;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

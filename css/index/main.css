@@ -17,7 +17,7 @@
   height: 100%;
   z-index: -1;
   .wrap {
-    padding-top: 150px;
+    padding-top: 10em;
     @media (--large-laptop-viewport) {
       @mixin scale 0.8;
     }
@@ -55,20 +55,28 @@
       }
     }
     .entry {
-      margin-right: 240px;
       margin-bottom: 50px;
-      text-align: right;
+      text-align: center;
       position: relative;
+      font-family: 'Poppins';
+
       &.zoom {
         opacity: 0.4;
         filter: blur(5px);
       }
       .title {
-        font-size: 3.3em;
-        font-family: 'Moon-Bold';
+        margin-top: .5em;
+        text-align: center;
+        font-size: 5em;
         @media (--laptop-viewport) {
           // font-size: 3.5em;
         }
+      }
+      .desc {
+        font-size: 1.5em;
+        padding: .5em 0 .1em;
+        width: 70%;
+        margin: 0 auto;
       }
       .subtitle {
         display: none;
@@ -86,6 +94,7 @@
         @mixin purple-btn;
         font-family: 'Moon-Bold';
         margin-top: 25px;
+        margin-right: .7em;
         margin-bottom: 35px;
         display: inline-block;
         font-size: 1.25em;
@@ -166,70 +175,18 @@
       }
     }
     .cloud-wrap {
-      #code {
-        text-align: left;
-        font-size: 15px;
-        position: absolute;
-        margin-left: 185px;
-        margin-top: 132px;
-        box-sizing: border-box;
-        transition: all .2s ease-in-out;
-        @media (--small-viewport) {
-          box-sizing: border-box;
-          position: relative;
-          margin-left: 0;
-          margin-top: 30px;
-          border: 2px solid #666;
-          padding: 10px;
-          width: 100%;
-          border-radius: 5px;
-          min-height: 230px;
-        }
-        .line {
-          display: inline-block;
-        }
-        .result {
-          color: #aaa;
-          display: inline-block;
-          margin: 3px 0;
-          margin-left: 19px;
-          font-style: italic;
-        }
-      }
-      .cloud {
-        margin-top: -250px;
-        max-width: 1415px;
-        @media (--small-viewport) {
-          display: none;
-        }
-      }
-      .new-region {
-        margin-left: 620px;
-        margin-top: -65px;
-        background-color: white;
-        color: $mainColor;
-        padding: 4px 5px;
-        position: absolute;
-        font-family: "Moon-Bold";
-        font-size: 15px;
-        border-radius: 3px;
-        opacity: 0;
-        transform: scale(0.5);
-        transition: all 0.3s ease-in-out 2s;
-        &.show {
-          opacity: 1;
-          transform: translate(0, 10px) scale(1);
-        }
-        &:before {
-          position: absolute;
-          top: -6px;
-          left: 36%;
-          content: "";
-          width: 0;
-          height: 0;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-          border-bottom: 6px solid white;
+      margin-bottom: 25em;
+      .blog-link {
+        font-size: 1.1em;
+        text-align: center;
+        font-family: Poppins;
+
+        &::before {
+          content: 'NEW';
+          font-family: Moon;
+          background: $purple;
+          padding: .3em .6em;
+          border-radius: 1em;
         }
       }
     }
