@@ -1,5 +1,6 @@
 .product .main > .container.topbg {
     background: none;
+    margin-top: 6.5em;
     &::before {
       background: none;
     }
@@ -9,7 +10,6 @@
 }
 
 .product .container > .main {
-  max-width: 1024px !important;
   padding-top: 0 !important;
 
   .tabs {
@@ -38,11 +38,16 @@
       text-align: center;
       color: #424C5C;
       width: 100%;
+      display: flex;
+      justify-content: center;
+
       .item {
-        float: left;
         text-align: left;
         padding: 11px 30px;
         cursor: pointer;
+        font-size: 2em;
+        flex-grow: 1;
+        text-transform: uppercase;
         &.active {
           border-bottom: #6D3BC6 3px solid;
         }
@@ -52,6 +57,7 @@
       display: none;
       margin-top: 5.5em;
       align-content: space-between;
+      min-height: 362px;
       &.active {
         display: block;
       }
@@ -83,8 +89,8 @@
             align-items: center;
             .icon {
               text-align: center;
-              height: 80px;
               margin-right: 20px;
+              width: 103px;
             }
           }
           .title {
@@ -96,7 +102,13 @@
             font-size: 16px;
             margin-top: 10px;
             font-weight: 400;
+            max-width: 300px;
             color: #555;
+
+            a {
+              color: #69A3FF;
+              font-weight: 500;
+            }
           }
         }
       }
@@ -108,11 +120,13 @@
     .btn {
       @mixin white-btn;
       display: inline-block;
+      font-size: 1.25em;
       &:first-child {
         margin-right: 1.8em;
       }
       &.active {
         @mixin purple-btn;
+        font-size: 1.25em;
       }
     }
 

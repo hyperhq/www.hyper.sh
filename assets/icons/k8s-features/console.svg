@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="52" viewBox="0 0 67 52">
   <defs>
-    <rect id="group-9-a" width="67" height="52" rx="5"/>
+    <rect id="console-a" width="67" height="52" rx="5"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
-    <use fill="#F9F6FF" xlink:href="#group-9-a"/>
+    <use fill="#F9F6FF" xlink:href="#console-a"/>
     <rect width="66" height="51" x=".5" y=".5" stroke="#6D3BC6" rx="5"/>
     <g fill="#6D3BC6" fill-opacity=".5" transform="translate(14 32)">
       <circle cx="5" cy="5" r="5"/>

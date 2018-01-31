@@ -8,10 +8,9 @@
 @import "unslider";
 
 @import "index/main";
-@import "index/cloud";
+@import "index/howto";
 @import "index/cases";
 @import "index/guide";
-@import "index/start";
 @import "index/news";
 
 @import "product/main.css";

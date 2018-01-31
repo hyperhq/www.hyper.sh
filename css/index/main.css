@@ -4,6 +4,21 @@
   transform: scale($size) translateZ(0);
 }
 
+@keyframes float {
+  from {
+    margin-top: 100px;
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+  to {
+    margin-top: -69px;
+    opacity: 0;
+  }
+}
+
 #header .main {
   color: white;
   text-align: center;
@@ -68,8 +83,13 @@
         margin-top: .5em;
         text-align: center;
         font-size: 5em;
+        font-weight: 500;
         @media (--laptop-viewport) {
           // font-size: 3.5em;
+        }
+        p {
+          margin: 0;
+          line-height: 1.3em;
         }
       }
       .desc {
@@ -77,6 +97,7 @@
         padding: .5em 0 .1em;
         width: 70%;
         margin: 0 auto;
+        color: DBCCFF;
       }
       .subtitle {
         display: none;
@@ -90,15 +111,56 @@
           font-weight: bold;
         }
       }
-      .signup {
-        @mixin purple-btn;
-        font-family: 'Moon-Bold';
-        margin-top: 25px;
-        margin-right: .7em;
-        margin-bottom: 35px;
-        display: inline-block;
-        font-size: 1.25em;
-        max-width: 280px;
+
+      .btns {
+        position: relative;
+        .animations {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          display: flex;
+          justify-content: center;
+          z-index: -1;
+
+          > span {
+            display: block;
+            background-image: url("/assets/images/cube-float.svg");
+            background-size: contain;
+            width: 112px;
+            height: 100px;
+            margin-right: 30px;
+            margin-top: 100px;
+
+            animation: float 5s infinite linear both;
+
+            &:first-child {
+              animation-delay: 0s;
+              width: 134.5px;
+              height: 120px;
+            }
+            &:nth-child(2) {
+              animation-delay: -2.5s;
+            }
+            &:nth-child(3) {
+              animation-delay: 1s;
+            }
+            &:last-child {
+              animation-delay: -1.5s;
+              width: 134.5px;
+              height: 120px;
+            }
+          }
+        }
+        .signup {
+          @mixin purple-btn;
+          font-family: 'Moon-Bold';
+          margin-top: 25px;
+          margin-right: .7em;
+          margin-bottom: 35px;
+          display: inline-block;
+          font-size: 1.25em;
+          max-width: 280px;
+        }
       }
       .noise {
         background-size: 100%;
@@ -177,16 +239,27 @@
     .cloud-wrap {
       margin-bottom: 25em;
       .blog-link {
+        background: rgba(255, 255, 255, .2);
+        border-radius: 1em;
         font-size: 1.1em;
         text-align: center;
         font-family: Poppins;
+        display: inline-block;
+        padding: 2px 14px 2px 6px;
 
         &::before {
           content: 'NEW';
           font-family: Moon;
           background: $purple;
-          padding: .3em .6em;
+          padding: 0 .8em;
+          line-height: 16px;
           border-radius: 1em;
+          font-size: 12px;
+          font-weight: bold;
+          display: inline-block;
+        }
+        &::after {
+          content: '>';
         }
       }
     }

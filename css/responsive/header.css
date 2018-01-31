@@ -19,7 +19,7 @@ $menuHeight: 165px;
           display: flex;
           flex-direction: column;
           position: absolute;
-          top: 120px;
+          top: 116px;
           left: 0;
           right: 0;
           height: $menuHeight;
@@ -37,6 +37,17 @@ $menuHeight: 165px;
           .item {
             padding: 5px;
             text-align: center;
+
+            .dropdown {
+              visibility: visible;
+              opacity: 1;
+              background: none;
+              position: static;
+
+              a:hover {
+                background: none;
+              }
+            }
 
             &::after {
               display: none;

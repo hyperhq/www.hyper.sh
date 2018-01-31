@@ -83,7 +83,6 @@
             margin: 0 5px;
           }
 
-
           &:hover ul {
             visibility: visible;
             opacity: 1;
@@ -95,7 +94,7 @@
             transition: visibility .5s, opacity .3s linear;
 
             position: absolute;
-            left: -8px;
+            left: -2px;
             top: 25px;
             background: $purple;
             border-radius: 5px;
@@ -103,8 +102,10 @@
 
             li a {
               display: block;
-              padding: 2px 8px;
+              padding: 0 8px;
               text-align: center;
+              font-size: 10px;
+              line-height: 18px;
               &:hover {
                 background: $purpleLight;
               }
@@ -166,6 +167,14 @@
     top: 0;
     bottom: 0;
     z-index: -2;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 79em;
+      height: 42em;
+      background: linear-gradient(18deg, $purple, $mainColor 42%, $mainColor);
+    }
     .shape {
       display: flex;
       @media (--laptop-viewport) {
@@ -180,12 +189,14 @@
     }
     .shape-left {
       z-index: 1;
-      max-width: 161px;
+      max-width: 241px;
+      margin-left: 1.6em;
     }
     .shape-right {
       z-index: 1;
-      max-width: 161px;
+      max-width: 241px;
       transform: scaleX(-1);
+      margin-right: 1.6em;
     }
     .shape-center {
       max-width: 609px;
