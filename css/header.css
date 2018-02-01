@@ -67,6 +67,7 @@
       }
     }
     .right {
+      z-index: 1;
       display: flex;
       font-family: 'Moon-Light';
       font-weight: bold;

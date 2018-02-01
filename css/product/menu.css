@@ -24,6 +24,8 @@
       flex-direction: row;
     }
     .btns {
+      display: flex;
+      justify-content: space-between;
 
       &.features .btn-features,
       &.pricing .btn-pricing,
@@ -35,28 +37,28 @@
         text-align: center;
         background-color: #EBDEFF;
         border: 2px solid #424C5C;
-        padding: 8px 13px 8px 33px;
+        padding: 8px 14px;
         margin-right: 1.66em;
         border-radius: 500px;
-        font-size: 1.1em;
+        font-size: 14px;
         font-family: 'Moon-Bold';
         color: #424C5C;
         cursor: pointer;
         position: relative;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         &:last-child {
           margin-right: 0;
         }
 
         &::before {
-          position: absolute;
-          left: 11px;
-          top: 7px;
           content: "";
-          display: inline-block;
           width: 15px;
           height: 15px;
+          margin-right: 5px;
+          margin-bottom: 2px;
         }
 
         &.btn-features {

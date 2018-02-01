@@ -42,10 +42,10 @@
       justify-content: center;
 
       .item {
-        text-align: left;
+        text-align: center;
         padding: 11px 30px;
         cursor: pointer;
-        font-size: 2em;
+        font-size: 1.8em;
         flex-grow: 1;
         text-transform: uppercase;
         &.active {
