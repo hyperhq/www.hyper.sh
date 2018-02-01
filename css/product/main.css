@@ -90,7 +90,12 @@
             .icon {
               text-align: center;
               margin-right: 20px;
-              width: 103px;
+              width: 80px;
+              @at-root {
+                .kubernetes .icon {
+                  width: 65px !important;
+                }
+              }
             }
           }
           .title {
