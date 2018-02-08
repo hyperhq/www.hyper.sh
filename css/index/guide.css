@@ -4,6 +4,38 @@
   align-items: center;
   margin: 6.66em 0;
 
+  @media (--ipad-viewport) {
+    font-size: 10px;
+  }
+
+  @media (--small-viewport) {
+    .title {
+      text-align: center;
+    }
+    > .start {
+      > .item {
+        .step {
+          width: 10em;
+          height: 10em;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (--iphone4-viewport) {
+    > .start {
+      > .item {
+        .step {
+          width: 9em;
+          height: 9em;
+        }
+      }
+    }
+  }
+
   .title {
     font-size: 4em;
     font-family: 'Fjalla One';
@@ -31,11 +63,11 @@
       position: relative;
       font-family: "Moon";
       flex-grow: 1;
-      min-width: 380px;
+      min-width: 33.3%;
 
       .step {
-        width: 145px;
-        height: 145px;
+        width: 12em;
+        height: 12em;
         background-repeat: no-repeat;
         background-size: contain;
 
@@ -58,38 +90,17 @@
       &:after {
         content: "";
         position: absolute;
-        top: 45px;
+        top: 2.6em;
         right: 0;
-        width: 60px;
-        height: 60px;
+        width: 5em;
+        height: 5em;
         background: url("/assets/icons/guide/arrow.svg") no-repeat;
         background-size: contain;
       }
-      .circle {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: 2px dashed #888;
-        font-size: 28px;
-        color: #888;
-        span {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          text-align: center;
-          justify-content: center;
-        }
-      }
       .desc {
-        font-size: 16px;
-        margin-top: 20px;
-        line-height: 25px;
+        font-size: 1.33em;
+        margin-top: 1.66em;
+        line-height: 2.08em;
         color: #6D3BC6;
 
         a {

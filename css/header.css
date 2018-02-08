@@ -174,6 +174,8 @@
       position: absolute;
       width: 79em;
       height: 42em;
+      max-width: 100%;
+      max-height: 100%;
       background: linear-gradient(18deg, $purple, $mainColor 42%, $mainColor);
     }
     .shape {

@@ -17,24 +17,33 @@
     display: flex;
     padding-bottom: 5em;
 
+    @media (--ipad-small-viewport) {
+      font-size: 10px;
+    }
+
     @media (--small-viewport) {
       height: auto;
-      flex-direction: column;
       > .items {
         display: none;
       }
       .detail {
         margin-left: 0;
-        margin-top: 50px;
+        margin-top: 3.33em;
         display: block;
+        min-height: unset;
         .items {
+          flex-direction: column;
+
+          .item {
+            width: auto;
+          }
         }
       }
     }
 
     > .items {
       font-family: 'Fjalla One';
-      font-size: 16px;
+      font-size: 1.33em;
       text-align: center;
       color: #424C5C;
       width: 100%;
@@ -57,16 +66,16 @@
       display: none;
       margin-top: 5.5em;
       align-content: space-between;
-      min-height: 362px;
+      min-height: 30.16em;
       &.active {
         display: block;
       }
       > .title {
-        font-size: 24px;
+        font-size: 2em;
         font-weight: 300;
         color: #555;
-        margin-top: 20px;
-        margin-bottom: 50px;
+        margin-top: 1.66em;
+        margin-bottom: 4.16em;
       }
       .items {
         display: flex;
@@ -79,7 +88,7 @@
           align-items: flex-start;
           justify-content: flex-start;
           width: 33.3%;
-          margin-bottom: 40px;
+          margin-bottom: 3.33em;
           &:last-child {
             margin-bottom: 0;
           }
@@ -89,8 +98,8 @@
             align-items: center;
             .icon {
               text-align: center;
-              margin-right: 20px;
-              width: 80px;
+              margin-right: 1.66em;
+              width: 6.66em;
               @at-root {
                 .kubernetes .icon {
                   width: 65px !important;
@@ -104,10 +113,10 @@
             color: $purple;
           }
           .subtitle {
-            font-size: 16px;
-            margin-top: 10px;
+            font-size: 1.33em;
+            margin-top: 0.83em;
             font-weight: 400;
-            max-width: 300px;
+            max-width: 25em;
             color: #555;
 
             a {

@@ -71,6 +71,12 @@ $whiteGray: #fcfcfc;
   }
 }
 
+@define-mixin scale $size {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transform: scale($size) translateZ(0);
+}
+
 html, body {
   min-width: 320px;
   font-size: 12px;

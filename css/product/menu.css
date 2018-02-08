@@ -3,6 +3,26 @@
   background: #E2EFFF;
   font-family: 'Moon-Bold';
 
+
+  @media (--small-viewport) {
+    > .content {
+      > .btns {
+        display: none;
+      }
+    }
+  }
+
+  @media (--mac-viewport) {
+    > .content {
+      .left {
+        margin-left: 2em;
+      }
+      .btns {
+        margin-right: 2em;
+      }
+    }
+  }
+
   .content {
     height: 6.67em;
     display: flex;
