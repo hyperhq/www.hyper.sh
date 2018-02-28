@@ -2,58 +2,51 @@
   <div class="section main">
     <ul class="sections">
       <li class="section">
-        <div class="title">> Container</div>
+        <div class="title">> Free Tier</div>
         <div class="content">
+          <ul>
+            <li>Hyperpod offers a free tier plan for up to 2 months by adding a credit card.</li>
+            <li>During the free tier period you will incur no costs for the following resources: 1 Pod (<= S4), 1 Volume, 1 Floating IP.
+</li>
+            <li>During the free tier period if we find that resources are being abused we will suspend your account and associated resources without notice. We reserve the right to define abusive usage.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="section">
+        <div class="title">> Pod</div>
+        <div class="content">
+          <div class="foreword">
+            <p>Hyperpod</p>
+            <p>Instance Types When you launch an instance, the instance type that you specify determines the hardware of the host computer used for your instance. Each instance type offers different compute, memory, and storage capabilities and are grouped in instance families based on these capabilities. Select an instance type based on the requirements of the application or software that you plan to run on your instance.</p>
+            Amazon EC2 provides each instance with a consistent and predictable amount of CPU capacity, regardless of its underlying hardware.
+            <p>Amazon EC2 dedicates some resources of the host computer, such as CPU, memory, and instance storage, to a particular instance. Amazon EC2 shares other resources of the host computer, such as the network and the disk subsystem, among instances. If each instance on a host computer tries to use as much of one of these shared resources as possible, each receives an equal share of that resource. However, when a resource is underused, an instance can consume a higher share of that resource while it's available.</p>
+            <p>Each instance type provides higher or lower minimum performance from a shared resource. For example, instance types with high I/O performance have a larger allocation of shared resources. Allocating a larger share of shared resources also reduces the variance of I/O performance. For most applications, moderate I/O performance is more than enough. However, for applications that require greater or more consistent I/O performance, consider an instance type with higher I/O performance.</p>
+
+            <ul>
+              <li>
+                Image
+                <ul>
+                  <li>Image is a self-contained package that includes application, configuration and data. Hyperpod supports Docker image.</li>
+                  <li>Currently image is <b>FREE</b>.</li>
+                </ul>
+              </li>
+              <li>
+                Pod
+                <ul>
+                  <li>A pod is a computational instance (include CPU, RAM), just like VM. We provide a set of predefined resource configurations for you to choose when launching pods. Different configurations come with different resource specification, thus different price.</li>
+                  <li>Billing begins when you create a new pod, ends when the pod terminates (through API call), or exits (success or failure).</li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
           {{> ./table}}
           <ul>
             <p> * All containers include a 10GB rootFS disk volume which is billed separately. See 'Storage' section below.</p>
-            <li>Billing begins when Hyper.sh launches a new container or start a stopped container, ends when the container stops or terminates, either through an API call, or through container exists (success or failure).</li>
-            <li>Everytime you issue a <code>hyper run/start/restart</code> request, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
-            <li>Everytime a container is restarted, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
-          </ul>
-        </div>
-      </li>
-      <li class="section">
-        <div class="title">> Service</div>
-        <div class="content">
-          <div class="table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Per Second</th>
-                  <th>Per Hour</th>
-                  <th>Monthly</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>$0.000003</td>
-                  <td>$0.0108</td>
-                  <td>$7.78</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <ul>
-            <p>* Hyper Service provides extra specific functionality and is not necessary for most use cases, for more information please consult the documentation <a href="https://docs.hyper.sh/Feature/container/service.html">here.</a></p>
-            <li>Billing begins when a new service created, ends when it is terminated.</li>
-            <li>Everytime you issue a <code>hyper run/start/restart</code> request, a default period of 10 seconds is billed. If a container runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
-          </ul>
-        </div>
-      </li>
-      <li class="section">
-        <div class="title">> Hyper Cron (BETA)</div>
-        <div class="content">
-          <ul>
-            <li>During the beta, Hyper Cron is charged at the standard per-second container rates.</li>
-          </ul>
-        </div>
-      </li>
-      <li class="section">
-        <div class="title">> Hyper Func (BETA)</div>
-        <div class="content">
-          <ul>
-            <li>During the beta, Hyper Func is charged at the standard per-second container rates.</li>
+            <li>Billing begins when Hypernetes launches a new pod or start a stopped pod, ends when the pod stops or terminates, either through an API call, or through the pod exists (success or failure).</li>
+            <li>Everytime you issue a <code>run/start/restart</code> request, a default period of 10 seconds is billed. If a pod runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
+            <li>Everytime a pod is restarted, a default period of 10 seconds is billed. If a pod runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
           </ul>
         </div>
       </li>
@@ -71,36 +64,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Image</td>
-                  <td>$0.0000000386/GB</td>
-                  <td>$0.0001388889/GB</td>
-                  <td>$0.1/GB</td>
+                <tr id="rootfs-row">
                 </tr>
-                <tr class="alt">
-                  <td>RootFS</td>
-                  <td>$0.0000000386/GB</td>
-                  <td>$0.0001388889/GB</td>
-                  <td>$0.1/GB</td>
-                </tr>
-                <tr>
-                  <td>Volume</td>
-                  <td>$0.0000000386/GB</td>
-                  <td>$0.0001388889/GB</td>
-                  <td>$0.1/GB</td>
-                </tr>
-                <tr class="alt">
-                  <td>Snapshot</td>
-                  <td>$0.0000000193/GB</td>
-                  <td>$0.0000694444/GB</td>
-                  <td>$0.05/GB</td>
+                <tr class="alt" id="volume-row">
                 </tr>
               </tbody>
             </table>
           </div>
           <ul>
-            <li>Billing begins when the storage object is created (<code>hyper pull</code>, <code>hyper run</code>, <code>hyper volume create</code>, <code>hyper snapshot create</code>), and a default period of 10 seconds is billed, ends upon removal.</li>
-            <li>Images are charged per GB with a minimum of 1GB and will be rounded UP to nearest GB (i.e. 1.5GB billed at 2GB).</li>
+            <li>Billing begins when the storage object is created, and a default period of 10 seconds is billed, ends upon removal.</li>
           </ul>
         </div>
       </li>
@@ -109,7 +81,7 @@
         <div class="content">
           <ul>
             <li>
-              <b>Floating IP:</b> $1/IP/month
+              <b>Floating IP:</b> $<span class="fip-price"></span>/IP/month
               <ul>
                 <li>Billed by calender month, e.g. one FIP is allocated in Jan. 29th, and released in Feb. 2nd, $2 will be charged.</li>
                 <li>Billing begins when a new Floating IP is allocated, ends when it is released. Partial month is treated as a entire month.</li>
@@ -123,13 +95,12 @@
         <div class="content">
           <ul>
             <li>
-              Cheapest single container with a publicly accessible IP (FIP) assuming a 1GB Docker image size.
+              Cheapest single pod with a publicly accessible IP (FIP) assuming a 1GB Docker image size.
               <ul>
-                <li>S1 container: 1.03/month</li>
-                <li>FIP: $1/month</li>
-                <li>RootFS Container Volume (10GB@$0.1/GB/month): $1/month</li>
-                <li>Container Image (1GB@$0.1/GB/month): $0.1</li>
-                <li><b>Total monthly price:</b> $3.13/month</li>
+                <li>S1 pod: $<span class="cheapest-pod-price-month"></span>/month</li>
+                <li>FIP: $<span class="fip-price"></span>/month</li>
+                <li>RootFS (10GB@$<span class="rootfs-price"></span>/GB/month): $<span class="rootfs-price-month"></span>/month</li>
+                <li><b>Total monthly price:</b> $<span id="exmaple-total"></span>/month</li>
               </ul>
             </li>
           </ul>
@@ -141,26 +112,15 @@
     </header>
     <ul class="sections">
       <li class="section">
-        <div class="title">> Does Hyper.sh offer a free tier?</div>
-        <div class="content">
-          <ul>
-            <li>Hyper.sh offers a free tier plan for up to 2 months by adding a credit card.</li>
-            <li>During the free tier period you will incur no costs for the following resources: 1 Container (<= S4), 1 Image, 1 Volume, 1 Floating IP.</li>
-            <li>Once the free tier period ends, you will be charged accordingly each month for all resources.</li>
-            <li>During the free tier period if we find that resources are being abused we will delete your account and associated resources without notice. We reserve the right to define abusive usage.</li>
-          </ul>
-        </div>
-      </li>
-      <li class="section">
         <div class="title">> What payment types do you accept?</div>
         <div class="content">
-          Currently, Hyper.sh accepts credit or debit cards, including Visa, MasterCard, American Express, JCB, Discover, and Diners Club.
+          Currently, Hypernetes accepts credit or debit cards, including Visa, MasterCard, American Express, JCB, Discover, and Diners Club.
         </div>
       </li>
       <li class="section">
-        <div class="title">> Does Hyper.sh keep my credit card information?</div>
+        <div class="title">> Does Hyperpod keep my credit card information?</div>
         <div class="content">
-          No, all payments are processed through Stripe, a trusted third party payment processing service. Hyper.sh does not retain any credit card information.
+          No, all payments are processed through Stripe, a trusted third party payment processing service. Hypernetes does not retain any credit card information.
         </div>
       </li>
       <li class="section">
@@ -193,11 +153,11 @@
           <ul>
             <li><b>First Payment Attempt</b>: Credit card payment charged on 1st of the month. You will receive email notification of failed credit card charge and to update credit card information in web console.</li>
             <li><b>Second Payment Attempt</b>: Submitted 3 days after first attempt, if the first charge fails, during this period you will be unable to create / update resources in your account.</li>
-            <li><b>Third Payment Attempt</b>: Submitted 5 days after second attempt, if the second charge attempt fails. If third attempt fails, we will stop all containers in your account.</li>
+            <li><b>Third Payment Attempt</b>: Submitted 5 days after second attempt, if the second charge attempt fails. If third attempt fails, we will stop all pods in your account.</li>
             <li>If the balance is due over 30 days, we will deactivate your account (unable to login to web console, removal of all credentials), and permanently purge all resources in your account.</li>
             <li>You can login the web console to update your credit card information, which will trigger new payment request, whenever a payment request succeeds, we will immediately resume your account.</li>
           </ul>
-          <p>If you have any questions about an outstanding balance, how to add a payment option, or about billing in general, please feel free to contact <a href="mailto:support@hyper.sh">Hyper.sh Support</a>.</p>
+          <p>If you have any questions about an outstanding balance, how to add a payment option, or about billing in general, please feel free to contact <a href="mailto:support@hyper.sh">Support</a>.</p>
         </div>
       </li>
       <li class="section">

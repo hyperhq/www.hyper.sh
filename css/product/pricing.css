@@ -50,6 +50,9 @@
 
 #pricing .container > .main {
   max-width: 1024px;
+  .foreword {
+    margin-bottom: 30px;
+  }
   .sections {
     .section {
       @mixin table;
