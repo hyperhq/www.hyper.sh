@@ -8,7 +8,7 @@
     font-size: 10px;
   }
 
-  @media (--small-viewport) {
+  @media (--small-than-ipad-viewport) {
     .title {
       text-align: center;
     }
@@ -91,7 +91,7 @@
         content: "";
         position: absolute;
         top: 2.6em;
-        right: 0;
+        right: -2em;
         width: 5em;
         height: 5em;
         background: url("/assets/icons/guide/arrow.svg") no-repeat;
