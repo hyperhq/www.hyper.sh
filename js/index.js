@@ -290,7 +290,7 @@ const initRegionUX = () => {
 }
 
 const loadPrice = () => {
-  if (!$('#pricing.kubernetes').length) return
+  if (!$('#pricing.pi').length) return
 
   const Second = {
     Hour: 3600,
@@ -298,8 +298,8 @@ const loadPrice = () => {
     Month: 3600 * 24 * 30,
   }
 
-  $.getJSON('https://raw.githubusercontent.com/hyperhq/h8s.hyper.sh-docs/master/FAQ/price.json', function(pricing) {
-    pricing = pricing['gcp-us-central1']
+  $.getJSON('https://raw.githubusercontent.com/hyperhq/h8s.hyper.sh-docs/hyperpod/price.json', function(pricing) {
+    pricing = pricing.region['gcp-us-central1']
     // render pod
     const podHtmlArray = pricing.pod.map((p, idx) => {
       const prefix = idx % 2 === 0 ? '<tr>' : '<tr class="alt">'
@@ -310,11 +310,12 @@ const loadPrice = () => {
       <td>${p.memory}MB</td>
       <td>10GB*</td>
       <td>FREE</td>
-      <td>${p.price.toFixed(7)}</td>
+      <td>${p.price}</td>
       <td>${(p.price * Second.Hour).toFixed(5)}</td>
       <td>${(p.price * Second.Month).toFixed(2)}</td>
     </tr>`
     })
+
 
     $('#pod tbody').html(podHtmlArray.join('\n'))
 
@@ -324,24 +325,14 @@ const loadPrice = () => {
     // render volume
     const vp = pricing.volume.price
     const vunit = pricing.volume.unit
-    const vHtml = `<td>${pricing.volume.name}</td><td>$${(vp/Second.Month).toFixed(10)}/${vunit}</td><td>$${(vp/30/24).toFixed(10)}/${vunit}</td><td>$${vp}/${vunit}</td>`
+    const vHtml = `<td>${pricing.volume.name}</td><td>$${vp.toFixed(10)}/${vunit}</td><td>$${(vp * Second.Hour).toFixed(10)}/${vunit}</td><td>$${(vp * Second.Month).toFixed(10)}/${vunit}</td>`
     $('#volume-row').html(vHtml)
 
     // render rootfs
     const rp = pricing.rootfs.price
     const runit = pricing.volume.unit
-    const rHtml = `<td>${pricing.rootfs.name}</td><td>$${(rp/Second.Month).toFixed(10)}/${runit}</td><td>$${(rp/30/24).toFixed(10)}/${runit}</td><td>$${rp}/${runit}</td>`
+    const rHtml = `<td>${pricing.rootfs.name}</td><td>$${rp.toFixed(10)}/${runit}</td><td>$${(rp * Second.Hour).toFixed(10)}/${runit}</td><td>$${(rp * Second.Month).toFixed(10)}/${runit}</td>`
     $('#rootfs-row').html(rHtml)
-
-    // render examples
-    const ppm = pricing.pod[0].price * Second.Month
-    const rpm = rp * 10
-
-    $('.cheapest-pod-price-month').html(ppm.toFixed(2))
-    $('.rootfs-price').html(rp)
-    $('.rootfs-price-month').html(rpm)
-
-    $('#exmaple-total').html((ppm + fp + rpm).toFixed(2))
   })
 }
 

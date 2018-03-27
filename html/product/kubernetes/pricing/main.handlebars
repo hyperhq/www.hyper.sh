@@ -1,58 +1,100 @@
 <section class="container white topbg">
   <div class="section main">
+    <div class="foreword">
+      <p><b>Pi</b> use a pay-per-use billing model, similar to other cloud services, such like AWS EC2. You pay only for the resources you use by the second, no minimum fee.</p>
+      <p>To see your bill, go to your <a href="https://console.hyper.sh/billing/history">billing history</a>. Your bill contains links to usage reports that provide details about your bill.</p>
+    </div>
     <ul class="sections">
       <li class="section">
-        <div class="title">> Free Tier</div>
+        <div class="title">> Compute</div>
         <div class="content">
-          <ul>
-            <li>Hyperpod offers a free tier plan for up to 2 months by adding a credit card.</li>
-            <li>During the free tier period you will incur no costs for the following resources: 1 Pod (<= S4), 1 Volume, 1 Floating IP.
-</li>
-            <li>During the free tier period if we find that resources are being abused we will suspend your account and associated resources without notice. We reserve the right to define abusive usage.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="section">
-        <div class="title">> Pod</div>
-        <div class="content">
-          <div class="foreword">
-            <p>Hyperpod</p>
-            <p>Instance Types When you launch an instance, the instance type that you specify determines the hardware of the host computer used for your instance. Each instance type offers different compute, memory, and storage capabilities and are grouped in instance families based on these capabilities. Select an instance type based on the requirements of the application or software that you plan to run on your instance.</p>
-            Amazon EC2 provides each instance with a consistent and predictable amount of CPU capacity, regardless of its underlying hardware.
-            <p>Amazon EC2 dedicates some resources of the host computer, such as CPU, memory, and instance storage, to a particular instance. Amazon EC2 shares other resources of the host computer, such as the network and the disk subsystem, among instances. If each instance on a host computer tries to use as much of one of these shared resources as possible, each receives an equal share of that resource. However, when a resource is underused, an instance can consume a higher share of that resource while it's available.</p>
-            <p>Each instance type provides higher or lower minimum performance from a shared resource. For example, instance types with high I/O performance have a larger allocation of shared resources. Allocating a larger share of shared resources also reduces the variance of I/O performance. For most applications, moderate I/O performance is more than enough. However, for applications that require greater or more consistent I/O performance, consider an instance type with higher I/O performance.</p>
-
+          <div>
             <ul>
               <li>
                 Image
                 <ul>
-                  <li>Image is a self-contained package that includes application, configuration and data. Hyperpod supports Docker image.</li>
+                  <li>Image is a self-contained package that includes application, configuration and data. Pi will pull your images from 3rd-party registry and launch them. We do not offer our own registry at the moment.</li>
                   <li>Currently image is <b>FREE</b>.</li>
                 </ul>
               </li>
               <li>
                 Pod
                 <ul>
-                  <li>A pod is a computational instance (include CPU, RAM), just like VM. We provide a set of predefined resource configurations for you to choose when launching pods. Different configurations come with different resource specification, thus different price.</li>
-                  <li>Billing begins when you create a new pod, ends when the pod terminates (through API call), or exits (success or failure).</li>
+                  <li>Pod is charged by the computational resources it consumes (CPU, RAM) and the duration it runs (by the second).
+</li>
+                  <li>We provide a set of predefined resource configurations for you to choose when launching pods. Different configurations come with different resource specifications, thus different price.
+</li>
+                  <li>Billing begins when a pod is started, ends when the pod terminates (through API call), or exits (success or failure).
+</li>
+                  <li>Everytime a pod is started, a default duration of 60 seconds is applied. If a pod runs for 40s, it will be billed for 60s; if it runs for 100s, it is billed for 100s.
+</li>
                 </ul>
               </li>
             </ul>
 
           </div>
           {{> ./table}}
+          <h2>Automatic Sustained Use Discounts</h2>
+          <p>Similar with Google Compute Engine, your Pods will qualify for a sustained use discount. The discounts are applied automatically and will be calculated and added to your bill. There is no action needed on your part to enable sustained use discounts.</p>
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Usage Duration (second)</th>
+                  <th>% at which incremental is charged</th>
+                  <th>Example (M1 size)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0-600</td>
+                  <td>100% of base rate</td>
+                  <td>$0.0000144/second</td>
+                </tr>
+                <tr class="alt">
+                  <td>600-3600</td>
+                  <td>67% of base rate</td>
+                  <td>$0.0000096/second</td>
+                </tr>
+                <tr>
+                  <td>3600+</td>
+                  <td>33% of base rate</td>
+                  <td>$0.0000048/second</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><b>Example: </b>For a M1 pod to run for an entire month, the pod will cost:</p>
           <ul>
-            <p> * All containers include a 10GB rootFS disk volume which is billed separately. See 'Storage' section below.</p>
-            <li>Billing begins when Hypernetes launches a new pod or start a stopped pod, ends when the pod stops or terminates, either through an API call, or through the pod exists (success or failure).</li>
-            <li>Everytime you issue a <code>run/start/restart</code> request, a default period of 10 seconds is billed. If a pod runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
-            <li>Everytime a pod is restarted, a default period of 10 seconds is billed. If a pod runs for 5s, it will be billed for 10s; if it runs for 30s, it is billed for 30s.</li>
+            <li>First 600 seconds: 600*$0.0000144 = $0.00864</li>
+            <li>The next 3000 seconds: 3000*$0.0000096 = $0.0288</li>
+            <li>The rest of the month: 3600*(24*30-1)*$0.0000048 = $12.42432</li>
+            <li>Total: $0.00864 + $0.0288 + $12.42432 = $12.46176</li>
           </ul>
         </div>
       </li>
       <li class="section">
         <div class="title">> Storage</div>
         <div class="content">
+          <ul>
+            <li>
+              Rootfs:
+              <ul>
+                <li>A pod may have one or more containers.</li>
+                <li>Every container come with a default 10GB rootfs, e.g. if a pod have 3 containers, the pod has three rootfs, 30GB in total.</li>
+                <li>Rootfs exits along with the lifecycle of the pod. Billing begins when the pod is created, ends when the pod terminates or exists.</li>
+                <li>A default duration of 60 seconds is applied.</li>
+              </ul>
+            </li>
+            <li>
+              Volume:
+              <ul>
+                <li>The volume size ranges from 10 to 50 GB, and the default size is 10GB.</li>
+                <li>Volume is independent from the pod's lifecycle. Thus, the billing begins when a volume is created, ends upon removal.</li>
+                <li>A default duration of 60 seconds is applied.</li>
+              </ul>
+            </li>
+          </ul>
           <div class="table">
             <table>
               <thead>
@@ -71,9 +113,6 @@
               </tbody>
             </table>
           </div>
-          <ul>
-            <li>Billing begins when the storage object is created, and a default period of 10 seconds is billed, ends upon removal.</li>
-          </ul>
         </div>
       </li>
       <li class="section">
@@ -81,46 +120,63 @@
         <div class="content">
           <ul>
             <li>
-              <b>Floating IP:</b> $<span class="fip-price"></span>/IP/month
+              Traffic:
               <ul>
-                <li>Billed by calender month, e.g. one FIP is allocated in Jan. 29th, and released in Feb. 2nd, $2 will be charged.</li>
-                <li>Billing begins when a new Floating IP is allocated, ends when it is released. Partial month is treated as a entire month.</li>
+                <li>Currently all network traffic are <b>Free</b>.</li>
               </ul>
             </li>
-          </ul>
-        </div>
-      </li>
-      <li class="section">
-        <div class="title">> Examples</div>
-        <div class="content">
-          <ul>
             <li>
-              Cheapest single pod with a publicly accessible IP (FIP) assuming a 1GB Docker image size.
+              Service:
               <ul>
-                <li>S1 pod: $<span class="cheapest-pod-price-month"></span>/month</li>
-                <li>FIP: $<span class="fip-price"></span>/month</li>
-                <li>RootFS (10GB@$<span class="rootfs-price"></span>/GB/month): $<span class="rootfs-price-month"></span>/month</li>
-                <li><b>Total monthly price:</b> $<span id="exmaple-total"></span>/month</li>
+                <li>$0.03/hour</li>
+                <li>Billing begins when a new service is created, ends when it is deleted. Partial hour will be counted as an hour.</li>
+                <li>A default duration of 1 hour is applied.</li>
+              </ul>
+            </li>
+            <li>
+              Floating IP:
+              <ul>
+                <li>If you allocate a floating IP address but do not use it, you will be charged with an hourly rate. If you use it (with Service), you will not be charged for it.</li>
               </ul>
             </li>
           </ul>
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Hourly</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Static IP address (assigned but unused)</td>
+                  <td>$0.01/IP</td>
+                </tr>
+                <tr class="alt">
+                  <td>Static IP address (assigned and in use)</td>
+                  <td>Free</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </li>
     </ul>
     <header class="title border sub">
-      <h1>General FAQ</h1>
+      <h1>FAQ</h1>
     </header>
     <ul class="sections">
       <li class="section">
         <div class="title">> What payment types do you accept?</div>
         <div class="content">
-          Currently, Hypernetes accepts credit or debit cards, including Visa, MasterCard, American Express, JCB, Discover, and Diners Club.
+          Currently, Pi accepts credit or debit cards, including Visa, MasterCard, American Express, JCB, Discover, and Diners Club.
         </div>
       </li>
       <li class="section">
-        <div class="title">> Does Hyperpod keep my credit card information?</div>
+        <div class="title">> Does Pi keep my credit card information?</div>
         <div class="content">
-          No, all payments are processed through Stripe, a trusted third party payment processing service. Hypernetes does not retain any credit card information.
+          No, all payments are processed through Stripe, a trusted third party payment processing service. Pi does not retain any credit card information.
         </div>
       </li>
       <li class="section">

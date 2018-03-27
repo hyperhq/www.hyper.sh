@@ -42,12 +42,12 @@ module.exports = function() {
     },
     {
       template: 'html/product/kubernetes/index/index.handlebars',
-      filename: `kubernetes/index.html`,
+      filename: `pi/index.html`,
       inject: false
     },
     {
       template: 'html/product/kubernetes/pricing/index.handlebars',
-      filename: `kubernetes/pricing.html`,
+      filename: `pi/pricing.html`,
       inject: false
     },
 

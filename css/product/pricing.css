@@ -51,13 +51,17 @@
 #pricing .container > .main {
   max-width: 1024px;
   .foreword {
-    margin-bottom: 30px;
+    font-size: 16px;
   }
   .sections {
     .section {
       @mixin table;
+      h2 {
+        font-weight: bold;
+      }
       .table {
         margin-bottom: 30px;
+        margin-top: 30px;
       }
       .desc {
         font-weight: 400;
