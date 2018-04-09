@@ -7,7 +7,8 @@
     "start": "node server",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors && cd howto && ../ink_linux publish && cd .. && rm -rf dist && mv ./dist_tmp ./dist",
     "build-local": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors && rm -rf dist && mv ./dist_tmp ./dist",
-    "docker": "npm run build-local && docker build -t jiecao/hyper-www . && docker push jiecao/hyper-www"
+    "docker": "npm run build-local && docker build -t jiecao/hyper-www . && docker push jiecao/hyper-www",
+    "hyper": "hyper pull jiecao/hyper-www && hyper rm -fv hyper-www-test && hyper run -d -p 80:2015 --name hyper-www-test jiecao/hyper-www && hyper fip attach 199.245.56.107 hyper-www-test"
   },
   "repository": {
     "type": "git",
