@@ -37,11 +37,21 @@
     }
 
     .left {
+      font-family: 'Fjalla One';
       display: flex;
       align-items: center;
       font-size: 1.67em;
       color: #424C5C;
       flex-direction: row;
+
+      .title {
+        text-transform: capitalize;
+        display: inline-block;
+      }
+
+      .desc {
+        display: inline-block;
+      }
     }
     .btns {
       display: flex;

@@ -70,8 +70,10 @@
       }
       .title {
         margin-top: .5em;
+        margin-bottom: .5em;
+        line-height: 6rem;
         text-align: center;
-        font-size: 5em;
+        font-size: 4.5em;
         font-weight: 500;
         @media (--laptop-viewport) {
           // font-size: 3.5em;
@@ -216,13 +218,14 @@
       margin-bottom: 25em;
       .blog-link {
         background: rgba(255, 255, 255, .2);
-        border-radius: 1em;
-        font-size: 1.1em;
+        border-radius: 2em;
+        font-size: 1.25em;
         text-align: center;
         font-family: Poppins;
         display: inline-flex;
         align-items: center;
-        padding: 2px 14px 2px 6px;
+        padding: 8px 20px 8px 16px;
+        margin-top: 2em;
 
         a {
           padding: 0 .3em 0 .3em;

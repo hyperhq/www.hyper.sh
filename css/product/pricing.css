@@ -56,6 +56,9 @@
   .sections {
     .section {
       @mixin table;
+      a {
+        color: rgb(0, 0, 238);
+      }
       h2 {
         font-weight: bold;
       }

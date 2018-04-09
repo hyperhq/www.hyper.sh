@@ -31,22 +31,22 @@ module.exports = function() {
       inject: false
     },
     {
-      template: 'html/product/swarm/index/index.handlebars',
-      filename: `swarm/index.html`,
+      template: 'html/product/hyper/index/index.handlebars',
+      filename: `hyper/index.html`,
       inject: false
     },
     {
-      template: 'html/product/swarm/pricing/index.handlebars',
-      filename: `swarm/pricing.html`,
+      template: 'html/product/hyper/pricing/index.handlebars',
+      filename: `hyper/pricing.html`,
       inject: false
     },
     {
-      template: 'html/product/kubernetes/index/index.handlebars',
+      template: 'html/product/pi/index/index.handlebars',
       filename: `pi/index.html`,
       inject: false
     },
     {
-      template: 'html/product/kubernetes/pricing/index.handlebars',
+      template: 'html/product/pi/pricing/index.handlebars',
       filename: `pi/pricing.html`,
       inject: false
     },

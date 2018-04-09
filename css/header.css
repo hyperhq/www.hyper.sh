@@ -90,6 +90,7 @@
           }
 
           ul {
+            font-family: 'Poppins';
             visibility: hidden;
             opacity: 0;
             transition: visibility .5s, opacity .3s linear;
@@ -103,9 +104,9 @@
 
             li a {
               display: block;
-              padding: 0 8px;
+              padding: 2px 13px;
               text-align: center;
-              font-size: 12px;
+              font-size: 14px;
               line-height: 18px;
               &:hover {
                 background: $purpleLight;
