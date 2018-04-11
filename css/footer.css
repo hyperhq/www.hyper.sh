@@ -72,6 +72,35 @@
             a {
               color: #888;
             }
+            ::selection {
+              background: transparent;
+            }
+            & > ul {
+              display: none;
+              color: #888;
+              padding-left: 8px;
+            }
+            .item-dropdown {
+              &.active + ul {
+                display: block;
+              }
+              &::after {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 2px;
+                vertical-align: middle;
+                border-top: 4px dashed;
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent;
+              }
+              &.active::after {
+                border-top: 0;
+                border-bottom: 4px dashed;
+              }
+
+            }
           }
         }
         &.community {

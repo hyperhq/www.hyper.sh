@@ -190,6 +190,7 @@ const initBackground = () => {
 }
 
 const bindEvents = () => {
+  $('.item-dropdown').click((evt) => $(evt.currentTarget).toggleClass('active'))
   $('#header .nav-toggle').click(evt => $('#header nav').toggleClass('show'))
 }
 
@@ -337,6 +338,7 @@ const loadPrice = () => {
 }
 
 $(() => {
+
   bindEvents()
   // initBackground()
   // initPriceSlider()

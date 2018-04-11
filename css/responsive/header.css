@@ -19,7 +19,7 @@ $menuHeight: 165px;
           display: flex;
           flex-direction: column;
           position: absolute;
-          top: 116px;
+          top: 112px;
           left: 0;
           right: 0;
           height: $menuHeight;

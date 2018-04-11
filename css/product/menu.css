@@ -1,14 +1,27 @@
+.product.hyper#pricing {
+  @media (--small-than-ipad-viewport) {
+    .title-wrap .desc {
+      display: none;
+    }
+  }
+}
 
 .product > .menu {
   background: #E2EFFF;
   font-family: 'Moon-Bold';
 
+  @media (--iphone4-viewport) {
+    .title-wrap .desc {
+      display: none !important;
+    }
+    .content .btns .btn {
+      margin-right: .2em;
+    }
+  }
 
   @media (--small-viewport) {
-    > .content {
-      > .btns {
-        display: none;
-      }
+    .content {
+      font-size: 8px;
     }
   }
 
@@ -23,8 +36,25 @@
     }
   }
 
+  @media (--ipad-medium-viewport) {
+    > .content {
+      flex-flow: column;
+      .left {
+        margin: 20px 0;
+      }
+      .btns {
+        margin-right: 0;
+        margin-bottom: 20px;
+        .btn {
+          margin-right: .6em;
+        }
+      }
+    }
+  }
+
   .content {
-    height: 6.67em;
+    font-size: 12px;
+    min-height: 6.67em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,10 +97,10 @@
         text-align: center;
         background-color: #EBDEFF;
         border: 2px solid #424C5C;
-        padding: 8px 14px;
+        padding: .66em 1.17em;
         margin-right: 1.66em;
         border-radius: 500px;
-        font-size: 14px;
+        font-size: 1.17em;
         font-family: 'Moon-Bold';
         color: #424C5C;
         cursor: pointer;
