@@ -314,7 +314,7 @@ const loadPrice = () => {
     Month: 3600 * 24 * 30,
   }
 
-  $.getJSON('https://raw.githubusercontent.com/hyperhq/h8s.hyper.sh-docs/hyperpod/price.json', function(pricing) {
+  $.getJSON('https://raw.githubusercontent.com/hyperhq/docs.hyper.sh-pi/master/price.json', function(pricing) {
     pricing = pricing.region['gcp-us-central1']
     // render pod
     const podHtmlArray = pricing.pod.map((p, idx) => {
