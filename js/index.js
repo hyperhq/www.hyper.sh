@@ -48,6 +48,21 @@ const debounce = function(func, wait, immediate) {
   };
 }
 
+const waitImages = function(images, cb) {
+  images = [].concat(images)
+
+  images.forEach(image => {
+    let $image = $(image)
+    if (!$image.is('img')) {
+      console.log($image.css('background-image'))
+      const imageUrl = $image.css('background-image').replace(/url\(['"]*(.+?)['"]*\)/, '$1')
+      $image = $('<img/>').attr('src', imageUrl)
+    }
+    if ($image.get(0).complete) return cb()
+    $image.on('load', cb)
+  })
+}
+
 const initCloudAnimate = () => {
   const items = $('#index .map .item')
   if (!items.length) return
@@ -309,11 +324,7 @@ const loadPrice = () => {
       <td>${p.name}</td>
       <td>${p.cpu}</td>
       <td>${p.memory}MB</td>
-      <td>10GB*</td>
-      <td>FREE</td>
       <td>${p.price}</td>
-      <td>${(p.price * Second.Hour).toFixed(5)}</td>
-      <td>${(p.price * Second.Month).toFixed(2)}</td>
     </tr>`
     })
 
@@ -337,6 +348,71 @@ const loadPrice = () => {
   })
 }
 
+const initHowSlides = () => {
+  const hwr = 1218 / 3474
+  const barHwr = 1218 / 84
+  const $slides = $('.how-slides')
+  const $slideUp = $('.how-slide-up')
+
+  if (!$slides.length || !$slideUp.length) return
+
+  const $upImage = $('.up-image img')
+  const $bar = $('.how-slide-up .bar')
+  let barWidth = $bar.width()
+  let slideWidth = $slides.width()
+  let slideHeight = $slides.height()
+  let minLeft = slideWidth * 0.17 + barWidth / 2
+  let maxLeft = slideWidth - slideWidth * 0.2 + barWidth / 2
+
+  let readyCount = 0
+
+  waitImages([$upImage, $slides, $bar], function() {
+    readyCount++
+    if (readyCount >= 3) $slideUp.css('visibility', 'visible')
+  })
+
+  function resizeSlides(init) {
+    slideWidth = $slides.width()
+    slideHeight = slideWidth * hwr
+    $slides.height(slideHeight)
+
+    minLeft = slideWidth * 0.17
+    maxLeft = slideWidth - slideWidth * 0.2
+
+    if (init === true) {
+      slide(minLeft)
+    }
+  }
+  resizeSlides(true)
+
+  window.addEventListener('resize', resizeSlides)
+
+  function mouseMoveListener(event) {
+    let x = (event.clientX || event.changedTouches[0].clientX) - $slides.offset().left
+
+    if (x < minLeft) x = minLeft
+    if (x > maxLeft) x = maxLeft
+
+    slide(x)
+  }
+
+  function slide(x) {
+    const slideUp = $slideUp.get(0)
+    const upImage = $upImage.get(0)
+    const nowX = +slideUp.style.left.slice(0, -2)
+    if (nowX === x) return
+    slideUp.style.left = x + 'px';
+    upImage.style.left = -x + 'px';
+  }
+
+  $slides.mousemove(mouseMoveListener)
+  $slides.get(0).addEventListener('touchmove', function(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    mouseMoveListener(event)
+  })
+}
+
 $(() => {
 
   bindEvents()
@@ -352,6 +428,7 @@ $(() => {
   updateButton()
   initRegionUX()
   loadPrice()
+  initHowSlides()
   // initCloudAnimate()
   // initTyping()
   // createAssciimaPlayer(1)

@@ -75,9 +75,6 @@
         text-align: center;
         font-size: 4.5em;
         font-weight: 500;
-        @media (--laptop-viewport) {
-          // font-size: 3.5em;
-        }
         p {
           margin: 0;
           line-height: 1.3em;
@@ -88,7 +85,10 @@
         padding: .5em 0 .1em;
         width: 70%;
         margin: 0 auto;
-        color: #DBCCFF;
+        p {
+          font-weight: 300;
+          margin: 0;
+        }
       }
       .btns {
         position: relative;
@@ -216,6 +216,32 @@
     }
     .cloud-wrap {
       margin-bottom: 25em;
+      .product-link {
+        display: flex;
+        justify-content: space-evenly;
+
+        & > div {
+          margin-top: 4.25em;
+          .link-tip {
+            font-size: 1.33em;
+            font-weight: 300;
+          }
+
+          a {
+            /* border: 2px solid #008503; */
+            border-radius: 4px;
+            background: $purple;
+            font-size: 1.33em;
+            min-width: 9.68em;
+            min-height: 3.12em;
+            line-height: 3.12em;
+            display: inline-block;
+            text-shadow: 0 1px 3px rgba(36,180,126,.4);
+            box-shadow: 0 7px 14px #0000001c, 0 3px 6px rgba(0,0,0,.08);
+          }
+        }
+      }
+
       .blog-link {
         background: rgba(255, 255, 255, .2);
         border-radius: 2em;
@@ -224,7 +250,7 @@
         font-family: Poppins;
         display: inline-flex;
         align-items: center;
-        padding: 8px 20px 8px 16px;
+        padding: 2px 12px 2px 5px;
         margin-top: 2em;
 
         a {
