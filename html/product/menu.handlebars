@@ -1,0 +1,27 @@
+<nav class="menu">
+  <section class="content">
+    <section class="left">
+      <img class="logo" src="https://www.hyper.sh/logo/logo_single_dark.svg">
+      <div class="title-wrap">
+        <div class="title">{{category}}</div>
+        <div class="desc">{{desc}}</div>
+      </div>
+      {{#if region}}
+      <div class="region-select-wrap">
+        <select name="Region" class="region-select active">
+          <option value="">Los Angeles</option>
+          <option value="frankfurt">Frankfurt</option>
+        </select>
+      </div>
+      {{/if}}
+    </section>
+
+    <section class="btns {{active}}">
+      <a href="/{{category}}" class="btn btn-features">FEATURES</a>
+      <a href="/{{category}}/pricing.html" class="btn btn-pricing">PRICING</a>
+      <a href="https://docs.hyper.sh/" class="btn btn-docs">DOCS</a>
+    </section>
+  </section>
+</nav>
+
+

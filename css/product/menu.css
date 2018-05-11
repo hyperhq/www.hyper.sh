@@ -1,0 +1,153 @@
+.product.hyper#pricing {
+  @media (--small-than-ipad-viewport) {
+    .title-wrap .desc {
+      display: none;
+    }
+  }
+}
+
+.product > .menu {
+  background: #E2EFFF;
+  font-family: 'Moon-Bold';
+
+  @media (--iphone4-viewport) {
+    .title-wrap .desc {
+      display: none !important;
+    }
+    .content .btns .btn {
+      margin-right: .2em;
+    }
+  }
+
+  @media (--small-viewport) {
+    .content {
+      font-size: 8px;
+    }
+  }
+
+  @media (--mac-viewport) {
+    > .content {
+      .left {
+        margin-left: 2em;
+      }
+      .btns {
+        margin-right: 2em;
+      }
+    }
+  }
+
+  @media (--ipad-medium-viewport) {
+    > .content {
+      flex-flow: column;
+      .left {
+        margin: 20px 0;
+      }
+      .btns {
+        margin-right: 0;
+        margin-bottom: 20px;
+        .btn {
+          margin-right: .6em;
+        }
+      }
+    }
+  }
+
+  .content {
+    font-size: 12px;
+    min-height: 6.67em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .logo {
+      height: 39px;
+      margin-right: 14px;
+    }
+
+    .left {
+      font-family: 'Fjalla One';
+      display: flex;
+      align-items: center;
+      font-size: 1.67em;
+      color: #424C5C;
+      flex-direction: row;
+
+      .title {
+        text-transform: capitalize;
+        display: inline-block;
+      }
+
+      .desc {
+        display: inline-block;
+      }
+    }
+    .btns {
+      display: flex;
+      justify-content: space-between;
+
+      &.features .btn-features,
+      &.pricing .btn-pricing,
+      &.docs .btn-docs {
+        background: white;
+      }
+
+      .btn {
+        text-align: center;
+        background-color: #EBDEFF;
+        border: 2px solid #424C5C;
+        padding: .66em 1.17em;
+        margin-right: 1.66em;
+        border-radius: 500px;
+        font-size: 1.17em;
+        font-family: 'Moon-Bold';
+        color: #424C5C;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &::before {
+          content: "";
+          width: 15px;
+          height: 15px;
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+
+        &.btn-features {
+          & > & {background: white;}
+          &::before {
+            background-image: url("/assets/images/features.svg");
+          }
+        }
+        &.btn-pricing {
+          & > &{background: white;}
+          &::before {
+            width: 18px;
+            height: 18px;
+            background-image: url("/assets/images/pricing.svg");
+          }
+        }
+        &.btn-docs {
+          & & {background: white;}
+          &::before {
+            height: 17px;
+            background-image: url("/assets/images/docs.svg");
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+
+}

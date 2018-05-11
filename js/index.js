@@ -48,6 +48,21 @@ const debounce = function(func, wait, immediate) {
   };
 }
 
+const waitImages = function(images, cb) {
+  images = [].concat(images)
+
+  images.forEach(image => {
+    let $image = $(image)
+    if (!$image.is('img')) {
+      console.log($image.css('background-image'))
+      const imageUrl = $image.css('background-image').replace(/url\(['"]*(.+?)['"]*\)/, '$1')
+      $image = $('<img/>').attr('src', imageUrl)
+    }
+    if ($image.get(0).complete) return cb()
+    $image.on('load', cb)
+  })
+}
+
 const initCloudAnimate = () => {
   const items = $('#index .map .item')
   if (!items.length) return
@@ -84,13 +99,13 @@ const initPriceSlider = () => {
 }
 
 const initTab = (id) => {
-  const items = $(`#${id} .tabs > .items .item`)
+  const items = $(`${id} .tabs > .items .item`)
   if (!items.length) return
   items.hover(function() {
     items.removeClass('active')
     $(this).addClass('active')
-    $(`#${id} .detail`).removeClass('active')
-    $(`#${id} .detail.detail-${$(this).index()}`).addClass('active')
+    $(`${id} .detail`).removeClass('active')
+    $(`${id} .detail.detail-${$(this).index()}`).addClass('active')
   })
 }
 
@@ -190,6 +205,7 @@ const initBackground = () => {
 }
 
 const bindEvents = () => {
+  $('.item-dropdown').click((evt) => $(evt.currentTarget).toggleClass('active'))
   $('#header .nav-toggle').click(evt => $('#header nav').toggleClass('show'))
 }
 
@@ -279,8 +295,6 @@ const getUrlVars = () => {
 }
 
 const initRegionUX = () => {
-  $('.new-region').addClass('show')
-
   const querys = getUrlVars()
   const $dom = $('.region-select.active')
   $dom.val(querys['region'])
@@ -291,19 +305,130 @@ const initRegionUX = () => {
   })
 }
 
+const loadPrice = () => {
+  if (!$('#pricing.pi').length) return
+
+  const Second = {
+    Hour: 3600,
+    Day: 3600 * 24,
+    Month: 3600 * 24 * 30,
+  }
+
+  $.getJSON('https://raw.githubusercontent.com/hyperhq/docs.hyper.sh-pi/master/price.json', function(pricing) {
+    pricing = pricing.region['gcp-us-central1']
+    // render pod
+    const podHtmlArray = pricing.pod.map((p, idx) => {
+      const prefix = idx % 2 === 0 ? '<tr>' : '<tr class="alt">'
+
+    return `${prefix}
+      <td>${p.name}</td>
+      <td>${p.cpu}</td>
+      <td>${p.memory}MB</td>
+      <td>${p.price}</td>
+    </tr>`
+    })
+
+
+    $('#pod tbody').html(podHtmlArray.join('\n'))
+
+    // render fip
+    const fp = pricing.fip.price
+    $('.fip-price').html(fp)
+    // render volume
+    const vp = pricing.volume.price
+    const vunit = pricing.volume.unit
+    const vHtml = `<td>${pricing.volume.name}</td><td>$${vp.toFixed(10)}/${vunit}</td><td>$${(vp * Second.Hour).toFixed(10)}/${vunit}</td><td>$${(vp * Second.Month).toFixed(10)}/${vunit}</td>`
+    $('#volume-row').html(vHtml)
+
+    // render rootfs
+    const rp = pricing.rootfs.price
+    const runit = pricing.volume.unit
+    const rHtml = `<td>${pricing.rootfs.name}</td><td>$${rp.toFixed(10)}/${runit}</td><td>$${(rp * Second.Hour).toFixed(10)}/${runit}</td><td>$${(rp * Second.Month).toFixed(10)}/${runit}</td>`
+    $('#rootfs-row').html(rHtml)
+  })
+}
+
+const initHowSlides = () => {
+  const hwr = 1218 / 3474
+  const barHwr = 1218 / 84
+  const $slides = $('.how-slides')
+  const $slideUp = $('.how-slide-up')
+
+  if (!$slides.length || !$slideUp.length) return
+
+  const $upImage = $('.up-image img')
+  const $bar = $('.how-slide-up .bar')
+  let barWidth = $bar.width()
+  let slideWidth = $slides.width()
+  let slideHeight = $slides.height()
+  let minLeft = slideWidth * 0.17 + barWidth / 2
+  let maxLeft = slideWidth - slideWidth * 0.2 + barWidth / 2
+
+  let readyCount = 0
+
+  waitImages([$upImage, $slides, $bar], function() {
+    readyCount++
+    if (readyCount >= 3) $slideUp.css('visibility', 'visible')
+  })
+
+  function resizeSlides(init) {
+    slideWidth = $slides.width()
+    slideHeight = slideWidth * hwr
+    $slides.height(slideHeight)
+
+    minLeft = slideWidth * 0.17
+    maxLeft = slideWidth - slideWidth * 0.2
+
+    if (init === true) {
+      slide(minLeft)
+    }
+  }
+  resizeSlides(true)
+
+  window.addEventListener('resize', resizeSlides)
+
+  function mouseMoveListener(event) {
+    let x = (event.clientX || event.changedTouches[0].clientX) - $slides.offset().left
+
+    if (x < minLeft) x = minLeft
+    if (x > maxLeft) x = maxLeft
+
+    slide(x)
+  }
+
+  function slide(x) {
+    const slideUp = $slideUp.get(0)
+    const upImage = $upImage.get(0)
+    const nowX = +slideUp.style.left.slice(0, -2)
+    if (nowX === x) return
+    slideUp.style.left = x + 'px';
+    upImage.style.left = -x + 'px';
+  }
+
+  $slides.mousemove(mouseMoveListener)
+  $slides.get(0).addEventListener('touchmove', function(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    mouseMoveListener(event)
+  })
+}
+
 $(() => {
+
   bindEvents()
   // initBackground()
-  initPriceSlider()
-  initTab('features')
-  initTab('howto')
+  // initPriceSlider()
+  initTab('.product')
+  initTab('#howto')
   initArticlesSearch()
-  setPrice('S4')
+  // setPrice('S4')
   initSignup()
   initTyped()
   initSlider()
   updateButton()
   initRegionUX()
+  loadPrice()
+  initHowSlides()
   // initCloudAnimate()
   // initTyping()
   // createAssciimaPlayer(1)

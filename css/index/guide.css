@@ -1,0 +1,113 @@
+ .guide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6.66em 0;
+
+  @media (--ipad-viewport) {
+    font-size: 10px;
+  }
+
+  @media (--small-than-ipad-viewport) {
+    .title {
+      text-align: center;
+    }
+    > .start {
+      > .item {
+        .step {
+          width: 10em;
+          height: 10em;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (--iphone4-viewport) {
+    > .start {
+      > .item {
+        .step {
+          width: 9em;
+          height: 9em;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 4em;
+    font-family: 'Fjalla One';
+    color: #424C5C;
+  }
+
+  .getstarted {
+    a {
+      @mixin purple-btn;
+      font-size: 1.25em;
+    }
+  }
+
+  .start {
+    display: flex;
+    margin: 4.16em 0;
+    max-width: 1280px;
+    width: 100%;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      font-family: "Moon";
+      flex-grow: 1;
+      min-width: 33.3%;
+
+      .step {
+        width: 12em;
+        height: 12em;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &.step-1 {
+          background-image: url("/assets/icons/guide/step-1.svg")
+        }
+        &.step-2 {
+          background-image: url("/assets/icons/guide/step-2.svg")
+        }
+        &.step-3 {
+          background-image: url("/assets/icons/guide/step-3.svg")
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 2.6em;
+        right: -2em;
+        width: 5em;
+        height: 5em;
+        background: url("/assets/icons/guide/arrow.svg") no-repeat;
+        background-size: contain;
+      }
+      .desc {
+        font-size: 1.33em;
+        margin-top: 1.66em;
+        line-height: 2.08em;
+        color: #6D3BC6;
+
+        a {
+          color: #409FFF;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
