@@ -49,12 +49,13 @@
       width: 100%;
       display: flex;
       justify-content: center;
+      align-items: center;
 
       .item {
         text-align: center;
-        padding: 11px 30px;
+        padding: 11px 10px;
         cursor: pointer;
-        font-size: 1.8em;
+        font-size: 1.6em;
         flex-grow: 1;
         text-transform: uppercase;
         &.active {
