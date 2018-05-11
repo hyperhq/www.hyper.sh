@@ -269,6 +269,9 @@
         &::after {
           content: '>';
         }
+        @media (--small-viewport) {
+          display: none;
+        }
       }
     }
   }
