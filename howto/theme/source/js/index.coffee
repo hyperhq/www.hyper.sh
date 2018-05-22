@@ -48,3 +48,6 @@ $ () ->
         $('img').unveil 200, () ->
             $(@).load () ->
                 @style.opacity = 1
+
+    # Footer dropdown
+    $('.item-dropdown').click((evt) -> $(evt.currentTarget).toggleClass('active'))
