@@ -259,12 +259,11 @@
 
         &::before {
           content: 'NEW';
-          font-family: Moon;
+          font-family: Moon-Bold;
           background: $purple;
           padding: .2em .7em;
           border-radius: 1em;
           font-size: .8em;
-          font-weight: bold;
         }
         &::after {
           content: '>';
