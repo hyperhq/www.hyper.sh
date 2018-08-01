@@ -61,7 +61,7 @@
       align-items: center;
       text-align: center;
       position: relative;
-      font-family: "Moon";
+      font-family: "Moon-Light";
       flex-grow: 1;
       min-width: 33.3%;
 
@@ -105,7 +105,7 @@
 
         a {
           color: #409FFF;
-          font-weight: bold;
+          font-family: "Moon-Bold";
         }
       }
     }
