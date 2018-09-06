@@ -40,16 +40,7 @@ module.exports = function() {
       filename: `hyper/pricing.html`,
       inject: false
     },
-    {
-      template: 'html/product/pi/index/index.handlebars',
-      filename: `pi/index.html`,
-      inject: false
-    },
-    {
-      template: 'html/product/pi/pricing/index.handlebars',
-      filename: `pi/pricing.html`,
-      inject: false
-    },
+
 
   ]
 }
