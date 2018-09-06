@@ -230,7 +230,6 @@
 
         .tip {
           font-size: 1.1em;
-          font-weight: bold;
           margin-top: -10px;
           margin-bottom: 20px;
           display: none;
@@ -256,6 +255,9 @@
 
           .success-tip {
             display: block;
+            h2 {
+              font-size: 2em;
+            }
           }
 
           & > div a {
