@@ -45,6 +45,17 @@ $whiteGray: #fcfcfc;
   color: white;
 }
 
+@define-mixin purple-textbox {
+  background-color: white;
+  border: 2px solid $purpleLight;
+  padding: 10px 25px;
+  border-radius: 500px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
 @define-mixin title {
   font-size: 56px;
   font-family: 'Fjalla One';
