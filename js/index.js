@@ -98,6 +98,33 @@ const initPriceSlider = () => {
   })
 }
 
+const setSubscribeError = () => {
+  $('.subscribe-clusterless').addClass('error')
+}
+
+const setSubscribeSuccess = () => {
+  $('.subscribe-clusterless').removeClass('error').addClass('success')
+}
+
+const subscribeClusterless = (evt) => {
+  evt.preventDefault()
+  const email = $('.subscribe-clusterless .email').val().trim()
+  if (!email) return setSubscribeError()
+  $.ajax({
+    type: "POST",
+    url: 'https://api.hyper.sh/clusterless',
+    headers: {'Content-Type': 'application/json'},
+    data: JSON.stringify({email}),
+    success(jqXHR, textStatus) {
+      setSubscribeSuccess()
+    },
+    error(jqXHR, textStatus) {
+      setSubscribeError()
+      console.error(jqXHR, textStatus)
+    },
+  });
+}
+
 const initTab = (id) => {
   const items = $(`${id} .tabs > .items .item`)
   if (!items.length) return
@@ -207,6 +234,8 @@ const initBackground = () => {
 const bindEvents = () => {
   $('.item-dropdown').click((evt) => $(evt.currentTarget).toggleClass('active'))
   $('#header .nav-toggle').click(evt => $('#header nav').toggleClass('show'))
+  $('#do-subscribe-clusterless').click(subscribeClusterless)
+  $('.subscribe-clusterless input').keypress(evt => {if (evt.which === 13) subscribeClusterless(evt)})
 }
 
 const initSlider = () => {
@@ -435,4 +464,6 @@ $(() => {
   // createAssciimaPlayer(2)
   // createAssciimaPlayer(3)
   // createAssciimaPlayer(4)
+
+  fetch('https://api.hyper.sh/quota', {method: 'POST'})
 })
