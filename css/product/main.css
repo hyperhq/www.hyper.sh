@@ -9,6 +9,15 @@
     }
 }
 
+.hyperform.product {
+  .links {
+    margin-top: 6em;
+  }
+  .main .container > .main .sections .section:first-child {
+    margin-top: 30px;
+  }
+}
+
 .product .container > .main {
   padding-top: 0 !important;
 
@@ -146,7 +155,6 @@
         font-size: 1.25em;
       }
     }
-
-
   }
+
 }

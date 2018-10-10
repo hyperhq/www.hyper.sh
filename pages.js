@@ -40,7 +40,11 @@ module.exports = function() {
       filename: `hyper/pricing.html`,
       inject: false
     },
-
+    {
+      template: 'html/product/hyperform/index/index.handlebars',
+      filename: `hyperform/index.html`,
+      inject: false
+    },
 
   ]
 }
