@@ -5,7 +5,8 @@ body.kata#index {
   }
   #header {
     height: auto;
-    min-height: 410px;
+    min-height: 34em;
+
 
     .main {
       display: block;
