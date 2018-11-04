@@ -234,8 +234,23 @@ const initBackground = () => {
 const bindEvents = () => {
   $('.item-dropdown').click((evt) => $(evt.currentTarget).toggleClass('active'))
   $('#header .nav-toggle').click(evt => $('#header nav').toggleClass('show'))
-  $('#do-subscribe-clusterless').click(subscribeClusterless)
-  $('.subscribe-clusterless input').keypress(evt => {if (evt.which === 13) subscribeClusterless(evt)})
+  $('.contact-kata-sales').click(contactKataSales)
+}
+
+function contactKataSales(evt) {
+  evt.preventDefault()
+
+  Intercom('showNewMessage', `[Contact Kata Sales]
+
+  Subject:
+  First Name:
+  Last Name:
+  Email:
+  Phone:
+  Company:
+  Country:
+
+  Message: `)
 }
 
 const initSlider = () => {

@@ -40,7 +40,11 @@ module.exports = function() {
       filename: `hyper/pricing.html`,
       inject: false
     },
-
+    {
+      template: 'html/product/kata/index.handlebars',
+      filename: `kata/index.html`,
+      inject: false
+    },
 
   ]
 }
