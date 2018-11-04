@@ -41,11 +41,6 @@ module.exports = function() {
       inject: false
     },
     {
-      template: 'html/product/hyperform/index/index.handlebars',
-      filename: `hyperform/index.html`,
-      inject: false
-    },
-    {
       template: 'html/product/kata/index.handlebars',
       filename: `kata/index.html`,
       inject: false

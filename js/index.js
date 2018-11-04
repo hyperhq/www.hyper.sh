@@ -106,6 +106,25 @@ const setSubscribeSuccess = () => {
   $('.subscribe-clusterless').removeClass('error').addClass('success')
 }
 
+const subscribeClusterless = (evt) => {
+  evt.preventDefault()
+  const email = $('.subscribe-clusterless .email').val().trim()
+  if (!email) return setSubscribeError()
+  $.ajax({
+    type: "POST",
+    url: 'https://api.hyper.sh/clusterless',
+    headers: {'Content-Type': 'application/json'},
+    data: JSON.stringify({email}),
+    success(jqXHR, textStatus) {
+      setSubscribeSuccess()
+    },
+    error(jqXHR, textStatus) {
+      setSubscribeError()
+      console.error(jqXHR, textStatus)
+    },
+  });
+}
+
 const initTab = (id) => {
   const items = $(`${id} .tabs > .items .item`)
   if (!items.length) return
