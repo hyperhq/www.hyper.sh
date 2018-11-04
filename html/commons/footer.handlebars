@@ -15,12 +15,8 @@
   <li class="item">
     <div class="head">Product</div>
     <ul class="list">
-      <li class="item"><a href="/hyper">Hyper</a></li>
-      <li class="item"><a href="/hyperform">HyperForm</a></li>
-      <li class="item"><a href="/howto">How To</a></li>
-      <li class="item">
-        <a href="/hyper/pricing.html">Pricing</a>
-      </li>
+      <li class="item"><a href="/hyper">Feature</a></li>
+      <li class="item"><a href="/hyper/pricing.html">Pricing</a></li>
       <li class="item"><a href="http://status.hyper.sh/" target="_blank">Status</a></li>
     </ul>
   </li>
@@ -29,28 +25,26 @@
     <div class="head">Learn</div>
     <ul class="list">
       <li class="item">
-        <a class="item-dropdown">Docs</a>
+        <a class="item-dropdown">Documentation</a>
         <ul>
           <li><a href="https://docs.hyper.sh/hyper">Hyper</a></li>
           <li><a href="https://docs.hyper.sh/hyperform">HyperForm</a></li>
         </ul>
       </li>
+      <li class="item"><a href="/howto">HOW TO</a></li>
       <li class="item"><a href="https://forum.hyper.sh/" target="_blank">Forum</a></li>
       <li class="item"><a href="https://slack.hyper.sh/" target="_blank">Slack</a></li>
       <li class="item"><a href="https://docs.hyper.sh/FAQ/index.html" target="_blank">FAQ</a></li>
-      <li class="item">
-        <a href="https://docs.hyper.sh/hyper/FAQ/privacy_policy.html" target="_blank">Privacy Policy</a>
-      </li>
     </ul>
   </li>
   <li class="item">
     <div class="head">About</div>
     <ul class="list">
+      <li class="item"><a href="/customers.html">Customers</a></li>
       <li class="item"><a href="/company.html#about">Company</a></li>
       <li class="item"><a href="/company.html#careers">Careers</a></li>
       <li class="item"><a href="https://blog.hyper.sh/" target="_blank">Blog</a></li>
       <li class="item"><a href="/company.html#contact">Contact</a></li>
-      <li class="item"><a href="/customers.html">Customers</a></li>
     </ul>
   </li>
   <li class="item community">
@@ -107,14 +101,26 @@ twq('track','PageView');
 </script>
 
 <script>
-  var delay = 30 * 1000;
+  function bootIntercom() {
+    setTimeout(function() {
+      if (window.Intercom) {
+        window.Intercom("boot", {
+          app_id: "zgytclad",
+        });
+      } else {
+        bootIntercom()
+      }
+    }, 1000)
+  }
+  {{!-- var delay = 30 * 1000;
   setTimeout(function() {
     window.Intercom("boot", {
-      app_id: "zgytclad"
+      app_id: "zgytclad",
     });
-  }, delay);
+  }, delay); --}}
+  bootIntercom()
 </script>
 <!-- Intercom -->
 
-<script src="/app.js?v=2"></script>
+<script src="/app.js?v=3"></script>
 

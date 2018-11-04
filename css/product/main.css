@@ -140,21 +140,7 @@
   }
 
   .links {
-    text-align: center;
-    .btn {
-      @mixin white-btn;
-      display: inline-block;
-      font-size: 1.25em;
-      font-family: 'Poppins';
-      &:first-child {
-        margin-right: 1.8em;
-      }
-      &.active {
-        @mixin purple-btn;
-        font-family: 'Poppins';
-        font-size: 1.25em;
-      }
-    }
+    @mixin links;
   }
 
 }

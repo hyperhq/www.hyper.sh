@@ -88,6 +88,26 @@ $whiteGray: #fcfcfc;
   transform: scale($size) translateZ(0);
 }
 
+@define-mixin links {
+  text-align: center;
+  margin-top: 3em;
+  .btn {
+    @mixin white-btn;
+    display: inline-block;
+    font-size: 1.25em;
+    font-family: 'Poppins';
+    &:first-child {
+      margin-right: 1.8em;
+    }
+    &.active {
+      @mixin purple-btn;
+      font-family: 'Poppins';
+      font-size: 1.25em;
+    }
+  }
+}
+
+
 html, body {
   min-width: 320px;
   font-size: 12px;

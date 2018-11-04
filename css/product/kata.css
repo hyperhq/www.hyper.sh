@@ -1,0 +1,235 @@
+body.kata#index {
+  .container.howto .content-synopsis .howto-title {
+    max-width: none;
+    text-align: center;
+  }
+  #header {
+    height: auto;
+    min-height: 410px;
+
+    .main {
+      display: block;
+      height: auto;
+      .wrap {
+        padding-top: 10em;
+        .cloud-wrap {
+          margin: 0;
+        }
+        .entry .title {
+          font-size: 3.2em;
+        }
+      }
+    }
+  }
+
+  #footer {
+    .form {
+      display: none;
+    }
+  }
+
+  .kata-intro {
+    display: block;
+    .section {
+      margin: 70px auto;
+      padding: 0;
+    }
+    .content {
+      font-family: Poppins;
+      margin-top: 5em;
+    }
+    .content-concepts {
+      img {
+        width: 100%;
+      }
+      .description {
+        margin-top: 3em;
+        p {
+          font-size: 1.5em;
+          margin: 1em 0 0;
+        }
+      }
+      h2 {
+        font-family: 'Fjalla One';
+        font-size: 1.5em;
+      }
+      .col {
+        .row {
+          padding-right: 80px;
+          &::before {
+            content: "";
+            display: block;
+            width: 58px;
+            height: 58px;
+            background: #D8D8D8;
+            border-radius: 50%;
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+
+    .content-editions > ul {
+      display: flex;
+
+      @media (--ipad-medium-viewport) {
+        flex-direction: column;
+      }
+
+      .btn {
+        @mixin purple-btn;
+        margin-top: 2.5em;
+        align-self: center;
+      }
+      h2 {
+        position: relative;
+        font-size: 1.5em;
+        padding-left: 3.5em;
+        height: 2.75em;
+        line-height: 2.75em;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 2.75em;
+          width: 2.75em;
+          background: #6F39C3;
+          border-radius: 50%;
+        }
+      }
+      h3 {
+        font-size: 16px;
+        border-left: 6px solid #6F39C3;
+        padding-left: 16px;
+        margin: 30px 0 30px;
+      }
+      p {
+        font-size: 1.16em;
+        font-weight: 300;
+      }
+      & > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 3px solid rgba(111,57,195,0.12);
+        border-left: 3px solid rgba(111,57,195,0.12);
+        padding: 0 2em;
+        min-width: 33.3%;
+        box-sizing: border-box;
+
+
+        @media (--ipad-medium-viewport) {
+          border: 0;
+          padding-left: 1em !important;
+          padding-bottom: 3em;
+        }
+
+        &:first-child {
+          border: 0;
+          padding-left: 0;
+          h2::before {background: #3660E0;}
+          .btn {
+            background: #3660E0;
+            border-color: #7B9BFF;
+          }
+        }
+        &:last-child {
+          padding-right: 0;
+          border: 0;
+          h2::before {background: #D53434;}
+          .btn {
+            background: #D53434;
+            border-color: #FF7A7A;
+          }
+        }
+        & > ul {
+          margin-top: 2.5em;
+          flex-direction: column;
+          li {
+            font-size: 1.16em;
+            position: relative;
+            padding-left: 1.33em;
+            margin: 0.83em;
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 7px;
+              height: 8px;
+              width: 8px;
+              background: #6F39C3;
+              border-radius: 50%;
+
+              @media (--ipad-medium-viewport) {
+                display: none;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content-synopsis {
+    .howto-title::after {display: none;}
+    h3 {
+      font-size: 1.5em;
+      font-family: 'Fjalla One';
+    }
+    p {
+      font-size: 1.16em;
+      font-weight: 300;
+    }
+    ul {
+      display: flex;
+      text-align: center;
+      li {
+        &::before {
+          content: "";
+          display: block;
+          width: 84px;
+          height: 84px;
+          background: #D8D8D8;
+          border-radius: 50%;
+          margin: 20px auto 16px;
+        }
+      }
+    }
+    .links {
+      @mixin links;
+    }
+  }
+
+  .btns a {
+    @mixin purple-btn;
+    padding: 10px 25px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin-top: 25px;
+    margin-right: .7em;
+    margin-bottom: 35px;
+    display: inline-block;
+    font-size: 1.25em;
+    max-width: 280px;
+
+
+    &.btn-purple {
+      background: $purple;
+      border-color: $purpleLight;
+    }
+
+    &.btn-blue {
+      background: #2948A7;
+      border-color: #3D60CC;
+    }
+
+    &.btn-red {
+      background: #A72929;
+      border-color: #C33D3D;
+    }
+  }
+}
