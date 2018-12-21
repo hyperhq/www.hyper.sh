@@ -466,7 +466,7 @@ $(() => {
   initTab('#howto')
   initArticlesSearch()
   // setPrice('S4')
-  initSignup()
+  // initSignup()
   initTyped()
   initSlider()
   updateButton()

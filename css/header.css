@@ -1,3 +1,16 @@
+#shutdown {
+  background: orange;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+
+  a {
+    padding-left: 10px;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
 #index #header {
   height: 100%;
   min-height: 700px;
