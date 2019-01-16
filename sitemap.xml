@@ -12,28 +12,4 @@
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
-<url>
-  <loc>https://www.hyper.sh/features.html</loc>
-  <lastmod>2016-10-08T04:13:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.hyper.sh/pricing.html</loc>
-  <lastmod>2016-10-08T04:13:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.hyper.sh/company.html</loc>
-  <lastmod>2016-10-08T04:13:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://www.hyper.sh/howto/</loc>
-  <lastmod>2016-10-08T04:13:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.60</priority>
-</url>
 </urlset>
