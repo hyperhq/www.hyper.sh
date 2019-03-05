@@ -10,18 +10,21 @@ const port = process.env.PORT || 8001
 const indexFullpath = __dirname + '/index.html'
 
 if (process.env.NODE_ENV !== 'production') {
-  const compiler = webpack(config)
-  app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
-  app.use(webpackHotMiddleware(compiler))
-  app.use('/', express.static('./'))
-  app.use('/howto', express.static('howto/public'))
+  // const compiler = webpack(config)
+  // app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
+  // app.use(webpackHotMiddleware(compiler))
+  // app.use('/', express.static('./'))
+  // app.use('/howto', express.static('howto/public'))
 } else {
-  app.use('/', express.static('dist'))
-  indexFullpath = __dirname + '/dist/index.html'
+  // app.use('/', function (req, res) {
+  //   res.send('Hello World')
+  // })
+  // indexFullpath = __dirname + '/dist/index.html'
+
 }
 
 app.get('*', function(req, res) {
-  res.sendFile(indexFullpath)
+  res.status(404).send('Not Found')
 })
 
 app.listen(port, function(error) {
